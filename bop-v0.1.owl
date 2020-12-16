@@ -1,0 +1,846 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.github.com/AlexDonkers/bop#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.github.com/AlexDonkers/bop#">
+    <Prefix name="" IRI="http://www.github.com/AlexDonkers/bop#"/>
+    <Prefix name="bop" IRI="http://www.github.com/AlexDonkers/bop#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
+    <Prefix name="qudt" IRI="http://qudt.org/schema/qudt/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="schema" IRI="http://schema.org/"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
+        <IRI>https://orcid.org/0000-0002-8809-3277</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:description"/>
+        <Literal xml:lang="en">The Building Performance Ontology (BOP) is a set of ontological constructs which allows integration of data related to building performance. By (re-)using ontology patterns from major ontologies in the field, BOP provides a method to integrate both static and dynamic (time-series) properties to buildings, zones, elements and products. 
+
+It&apos;s aim is to facilitate building managers and facility managers with a common data structure to ease the process of data integration and to allow software tools to deal with the large heterogeneity of data. 
+
+By (re-)using concepts from major ontologies in the field, BOP could easily be integrated with a wide range of existing ontologies and datasets. BOP could be seen as an extension of existing work rather than an individual ontology.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:title"/>
+        <Literal xml:lang="en">Building Performance Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+        <Literal>bop</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+        <IRI></IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.1</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="Actuation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Actuator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Database"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Element"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Evaluation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Execution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Executor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="FeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Function"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Interface"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Observation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Platform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PropertySet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Result"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Zone"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="actuatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="containsProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="evaluatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="executedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasComplexActuation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasComplexEvaluation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasComplexObservation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasComplexProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasComplexResult"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasComplexUnit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasExternalDatabase"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasFeatureOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSubExecutor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSubSensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hostsExecutor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isComplexUnitOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isExternalDatabaseOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isFeatureOfInterestOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isHostedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="observedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="partOfPropertySet"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="performedActuation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="performedEvaluation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="performedExecution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="performedObservation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/bot#hasSubElement"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSimpleEvaluation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSimpleProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSimpleResult"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasSimpleUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prov:generatedAtTime"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://orcid.org/0000-0002-8809-3277"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="Actuation"/>
+        <Class IRI="Execution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Actuation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="actuatedBy"/>
+            <Class IRI="Actuator"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Actuator"/>
+        <Class IRI="Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Database"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="isExternalDatabaseOf"/>
+            <Class IRI="Executor"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Device"/>
+        <Class IRI="Executor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Element"/>
+        <Class IRI="FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Evaluation"/>
+        <Class IRI="Execution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Execution"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="executedBy"/>
+            <Class IRI="Executor"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Executor"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="isHostedBy"/>
+            <Class IRI="Platform"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Executor"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="isHostedBy"/>
+            <Class IRI="Platform"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="FeatureOfInterest"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="isFeatureOfInterestOf"/>
+            <Class IRI="Property"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Function"/>
+        <Class IRI="Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Interface"/>
+        <Class IRI="FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Observation"/>
+        <Class IRI="Evaluation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Observation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="observedBy"/>
+            <Class IRI="Sensor"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Platform"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="hostsExecutor"/>
+            <Class IRI="Executor"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Property"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="hasFeatureOfInterest"/>
+            <Class IRI="FeatureOfInterest"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PropertySet"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="containsProperty"/>
+            <Class IRI="Property"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Sensor"/>
+        <Class IRI="Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Zone"/>
+        <Class IRI="FeatureOfInterest"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="Executor"/>
+        <Class IRI="Platform"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="foaf:Person"/>
+        <NamedIndividual IRI="https://orcid.org/0000-0002-8809-3277"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="actuatedBy"/>
+        <ObjectProperty IRI="executedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="evaluatedBy"/>
+        <ObjectProperty IRI="executedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasComplexActuation"/>
+        <ObjectProperty IRI="hasComplexEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasComplexObservation"/>
+        <ObjectProperty IRI="hasComplexEvaluation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSubExecutor"/>
+        <ObjectProperty IRI="https://w3id.org/bot#hasSubElement"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasSubSensor"/>
+        <ObjectProperty IRI="hasSubExecutor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="observedBy"/>
+        <ObjectProperty IRI="evaluatedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="performedActuation"/>
+        <ObjectProperty IRI="performedExecution"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="performedEvaluation"/>
+        <ObjectProperty IRI="performedExecution"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="performedObservation"/>
+        <ObjectProperty IRI="performedEvaluation"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="containsProperty"/>
+        <ObjectProperty IRI="partOfPropertySet"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasComplexUnit"/>
+        <ObjectProperty IRI="isComplexUnitOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasExternalDatabase"/>
+        <ObjectProperty IRI="isExternalDatabaseOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hasFeatureOfInterest"/>
+        <ObjectProperty IRI="isFeatureOfInterestOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="hostsExecutor"/>
+        <ObjectProperty IRI="isHostedBy"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="hasComplexUnit"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="isComplexUnitOf"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="containsProperty"/>
+        <Class IRI="PropertySet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasComplexEvaluation"/>
+        <Class IRI="Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasComplexUnit"/>
+        <Class IRI="Result"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasExternalDatabase"/>
+        <Class IRI="Executor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSubExecutor"/>
+        <Class IRI="Executor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSubSensor"/>
+        <Class IRI="Sensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isExternalDatabaseOf"/>
+        <Class IRI="Database"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isHostedBy"/>
+        <Class IRI="Executor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="observedBy"/>
+        <Class IRI="Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://w3id.org/bot#hasSubElement"/>
+        <Class IRI="Element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="containsProperty"/>
+        <Class IRI="Property"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasComplexEvaluation"/>
+        <Class IRI="Result"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasComplexUnit"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="hasComplexUnit"/>
+            <Class IRI="Unit"/>
+        </ObjectExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasExternalDatabase"/>
+        <Class IRI="Database"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSubExecutor"/>
+        <Class IRI="Executor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSubSensor"/>
+        <Class IRI="Sensor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isExternalDatabaseOf"/>
+        <Class IRI="Executor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="observedBy"/>
+        <Class IRI="Observation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/bot#hasSubElement"/>
+        <Class IRI="Element"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasSimpleEvaluation"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasSimpleProperty"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasSimpleResult"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasSimpleUnit"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="hasValue"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI="prov:generatedAtTime"/>
+    </FunctionalDataProperty>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Actuation</IRI>
+        <Literal xml:lang="en">Actuation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Actuation</IRI>
+        <Literal xml:lang="nl">Bediening</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Actuator</IRI>
+        <Literal xml:lang="en">Actuator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Actuator</IRI>
+        <Literal xml:lang="nl">Actuator</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Database</IRI>
+        <Literal xml:lang="en">A collection of data.
+
+The database class is used to describe an external database, storing results of executions, such as a time-series database.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Database</IRI>
+        <Literal xml:lang="nl">Databank</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Database</IRI>
+        <Literal xml:lang="en">Database</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Device</IRI>
+        <Literal xml:lang="en">An object or machine that can implement a procedure to perform an execution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Device</IRI>
+        <Literal xml:lang="nl">Een object of machine die een taak kan uitvoeren op basis van een procedure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Device</IRI>
+        <Literal xml:lang="nl">Apparaat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Device</IRI>
+        <Literal xml:lang="en">Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Element</IRI>
+        <Literal xml:lang="en">Element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Element</IRI>
+        <Literal xml:lang="nl">Element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Evaluation</IRI>
+        <Literal xml:lang="nl">Evaluatie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Evaluation</IRI>
+        <Literal xml:lang="en">Evaluation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Execution</IRI>
+        <Literal xml:lang="nl">Het doen of uitvoeren van iets. Een uitvoering kan worden uitgevoerd door een uitvoerder, eventueel op basis van een procedure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Execution</IRI>
+        <Literal xml:lang="en">The act of doing or performing something. An execution could be performed by an executor, possibly based on a procedure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Execution</IRI>
+        <Literal xml:lang="en">Execution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Execution</IRI>
+        <Literal xml:lang="nl">Uitvoering</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Executor</IRI>
+        <Literal xml:lang="en">An agent that can implement a procedure to perform an execution.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Executor</IRI>
+        <Literal xml:lang="nl">Iets wat een taak kan uitvoeren op basis van een procedure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Executor</IRI>
+        <Literal xml:lang="en">Executor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Executor</IRI>
+        <Literal xml:lang="nl">Uitvoerder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>FeatureOfInterest</IRI>
+        <Literal xml:lang="en">An abstraction of a real world phenomena (object, part, zone, event, etc).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>FeatureOfInterest</IRI>
+        <Literal xml:lang="nl">Een abstractie van een fenomeen uit de echte wereld (object, onderdeel, zone, evenement, etc).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FeatureOfInterest</IRI>
+        <Literal xml:lang="en">Feature of interest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FeatureOfInterest</IRI>
+        <Literal xml:lang="nl">Kenmerk van belang</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Function</IRI>
+        <Literal xml:lang="nl">Functie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Function</IRI>
+        <Literal xml:lang="en">Function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Interface</IRI>
+        <Literal xml:lang="en">Interface</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Interface</IRI>
+        <Literal xml:lang="nl">Raakvlak</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Observation</IRI>
+        <Literal xml:lang="nl">Observatie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Observation</IRI>
+        <Literal xml:lang="en">Observation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Platform</IRI>
+        <Literal xml:lang="en">An entity that hosts an executor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Platform</IRI>
+        <Literal xml:lang="en">Platform</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Platform</IRI>
+        <Literal xml:lang="nl">Platform</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Property</IRI>
+        <Literal xml:lang="en">A characteristic of a feature of interest. The property is intrinsic to and cannot exist without the feature of interest.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Property</IRI>
+        <Literal xml:lang="nl">Een kenmerk van een feature of interest. Het kenmerk is intrinsiek aan en kan niet bestaan zonder de feature of interest.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Property</IRI>
+        <Literal xml:lang="nl">Eigenschap</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Property</IRI>
+        <Literal xml:lang="en">Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PropertySet</IRI>
+        <Literal xml:lang="en">A collection of properties. The collection could also be a singleton or a null set.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PropertySet</IRI>
+        <Literal xml:lang="nl">Een collectie van eigenschappen. De collectie kan ook een eenpuntsverzameling of een lege verzameling zijn.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PropertySet</IRI>
+        <Literal xml:lang="en">Property set</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PropertySet</IRI>
+        <Literal xml:lang="nl">Verzameling van eigenschappen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Result</IRI>
+        <Literal xml:lang="en">Result</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Result</IRI>
+        <Literal xml:lang="nl">Resultaat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Sensor</IRI>
+        <Literal xml:lang="en">Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Sensor</IRI>
+        <Literal xml:lang="nl">Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Unit</IRI>
+        <Literal xml:lang="en">A particular quantity value that has been chosen as a scale for measuring other quantities of the same kind.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Unit</IRI>
+        <Literal xml:lang="nl">Een specifieke waarde van een natuurkundige grootheid die is gekozen als een schaal voor het meten van andere hoeveelheden van diezelfde grootheid.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Unit</IRI>
+        <Literal xml:lang="nl">Eenheid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Unit</IRI>
+        <Literal xml:lang="en">Unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Zone</IRI>
+        <Literal xml:lang="en">Zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Zone</IRI>
+        <Literal xml:lang="nl">Zone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>containsProperty</IRI>
+        <Literal xml:lang="en">contains property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasComplexUnit</IRI>
+        <Literal xml:lang="en">has complex unit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasExternalDatabase</IRI>
+        <Literal xml:lang="en">has external database</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasFeatureOfInterest</IRI>
+        <Literal xml:lang="en">has feature of interest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hostsExecutor</IRI>
+        <Literal xml:lang="en">hosts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isExternalDatabaseOf</IRI>
+        <Literal xml:lang="en">is external database of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isFeatureOfInterestOf</IRI>
+        <Literal xml:lang="en">has feature of interest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isHostedBy</IRI>
+        <Literal xml:lang="en">is hosted by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>observedBy</IRI>
+        <Literal xml:lang="en">observed by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>https://orcid.org/0000-0002-8809-3277</IRI>
+        <Literal>Alex Donkers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/bot#hasSubElement</IRI>
+        <Literal xml:lang="en">has sub element</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
