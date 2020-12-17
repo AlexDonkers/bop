@@ -211,7 +211,7 @@ table.canonicalparsing td.two {
 
 /* override mediawiki's beautiful DL styling... */
 dl {
-    background: white;
+    background: transparent;
     width: 100%;
     border: none;
     margin-top: 0;

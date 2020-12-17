@@ -18,8 +18,8 @@ body {
   background-repeat: no-repeat;
   counter-reset:section;
 }
-:link { color: red; background: transparent }
-:visited { color: #609; background: transparent }
+:link { color: rgb(112, 186, 255); background: transparent }
+:visited { color: rgb(112, 186, 255); background: transparent }
 a:active { color: #C00; background: transparent }
 
 a:link img, a:visited img { border-style: none } /* no border on img links */
@@ -59,7 +59,7 @@ p.copyright { font-size: small }
 p.copyright small { font-size: small }
 
 @media screen {  /* hide from IE3 */
-a[href]:hover { background: rgb(236, 236, 236) }
+a[href]:hover { text-decoration: underline; }
 }
 
 pre { margin-left: 2em }
