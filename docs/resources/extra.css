@@ -131,3 +131,41 @@ dt {
     color:green;
     font-style:italic;
 }
+
+/* The logos */
+
+#wrapper {
+    text-align: center;
+    background: black;
+  }
+  
+  .logo {
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+  }
+  
+  #tue {
+    background-image: url('https://logodix.com/logo/2165230.png');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: center center;
+  }
+  
+  
+  #kpn {
+    background-image: url('https://kpnventures.com/wp-content/uploads/2018/06/kpn-ventures-logo-white.png');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: center center;
+  }
+  
+  #isbe {
+  
+    background-image: url('https://raw.githubusercontent.com/AlexDonkers/bop/main/docs/resources/ISBEtue.png');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: center center;
+  
+  }
+  
