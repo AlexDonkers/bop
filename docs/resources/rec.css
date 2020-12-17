@@ -18,7 +18,7 @@ body {
   background-repeat: no-repeat;
   counter-reset:section;
 }
-:link { color: #00C; background: transparent }
+:link { color: red; background: transparent }
 :visited { color: #609; background: transparent }
 a:active { color: #C00; background: transparent }
 
@@ -59,7 +59,7 @@ p.copyright { font-size: small }
 p.copyright small { font-size: small }
 
 @media screen {  /* hide from IE3 */
-a[href]:hover { background: #ffa }
+a[href]:hover { background: rgb(236, 236, 236) }
 }
 
 pre { margin-left: 2em }
@@ -69,7 +69,8 @@ p {
   margin-bottom: 0.6em;
 }
 */
-dt, dd { margin-top: 0; margin-bottom: 0 } /* opera 3.50 */
+dt, dd { margin-top: 0; margin-bottom: 0 ;
+background-color: transparent;} /* opera 3.50 */
 dt { font-weight: bold }
 
 pre, code { font-family: monospace } /* navigator 4 requires this */
