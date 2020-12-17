@@ -19,7 +19,7 @@ body {
   counter-reset:section;
 }
 
-:link { color: #3897F1; background: transparent }
+:link { color: #3897F1; background: transparent; text-decoration: none}
 :visited { color: #3897F1; background: transparent }
 a:active { color: #C00; background: transparent }
 
