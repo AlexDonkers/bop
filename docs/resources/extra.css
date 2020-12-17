@@ -3,11 +3,12 @@ body {
 }
 
 h1 {
-    line-height: 110%;    
+    line-height: 110%;
+    color:red;
 }
 
 .hlist {
-    border: 1px solid navy;
+    border: 1px solid red;
     padding:5px;
     background-color: #F4FFFF; 
 }
@@ -21,7 +22,7 @@ h1 {
 }
 
 .entity {
-    border: 1px solid navy;
+    border: 1px solid red;
     margin:5px 0px 5px 0px;
     padding: 5px;    
 }
@@ -59,7 +60,7 @@ h1 {
 h3 {
     margin-top: 3px;
     padding-bottom: 5px;
-	border-bottom: 1px solid navy;
+	border-bottom: 1px solid red;
 }
 
 h2 {
@@ -97,7 +98,7 @@ dt {
     float:right;
     color:black;
     padding: 2px;
-    border: 1px dotted navy;
+    border: 1px dotted red;
     background-color: #F4FFFF;
 }
 
