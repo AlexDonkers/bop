@@ -44,8 +44,8 @@ h3.list{margin-top: 20px;
 /* background should be transparent, but WebTV has a bug */
 h1, h2, h3 { color: #005A9C; background: transparent }
 h1 { font: 170% sans-serif }
-h2 { font: 140% sans-serif; text-transform: uppercase;}
-h3 { font: 120% sans-serif }
+h2 { font: 140% sans-serif}
+h3 { font: 120% sans-serif}
 h4 { font: bold 100% sans-serif }
 h5 { font: italic 100% sans-serif }
 h6 { font: small-caps 100% sans-serif }

@@ -13,9 +13,8 @@ h1 {
 }
 
 .hlist {
-    border: 1px solid red;
     padding:5px;
-    background-color: #F4FFFF; 
+    background-color: #F5F5F5; 
 }
 
 .hlist li {
@@ -65,8 +64,11 @@ h1 {
 h3 {
     margin-top: 3px;
     padding-bottom: 5px;
-	border-bottom: 1px solid black;
+    border-bottom: 1px solid black;
+    color: red;
 }
+
+h3.list {color:black}
 
 h2 {
     margin-top:40px;
@@ -105,8 +107,7 @@ dt {
     float:right;
     color:black;
     padding: 2px;
-    border: 1px dotted red;
-    background-color: #F4FFFF;
+    background-color: #F5F5F5;
 }
 
 .imageblock {
