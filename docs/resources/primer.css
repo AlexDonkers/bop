@@ -1,6 +1,13 @@
 /* define a class "noprint" for sections which don't get printed */  
 .noprint { display: none; }
 
+/* header */
+
+div.head {
+  text-align: center;
+  background-image: load("TUEbg.png"); 
+}
+
 /* our syntax menu for switching */
 div.syntaxmenu {
   border: 1px dotted black;
