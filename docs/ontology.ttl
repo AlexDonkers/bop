@@ -1,0 +1,453 @@
+@prefix : <http://www.github.com/AlexDonkers/bop#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.github.com/AlexDonkers/bop#> .
+
+<http://www.github.com/AlexDonkers/bop#> rdf:type owl:Ontology ;
+                                          <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-8809-3277> ;
+                                          <http://purl.org/dc/terms/description> """The Building Performance Ontology (BOP) is a set of ontological constructs which allows integration of data related to building performance. By (re-)using ontology patterns from major ontologies in the field, BOP provides a method to integrate both static and dynamic (time-series) properties to buildings, zones, elements and products. 
+
+It's aim is to facilitate building managers and facility managers with a common data structure to ease the process of data integration and to allow software tools to deal with the large heterogeneity of data. 
+
+By (re-)using concepts from major ontologies in the field, BOP could easily be integrated with a wide range of existing ontologies and datasets. BOP could be seen as an extension of existing work rather than an individual ontology."""@en ;
+                                          <http://purl.org/dc/terms/title> "Building Performance Ontology"@en ;
+                                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "bop" ;
+                                          <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.github.com/AlexDonkers/bop#> ;
+                                          owl:versionInfo 1.1 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.github.com/AlexDonkers/bop#actuatedBy
+:actuatedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :executedBy .
+
+
+###  http://www.github.com/AlexDonkers/bop#containsProperty
+:containsProperty rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :partOfPropertySet ;
+                  rdfs:domain :PropertySet ;
+                  rdfs:range :Property ;
+                  rdfs:label "contains property"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#evaluatedBy
+:evaluatedBy rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :executedBy .
+
+
+###  http://www.github.com/AlexDonkers/bop#executedBy
+:executedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.github.com/AlexDonkers/bop#hasComplexActuation
+:hasComplexActuation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasComplexEvaluation .
+
+
+###  http://www.github.com/AlexDonkers/bop#hasComplexEvaluation
+:hasComplexEvaluation rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Property ;
+                      rdfs:range :Result .
+
+
+###  http://www.github.com/AlexDonkers/bop#hasComplexObservation
+:hasComplexObservation rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :hasComplexEvaluation .
+
+
+###  http://www.github.com/AlexDonkers/bop#hasComplexProperty
+:hasComplexProperty rdf:type owl:ObjectProperty .
+
+
+###  http://www.github.com/AlexDonkers/bop#hasComplexResult
+:hasComplexResult rdf:type owl:ObjectProperty .
+
+
+###  http://www.github.com/AlexDonkers/bop#hasComplexUnit
+:hasComplexUnit rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isComplexUnitOf ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:domain :Result ;
+                rdfs:range [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasComplexUnit ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Unit
+                           ] ;
+                rdfs:label "has complex unit"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#hasExternalDatabase
+:hasExternalDatabase rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :isExternalDatabaseOf ;
+                     rdfs:domain :Executor ;
+                     rdfs:range :Database ;
+                     rdfs:label "has external database"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest
+:hasFeatureOfInterest rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :isFeatureOfInterestOf ;
+                      rdfs:label "has feature of interest"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#hasSubExecutor
+:hasSubExecutor rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <https://w3id.org/bot#hasSubElement> ;
+                rdfs:domain :Executor ;
+                rdfs:range :Executor .
+
+
+###  http://www.github.com/AlexDonkers/bop#hasSubSensor
+:hasSubSensor rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :hasSubExecutor ;
+              rdfs:domain :Sensor ;
+              rdfs:range :Sensor .
+
+
+###  http://www.github.com/AlexDonkers/bop#hostsExecutor
+:hostsExecutor rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isHostedBy ;
+               rdfs:label "hosts"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#isComplexUnitOf
+:isComplexUnitOf rdf:type owl:ObjectProperty ,
+                          owl:InverseFunctionalProperty .
+
+
+###  http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf
+:isExternalDatabaseOf rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Database ;
+                      rdfs:range :Executor ;
+                      rdfs:label "is external database of"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf
+:isFeatureOfInterestOf rdf:type owl:ObjectProperty ;
+                       rdfs:label "has feature of interest"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#isHostedBy
+:isHostedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :Executor ;
+            rdfs:label "is hosted by"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#observedBy
+:observedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :evaluatedBy ;
+            rdfs:domain :Property ;
+            rdfs:range :Observation ;
+            rdfs:label "observed by"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#partOfPropertySet
+:partOfPropertySet rdf:type owl:ObjectProperty .
+
+
+###  http://www.github.com/AlexDonkers/bop#performedActuation
+:performedActuation rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :performedExecution .
+
+
+###  http://www.github.com/AlexDonkers/bop#performedEvaluation
+:performedEvaluation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :performedExecution .
+
+
+###  http://www.github.com/AlexDonkers/bop#performedExecution
+:performedExecution rdf:type owl:ObjectProperty .
+
+
+###  http://www.github.com/AlexDonkers/bop#performedObservation
+:performedObservation rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :performedEvaluation .
+
+
+###  https://w3id.org/bot#hasSubElement
+<https://w3id.org/bot#hasSubElement> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain :Element ;
+                                     rdfs:range :Element ;
+                                     rdfs:label "has sub element"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.github.com/AlexDonkers/bop#hasSimpleEvaluation
+:hasSimpleEvaluation rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty .
+
+
+###  http://www.github.com/AlexDonkers/bop#hasSimpleProperty
+:hasSimpleProperty rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty .
+
+
+###  http://www.github.com/AlexDonkers/bop#hasSimpleResult
+:hasSimpleResult rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty .
+
+
+###  http://www.github.com/AlexDonkers/bop#hasSimpleUnit
+:hasSimpleUnit rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty .
+
+
+###  http://www.github.com/AlexDonkers/bop#hasValue
+:hasValue rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty .
+
+
+###  http://www.w3.org/ns/prov#generatedAtTime
+<http://www.w3.org/ns/prov#generatedAtTime> rdf:type owl:DatatypeProperty ,
+                                                     owl:FunctionalProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.github.com/AlexDonkers/bop#Actuation
+:Actuation rdf:type owl:Class ;
+           rdfs:subClassOf :Execution ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :actuatedBy ;
+                             owl:allValuesFrom :Actuator
+                           ] ;
+           rdfs:label "Actuation"@en ,
+                      "Bediening"@nl .
+
+
+###  http://www.github.com/AlexDonkers/bop#Actuator
+:Actuator rdf:type owl:Class ;
+          rdfs:subClassOf :Device ;
+          rdfs:label "Actuator"@en ,
+                     "Actuator"@nl .
+
+
+###  http://www.github.com/AlexDonkers/bop#Database
+:Database rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :isExternalDatabaseOf ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Executor
+                          ] ;
+          rdfs:comment """A collection of data.
+
+The database class is used to describe an external database, storing results of executions, such as a time-series database."""@en ;
+          rdfs:label "Databank"@nl ,
+                     "Database"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#Device
+:Device rdf:type owl:Class ;
+        rdfs:subClassOf :Executor ;
+        rdfs:comment "An object or machine that can implement a procedure to perform an execution."@en ,
+                     "Een object of machine die een taak kan uitvoeren op basis van een procedure."@nl ;
+        rdfs:label "Apparaat"@nl ,
+                   "Device"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#Element
+:Element rdf:type owl:Class ;
+         rdfs:subClassOf :FeatureOfInterest ;
+         rdfs:label "Element"@en ,
+                    "Element"@nl .
+
+
+###  http://www.github.com/AlexDonkers/bop#Evaluation
+:Evaluation rdf:type owl:Class ;
+            rdfs:subClassOf :Execution ;
+            rdfs:label "Evaluatie"@nl ,
+                       "Evaluation"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#Execution
+:Execution rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :executedBy ;
+                             owl:allValuesFrom :Executor
+                           ] ;
+           rdfs:comment "Het doen of uitvoeren van iets. Een uitvoering kan worden uitgevoerd door een uitvoerder, eventueel op basis van een procedure."@nl ,
+                        "The act of doing or performing something. An execution could be performed by an executor, possibly based on a procedure."@en ;
+           rdfs:label "Execution"@en ,
+                      "Uitvoering"@nl .
+
+
+###  http://www.github.com/AlexDonkers/bop#Executor
+:Executor rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :isHostedBy ;
+                            owl:allValuesFrom :Platform
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :isHostedBy ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Platform
+                          ] ;
+          owl:disjointWith :Platform ;
+          rdfs:comment "An agent that can implement a procedure to perform an execution."@en ,
+                       "Iets wat een taak kan uitvoeren op basis van een procedure."@nl ;
+          rdfs:label "Executor"@en ,
+                     "Uitvoerder"@nl .
+
+
+###  http://www.github.com/AlexDonkers/bop#FeatureOfInterest
+:FeatureOfInterest rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :isFeatureOfInterestOf ;
+                                     owl:allValuesFrom :Property
+                                   ] ;
+                   rdfs:comment "An abstraction of a real world phenomena (object, part, zone, event, etc)."@en ,
+                                "Een abstractie van een fenomeen uit de echte wereld (object, onderdeel, zone, evenement, etc)."@nl ;
+                   rdfs:label "Feature of interest"@en ,
+                              "Kenmerk van belang"@nl .
+
+
+###  http://www.github.com/AlexDonkers/bop#Function
+:Function rdf:type owl:Class ;
+          rdfs:subClassOf :Property ;
+          rdfs:label "Functie"@nl ,
+                     "Function"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#Interface
+:Interface rdf:type owl:Class ;
+           rdfs:subClassOf :FeatureOfInterest ;
+           rdfs:label "Interface"@en ,
+                      "Raakvlak"@nl .
+
+
+###  http://www.github.com/AlexDonkers/bop#Observation
+:Observation rdf:type owl:Class ;
+             rdfs:subClassOf :Evaluation ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :observedBy ;
+                               owl:allValuesFrom :Sensor
+                             ] ;
+             rdfs:label "Observatie"@nl ,
+                        "Observation"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#Platform
+:Platform rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hostsExecutor ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Executor
+                          ] ;
+          rdfs:comment "An entity that hosts an executor."@en ;
+          rdfs:label "Platform"@en ,
+                     "Platform"@nl .
+
+
+###  http://www.github.com/AlexDonkers/bop#Property
+:Property rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasFeatureOfInterest ;
+                            owl:allValuesFrom :FeatureOfInterest
+                          ] ;
+          rdfs:comment "A characteristic of a feature of interest. The property is intrinsic to and cannot exist without the feature of interest."@en ,
+                       "Een kenmerk van een feature of interest. Het kenmerk is intrinsiek aan en kan niet bestaan zonder de feature of interest."@nl ;
+          rdfs:label "Eigenschap"@nl ,
+                     "Property"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#PropertySet
+:PropertySet rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :containsProperty ;
+                               owl:allValuesFrom :Property
+                             ] ;
+             rdfs:comment "A collection of properties. The collection could also be a singleton or a null set."@en ,
+                          "Een collectie van eigenschappen. De collectie kan ook een eenpuntsverzameling of een lege verzameling zijn."@nl ;
+             rdfs:label "Property set"@en ,
+                        "Verzameling van eigenschappen"@nl .
+
+
+###  http://www.github.com/AlexDonkers/bop#Result
+:Result rdf:type owl:Class ;
+        rdfs:label "Result"@en ,
+                   "Resultaat"@nl .
+
+
+###  http://www.github.com/AlexDonkers/bop#Sensor
+:Sensor rdf:type owl:Class ;
+        rdfs:subClassOf :Device ;
+        rdfs:label "Sensor"@en ,
+                   "Sensor"@nl .
+
+
+###  http://www.github.com/AlexDonkers/bop#Unit
+:Unit rdf:type owl:Class ;
+      rdfs:comment "A particular quantity value that has been chosen as a scale for measuring other quantities of the same kind."@en ,
+                   "Een specifieke waarde van een natuurkundige grootheid die is gekozen als een schaal voor het meten van andere hoeveelheden van diezelfde grootheid."@nl ;
+      rdfs:label "Eenheid"@nl ,
+                 "Unit"@en .
+
+
+###  http://www.github.com/AlexDonkers/bop#Zone
+:Zone rdf:type owl:Class ;
+      rdfs:subClassOf :FeatureOfInterest ;
+      rdfs:label "Zone"@en ,
+                 "Zone"@nl .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.github.com/AlexDonkers/bop#
+<http://www.github.com/AlexDonkers/bop#> rdf:type owl:NamedIndividual .
+
+
+###  https://orcid.org/0000-0002-8809-3277
+<https://orcid.org/0000-0002-8809-3277> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Alex Donkers" .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
