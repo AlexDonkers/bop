@@ -1,5 +1,6 @@
 body {
     text-align: justify;
+    background-color: white;
 }
 
 h1 {
@@ -7,6 +8,7 @@ h1 {
     color:red;
     font-family: Helvetica;
     font-weight: bold;
+    background-color: transparent;
 }
 
 .hlist {
