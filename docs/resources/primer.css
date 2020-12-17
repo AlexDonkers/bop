@@ -8,6 +8,7 @@ div.head {
   background-image: url('https://raw.githubusercontent.com/AlexDonkers/bop/main/docs/resources/TUEbg.png'); 
   background-repeat: no-repeat ;
   background-size: cover ;
+  color: white
 }
 
 /* our syntax menu for switching */
