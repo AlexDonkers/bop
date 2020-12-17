@@ -27,7 +27,7 @@ h1 {
 }
 
 .entity {
-    border: 1px solid red;
+    background-color: #F5F5F5; 
     margin:5px 0px 5px 0px;
     padding: 5px;    
 }
@@ -69,7 +69,9 @@ h3 {
 }
 
 h2 {
-    margin-top:40px;    
+    margin-top:40px;
+    font-weight: bold;
+    text-transform: uppercase;    
 }
 
 .dotted {
@@ -83,7 +85,7 @@ dt {
 .description {
     border-top: 1px dashed gray;
     border-bottom: 1px dashed gray;
-    background-color: rgb(83, 93, 153);
+    background-color:white;
     margin-top:5px;
     padding-bottom:5px;
 }

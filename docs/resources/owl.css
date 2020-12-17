@@ -111,11 +111,11 @@ table.fss td:first-child {
     width: 60%;
 }
 table{
-    background-color: #f4ffff;
-    border: 1px solid navy;
+    background-color: #f5f5f5;
     margin: 20px;
     vertical-align: middle;
 }
+
 table td {
     padding: 5px 15px;
     text-align: left;
