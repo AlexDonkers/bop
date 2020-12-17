@@ -5,7 +5,9 @@
 
 div.head {
   text-align: center;
-  background-image: load("TUEbg.png"); 
+  background-image: url('https://raw.githubusercontent.com/AlexDonkers/bop/main/docs/resources/TUEbg.png'); 
+  background-repeat: no-repeat ;
+  background-size: cover ;
 }
 
 /* our syntax menu for switching */
