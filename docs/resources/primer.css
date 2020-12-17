@@ -84,7 +84,7 @@ div.fssyntax pre, div.rdfxml pre, div.owlxml pre, div.turtle pre, div.manchester
 /* The actual status box */
  .status div {   
     display: block;
-    background: rgb(0, 90, 156);
+    background: red;
     color: white;
     width: 24em;
     padding-top: 0.3em;
@@ -98,6 +98,6 @@ div.fssyntax pre, div.rdfxml pre, div.owlxml pre, div.turtle pre, div.manchester
 
 /* And text inside, don't confuse fonts as it breaks em above */
 .status div span {
-    font-family: "Tauri";
+    font-family: "Helvetica";
     font-size: larger;
 }
