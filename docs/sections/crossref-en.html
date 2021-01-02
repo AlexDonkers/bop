@@ -10,16 +10,14 @@ This section provides details for each class and property defined by Building Pe
          <a href="#Actuator" title="http://www.github.com/AlexDonkers/bop#Actuator">Actuator</a>
       </li>
       <li>
+         <a href="#Collection" title="http://www.github.com/AlexDonkers/bop#Collection">Collection</a>
+      </li>
+      <li>
+         <a href="#CurrentState"
+            title="http://www.github.com/AlexDonkers/bop#CurrentState">Current state</a>
+      </li>
+      <li>
          <a href="#Database" title="http://www.github.com/AlexDonkers/bop#Database">Database</a>
-      </li>
-      <li>
-         <a href="#Device" title="http://www.github.com/AlexDonkers/bop#Device">Device</a>
-      </li>
-      <li>
-         <a href="#Element" title="http://www.github.com/AlexDonkers/bop#Element">Element</a>
-      </li>
-      <li>
-         <a href="#Evaluation" title="http://www.github.com/AlexDonkers/bop#Evaluation">Evaluation</a>
       </li>
       <li>
          <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
@@ -35,14 +33,14 @@ This section provides details for each class and property defined by Building Pe
          <a href="#Function" title="http://www.github.com/AlexDonkers/bop#Function">Function</a>
       </li>
       <li>
-         <a href="#Interface" title="http://www.github.com/AlexDonkers/bop#Interface">Interface</a>
-      </li>
-      <li>
          <a href="#Observation"
             title="http://www.github.com/AlexDonkers/bop#Observation">Observation</a>
       </li>
       <li>
          <a href="#Platform" title="http://www.github.com/AlexDonkers/bop#Platform">Platform</a>
+      </li>
+      <li>
+         <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
       </li>
       <li>
          <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
@@ -60,9 +58,6 @@ This section provides details for each class and property defined by Building Pe
       <li>
          <a href="#Unit" title="http://www.github.com/AlexDonkers/bop#Unit">Unit</a>
       </li>
-      <li>
-         <a href="#Zone" title="http://www.github.com/AlexDonkers/bop#Zone">Zone</a>
-      </li>
    </ul>
    <div class="entity" id="Actuation">
       <h3>Actuation<sup class="type-c" title="class">c</sup>
@@ -71,11 +66,25 @@ This section provides details for each class and property defined by Building Pe
       </h3>
       <p>
          <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Actuation</p>
+      <div class="comment">
+         <span class="markdown">An act of carrying out an actuation procedure by an actuator to change the state of a property.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#actuatedBy" title="http://www.github.com/AlexDonkers/bop#actuatedBy">actuated by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#performedActuation"
+               title="http://www.github.com/AlexDonkers/bop#performedActuation">performed actuation</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -86,10 +95,80 @@ This section provides details for each class and property defined by Building Pe
       </h3>
       <p>
          <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Actuator</p>
+      <div class="comment">
+         <span class="markdown">An agent that can implement an actuation procedure to change the state of a property..</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Device" title="http://www.github.com/AlexDonkers/bop#Device">Device</a>
+            <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasSubActuator"
+               title="http://www.github.com/AlexDonkers/bop#hasSubActuator">has sub-actuator</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSubActuatorOf"
+               title="http://www.github.com/AlexDonkers/bop#isSubActuatorOf">is sub-actuator of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#performedActuation"
+               title="http://www.github.com/AlexDonkers/bop#performedActuation">performed actuation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#actuatedBy" title="http://www.github.com/AlexDonkers/bop#actuatedBy">actuated by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSubActuator"
+               title="http://www.github.com/AlexDonkers/bop#hasSubActuator">has sub-actuator</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSubActuatorOf"
+               title="http://www.github.com/AlexDonkers/bop#isSubActuatorOf">is sub-actuator of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Collection">
+      <h3>Collection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Collection</p>
+      <div class="comment">
+         <span class="markdown">A collection of documents in a database.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isCollectionOf"
+               title="http://www.github.com/AlexDonkers/bop#isCollectionOf">is collection of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasCollection"
+               title="http://www.github.com/AlexDonkers/bop#hasCollection">has collection</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CurrentState">
+      <h3>Current state<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#CurrentState</p>
+      <div class="comment">
+         <span class="markdown">The most recently defined state of a property.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -111,7 +190,9 @@ The database class is used to describe an external database, storing results of 
          <dd/>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#isExternalDatabaseOf"
+            <a href="#hasCollection"
+               title="http://www.github.com/AlexDonkers/bop#hasCollection">has collection</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isExternalDatabaseOf"
                title="http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf">is external database of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -119,77 +200,23 @@ The database class is used to describe an external database, storing results of 
          <dd>
             <a href="#hasExternalDatabase"
                title="http://www.github.com/AlexDonkers/bop#hasExternalDatabase">has external database</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isCollectionOf"
+               title="http://www.github.com/AlexDonkers/bop#isCollectionOf">is collection of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Device">
-      <h3>Device<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Device</p>
-      <div class="comment">
-         <span class="markdown">An object or machine that can implement a procedure to perform an execution.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#Actuator" title="http://www.github.com/AlexDonkers/bop#Actuator">Actuator</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Sensor" title="http://www.github.com/AlexDonkers/bop#Sensor">Sensor</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Element">
-      <h3>Element<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Element</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#FeatureOfInterest"
-               title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#https://w3id.org/bot#hasSubElement" title="https://w3id.org/bot#hasSubElement">has sub element</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#https://w3id.org/bot#hasSubElement" title="https://w3id.org/bot#hasSubElement">has sub element</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Evaluation">
-      <h3>Evaluation<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Evaluation</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
+         <dt>is disjoint with</dt>
          <dd>
             <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#Observation"
-               title="http://www.github.com/AlexDonkers/bop#Observation">Observation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest"
+               title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="http://www.github.com/AlexDonkers/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet"
+               title="http://www.github.com/AlexDonkers/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="http://www.github.com/AlexDonkers/bop#Unit">Unit</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -202,7 +229,7 @@ The database class is used to describe an external database, storing results of 
       <p>
          <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Execution</p>
       <div class="comment">
-         <span class="markdown">The act of doing or performing something. An execution could be performed by an executor, possibly based on a procedure.</span>
+         <span class="markdown">An act of carrying out a procedure by an executor on a property</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -210,7 +237,45 @@ The database class is used to describe an external database, storing results of 
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Actuation" title="http://www.github.com/AlexDonkers/bop#Actuation">Actuation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Evaluation" title="http://www.github.com/AlexDonkers/bop#Evaluation">Evaluation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Observation"
+               title="http://www.github.com/AlexDonkers/bop#Observation">Observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#executedBy" title="http://www.github.com/AlexDonkers/bop#executedBy">executed by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasFeatureOfInterest"
+               title="http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest">has feature of interest</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasResult" title="http://www.github.com/AlexDonkers/bop#hasResult">has result</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSimpleResult"
+               title="http://www.github.com/AlexDonkers/bop#hasSimpleResult">has simple result</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#usedProcedure"
+               title="http://www.github.com/AlexDonkers/bop#usedProcedure">used procedure</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isFeatureOfInterestOf"
+               title="http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf">is feature of interest of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isResultOf" title="http://www.github.com/AlexDonkers/bop#isResultOf">is result of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isUsedFor" title="http://www.github.com/AlexDonkers/bop#isUsedFor">is used for</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#performedExecution"
+               title="http://www.github.com/AlexDonkers/bop#performedExecution">performed execution</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="http://www.github.com/AlexDonkers/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest"
+               title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="http://www.github.com/AlexDonkers/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet"
+               title="http://www.github.com/AlexDonkers/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="http://www.github.com/AlexDonkers/bop#Unit">Unit</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -230,29 +295,55 @@ The database class is used to describe an external database, storing results of 
          <dd/>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#Device" title="http://www.github.com/AlexDonkers/bop#Device">Device</a>
+            <a href="#Actuator" title="http://www.github.com/AlexDonkers/bop#Actuator">Actuator</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Sensor" title="http://www.github.com/AlexDonkers/bop#Sensor">Sensor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasExternalDatabase"
+            <a href="#actsOn" title="http://www.github.com/AlexDonkers/bop#actsOn">acts on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasExternalDatabase"
                title="http://www.github.com/AlexDonkers/bop#hasExternalDatabase">has external database</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasSubExecutor"
-               title="http://www.github.com/AlexDonkers/bop#hasSubExecutor">has sub executor</a>
+               title="http://www.github.com/AlexDonkers/bop#hasSubExecutor">has sub-executor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#implementsProcedure"
+               title="http://www.github.com/AlexDonkers/bop#implementsProcedure">implements procedure</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isHostedBy" title="http://www.github.com/AlexDonkers/bop#isHostedBy">is hosted by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSubExecutorOf"
+               title="http://www.github.com/AlexDonkers/bop#isSubExecutorOf">is sub-executor of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#performedExecution"
+               title="http://www.github.com/AlexDonkers/bop#performedExecution">performed execution</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasSubExecutor"
-               title="http://www.github.com/AlexDonkers/bop#hasSubExecutor">has sub executor</a>
+            <a href="#executedBy" title="http://www.github.com/AlexDonkers/bop#executedBy">executed by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSubExecutor"
+               title="http://www.github.com/AlexDonkers/bop#hasSubExecutor">has sub-executor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hosts" title="http://www.github.com/AlexDonkers/bop#hosts">hosts</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#implementedBy"
+               title="http://www.github.com/AlexDonkers/bop#implementedBy">implemented by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isActedOnBy"
+               title="http://www.github.com/AlexDonkers/bop#isActedOnBy">is acted on by</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isExternalDatabaseOf"
                title="http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf">is external database of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSubExecutorOf"
+               title="http://www.github.com/AlexDonkers/bop#isSubExecutorOf">is sub-executor of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#Platform" title="http://www.github.com/AlexDonkers/bop#Platform">Platform</a>
+            <a href="#Database" title="http://www.github.com/AlexDonkers/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest"
+               title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="http://www.github.com/AlexDonkers/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet"
+               title="http://www.github.com/AlexDonkers/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="http://www.github.com/AlexDonkers/bop#Unit">Unit</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -265,16 +356,51 @@ The database class is used to describe an external database, storing results of 
       <p>
          <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#FeatureOfInterest</p>
       <div class="comment">
-         <span class="markdown">An abstraction of a real world phenomena (object, part, zone, event, etc).</span>
+         <span class="markdown">An abstraction of a real-world phenomenon which could be described in terms of its properties.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>An object, part, zone, event etc.</pre>
+         </dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
-         <dt>has sub-classes</dt>
+         <dt>is in domain of</dt>
          <dd>
-            <a href="#Element" title="http://www.github.com/AlexDonkers/bop#Element">Element</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Interface" title="http://www.github.com/AlexDonkers/bop#Interface">Interface</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Zone" title="http://www.github.com/AlexDonkers/bop#Zone">Zone</a>
+            <a href="#hasComplexProperty"
+               title="http://www.github.com/AlexDonkers/bop#hasComplexProperty">has complex property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasProperty"
+               title="http://www.github.com/AlexDonkers/bop#hasProperty">has property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSimpleProperty"
+               title="http://www.github.com/AlexDonkers/bop#hasSimpleProperty">has simple property</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isFeatureOfInterestOf"
+               title="http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf">is feature of interest of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasFeatureOfInterest"
+               title="http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest">has feature of interest</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isComplexPropertyOf"
+               title="http://www.github.com/AlexDonkers/bop#isComplexPropertyOf">is complex property of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isPropertyOf"
+               title="http://www.github.com/AlexDonkers/bop#isPropertyOf">is property of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="http://www.github.com/AlexDonkers/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="http://www.github.com/AlexDonkers/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet"
+               title="http://www.github.com/AlexDonkers/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="http://www.github.com/AlexDonkers/bop#Unit">Unit</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -286,26 +412,13 @@ The database class is used to describe an external database, storing results of 
       </h3>
       <p>
          <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Function</p>
+      <div class="comment">
+         <span class="markdown">A function of a feature of interest.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Interface">
-      <h3>Interface<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Interface</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#FeatureOfInterest"
-               title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -317,15 +430,24 @@ The database class is used to describe an external database, storing results of 
       </h3>
       <p>
          <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Observation</p>
+      <div class="comment">
+         <span class="markdown">An act of carrying out an observation procedure by a sensor to observe the state of a property.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Evaluation" title="http://www.github.com/AlexDonkers/bop#Evaluation">Evaluation</a>
+            <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#observedBy" title="http://www.github.com/AlexDonkers/bop#observedBy">observed by</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#observedBy" title="http://www.github.com/AlexDonkers/bop#observedBy">observed by</a>
+            <a href="#performedObservation"
+               title="http://www.github.com/AlexDonkers/bop#performedObservation">performed observation</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -343,9 +465,71 @@ The database class is used to describe an external database, storing results of 
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hosts" title="http://www.github.com/AlexDonkers/bop#hosts">hosts</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isHostedBy" title="http://www.github.com/AlexDonkers/bop#isHostedBy">is hosted by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+            <a href="#Database" title="http://www.github.com/AlexDonkers/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest"
+               title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet"
+               title="http://www.github.com/AlexDonkers/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="http://www.github.com/AlexDonkers/bop#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Procedure">
+      <h3>Procedure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Procedure</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#implementedBy"
+               title="http://www.github.com/AlexDonkers/bop#implementedBy">implemented by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isUsedFor" title="http://www.github.com/AlexDonkers/bop#isUsedFor">is used for</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#implementsProcedure"
+               title="http://www.github.com/AlexDonkers/bop#implementsProcedure">implements procedure</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#usedProcedure"
+               title="http://www.github.com/AlexDonkers/bop#usedProcedure">used procedure</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="http://www.github.com/AlexDonkers/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest"
+               title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="http://www.github.com/AlexDonkers/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet"
+               title="http://www.github.com/AlexDonkers/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="http://www.github.com/AlexDonkers/bop#Unit">Unit</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -358,7 +542,7 @@ The database class is used to describe an external database, storing results of 
       <p>
          <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Property</p>
       <div class="comment">
-         <span class="markdown">A characteristic of a feature of interest. The property is intrinsic to and cannot exist without the feature of interest.</span>
+         <span class="markdown">A measurable and intrinsic characteristic of a feature of interest.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -370,16 +554,47 @@ The database class is used to describe an external database, storing results of 
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasComplexEvaluation"
-               title="http://www.github.com/AlexDonkers/bop#hasComplexEvaluation">has complex evaluation</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#observedBy" title="http://www.github.com/AlexDonkers/bop#observedBy">observed by</a>
+            <a href="#hasPropertyState"
+               title="http://www.github.com/AlexDonkers/bop#hasPropertyState">has property state</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSimplePropertyState"
+               title="http://www.github.com/AlexDonkers/bop#hasSimplePropertyState">has simple property state</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSubProperty"
+               title="http://www.github.com/AlexDonkers/bop#hasSubProperty">has sub-property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isActedOnBy"
+               title="http://www.github.com/AlexDonkers/bop#isActedOnBy">is acted on by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isPartOfPropertySet"
+               title="http://www.github.com/AlexDonkers/bop#isPartOfPropertySet">is part of property set</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isPropertyOf"
+               title="http://www.github.com/AlexDonkers/bop#isPropertyOf">is property of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#containsProperty"
+            <a href="#actsOn" title="http://www.github.com/AlexDonkers/bop#actsOn">acts on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containsProperty"
                title="http://www.github.com/AlexDonkers/bop#containsProperty">contains property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasProperty"
+               title="http://www.github.com/AlexDonkers/bop#hasProperty">has property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSubProperty"
+               title="http://www.github.com/AlexDonkers/bop#hasSubProperty">has sub-property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isPropertyStateOf"
+               title="http://www.github.com/AlexDonkers/bop#isPropertyStateOf">is property state of</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="http://www.github.com/AlexDonkers/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest"
+               title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="http://www.github.com/AlexDonkers/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet"
+               title="http://www.github.com/AlexDonkers/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="http://www.github.com/AlexDonkers/bop#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -402,6 +617,26 @@ The database class is used to describe an external database, storing results of 
                title="http://www.github.com/AlexDonkers/bop#containsProperty">contains property</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isPartOfPropertySet"
+               title="http://www.github.com/AlexDonkers/bop#isPartOfPropertySet">is part of property set</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="http://www.github.com/AlexDonkers/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest"
+               title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="http://www.github.com/AlexDonkers/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="http://www.github.com/AlexDonkers/bop#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="Result">
@@ -411,18 +646,61 @@ The database class is used to describe an external database, storing results of 
       </h3>
       <p>
          <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Result</p>
+      <div class="comment">
+         <span class="markdown">The outcome of an execution.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>The result may hold, for example, a value, a unit, a result time and other provenance data.</pre>
+         </dd>
+      </dl>
       <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Collection" title="http://www.github.com/AlexDonkers/bop#Collection">Collection</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CurrentState"
+               title="http://www.github.com/AlexDonkers/bop#CurrentState">Current state</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasComplexUnit"
-               title="http://www.github.com/AlexDonkers/bop#hasComplexUnit">has complex unit</a>
+            <a href="#http://www.w3.org/ns/prov#generatedAtTime" title="http://www.w3.org/ns/prov#generatedAtTime">generated at time</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSimpleUnit"
+               title="http://www.github.com/AlexDonkers/bop#hasSimpleUnit">has simple unit</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasUnit" title="http://www.github.com/AlexDonkers/bop#hasUnit">has unit</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasValue" title="http://www.github.com/AlexDonkers/bop#hasValue">has value</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isComplexPropertyOf"
+               title="http://www.github.com/AlexDonkers/bop#isComplexPropertyOf">is complex property of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isPropertyStateOf"
+               title="http://www.github.com/AlexDonkers/bop#isPropertyStateOf">is property state of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isResultOf" title="http://www.github.com/AlexDonkers/bop#isResultOf">is result of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasComplexEvaluation"
-               title="http://www.github.com/AlexDonkers/bop#hasComplexEvaluation">has complex evaluation</a>
+            <a href="#hasComplexProperty"
+               title="http://www.github.com/AlexDonkers/bop#hasComplexProperty">has complex property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPropertyState"
+               title="http://www.github.com/AlexDonkers/bop#hasPropertyState">has property state</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasResult" title="http://www.github.com/AlexDonkers/bop#hasResult">has result</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isUnitOf" title="http://www.github.com/AlexDonkers/bop#isUnitOf">is unit of</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="http://www.github.com/AlexDonkers/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest"
+               title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="http://www.github.com/AlexDonkers/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet"
+               title="http://www.github.com/AlexDonkers/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="http://www.github.com/AlexDonkers/bop#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -433,22 +711,32 @@ The database class is used to describe an external database, storing results of 
       </h3>
       <p>
          <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Sensor</p>
+      <div class="comment">
+         <span class="markdown">An agent that can implement an observation procedure to measure the state of a property.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Device" title="http://www.github.com/AlexDonkers/bop#Device">Device</a>
+            <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#hasSubSensor"
-               title="http://www.github.com/AlexDonkers/bop#hasSubSensor">has sub sensor</a>
+               title="http://www.github.com/AlexDonkers/bop#hasSubSensor">has sub-sensor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSubSensorOf"
+               title="http://www.github.com/AlexDonkers/bop#isSubSensorOf">is sub-sensor of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#performedObservation"
+               title="http://www.github.com/AlexDonkers/bop#performedObservation">performed observation</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasSubSensor"
-               title="http://www.github.com/AlexDonkers/bop#hasSubSensor">has sub sensor</a>
+               title="http://www.github.com/AlexDonkers/bop#hasSubSensor">has sub-sensor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSubSensorOf"
+               title="http://www.github.com/AlexDonkers/bop#isSubSensorOf">is sub-sensor of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#observedBy" title="http://www.github.com/AlexDonkers/bop#observedBy">observed by</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -463,19 +751,25 @@ The database class is used to describe an external database, storing results of 
       <div class="comment">
          <span class="markdown">A particular quantity value that has been chosen as a scale for measuring other quantities of the same kind.</span>
       </div>
-   </div>
-   <div class="entity" id="Zone">
-      <h3>Zone<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#Zone</p>
       <dl class="description">
-         <dt>has super-classes</dt>
+         <dt>is in domain of</dt>
          <dd>
-            <a href="#FeatureOfInterest"
+            <a href="#isUnitOf" title="http://www.github.com/AlexDonkers/bop#isUnitOf">is unit of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="http://www.github.com/AlexDonkers/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest"
                title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="http://www.github.com/AlexDonkers/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet"
+               title="http://www.github.com/AlexDonkers/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -484,40 +778,25 @@ The database class is used to describe an external database, storing results of 
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#actuatedBy" title="http://www.github.com/AlexDonkers/bop#actuatedBy">
-            <span>actuated by</span>
-         </a>
+         <a href="#actsOn" title="http://www.github.com/AlexDonkers/bop#actsOn">acts on</a>
+      </li>
+      <li>
+         <a href="#actuatedBy" title="http://www.github.com/AlexDonkers/bop#actuatedBy">actuated by</a>
       </li>
       <li>
          <a href="#containsProperty"
             title="http://www.github.com/AlexDonkers/bop#containsProperty">contains property</a>
       </li>
       <li>
-         <a href="#evaluatedBy" title="http://www.github.com/AlexDonkers/bop#evaluatedBy">
-            <span>evaluated by</span>
-         </a>
+         <a href="#executedBy" title="http://www.github.com/AlexDonkers/bop#executedBy">executed by</a>
       </li>
       <li>
-         <a href="#hasComplexActuation"
-            title="http://www.github.com/AlexDonkers/bop#hasComplexActuation">
-            <span>has complex actuation</span>
-         </a>
+         <a href="#hasCollection"
+            title="http://www.github.com/AlexDonkers/bop#hasCollection">has collection</a>
       </li>
       <li>
-         <a href="#hasComplexEvaluation"
-            title="http://www.github.com/AlexDonkers/bop#hasComplexEvaluation">
-            <span>has complex evaluation</span>
-         </a>
-      </li>
-      <li>
-         <a href="#hasComplexObservation"
-            title="http://www.github.com/AlexDonkers/bop#hasComplexObservation">
-            <span>has complex observation</span>
-         </a>
-      </li>
-      <li>
-         <a href="#hasComplexUnit"
-            title="http://www.github.com/AlexDonkers/bop#hasComplexUnit">has complex unit</a>
+         <a href="#hasComplexProperty"
+            title="http://www.github.com/AlexDonkers/bop#hasComplexProperty">has complex property</a>
       </li>
       <li>
          <a href="#hasExternalDatabase"
@@ -528,63 +807,150 @@ The database class is used to describe an external database, storing results of 
             title="http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest">has feature of interest</a>
       </li>
       <li>
-         <a href="#isFeatureOfInterestOf"
-            title="http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf">has feature of interest</a>
+         <a href="#hasProperty"
+            title="http://www.github.com/AlexDonkers/bop#hasProperty">has property</a>
       </li>
       <li>
-         <a href="#https://w3id.org/bot#hasSubElement" title="https://w3id.org/bot#hasSubElement">has sub element</a>
+         <a href="#hasPropertyState"
+            title="http://www.github.com/AlexDonkers/bop#hasPropertyState">has property state</a>
+      </li>
+      <li>
+         <a href="#hasResult" title="http://www.github.com/AlexDonkers/bop#hasResult">has result</a>
+      </li>
+      <li>
+         <a href="#hasSubActuator"
+            title="http://www.github.com/AlexDonkers/bop#hasSubActuator">has sub-actuator</a>
       </li>
       <li>
          <a href="#hasSubExecutor"
-            title="http://www.github.com/AlexDonkers/bop#hasSubExecutor">
-            <span>has sub executor</span>
-         </a>
+            title="http://www.github.com/AlexDonkers/bop#hasSubExecutor">has sub-executor</a>
+      </li>
+      <li>
+         <a href="#hasSubProperty"
+            title="http://www.github.com/AlexDonkers/bop#hasSubProperty">has sub-property</a>
       </li>
       <li>
          <a href="#hasSubSensor"
-            title="http://www.github.com/AlexDonkers/bop#hasSubSensor">
-            <span>has sub sensor</span>
-         </a>
+            title="http://www.github.com/AlexDonkers/bop#hasSubSensor">has sub-sensor</a>
       </li>
       <li>
-         <a href="#hostsExecutor"
-            title="http://www.github.com/AlexDonkers/bop#hostsExecutor">hosts</a>
+         <a href="#hasUnit" title="http://www.github.com/AlexDonkers/bop#hasUnit">has unit</a>
       </li>
       <li>
-         <a href="#isComplexUnitOf"
-            title="http://www.github.com/AlexDonkers/bop#isComplexUnitOf">
-            <span>is complex unit of</span>
-         </a>
+         <a href="#hosts" title="http://www.github.com/AlexDonkers/bop#hosts">hosts</a>
+      </li>
+      <li>
+         <a href="#implementedBy"
+            title="http://www.github.com/AlexDonkers/bop#implementedBy">implemented by</a>
+      </li>
+      <li>
+         <a href="#implementsProcedure"
+            title="http://www.github.com/AlexDonkers/bop#implementsProcedure">implements procedure</a>
+      </li>
+      <li>
+         <a href="#isActedOnBy"
+            title="http://www.github.com/AlexDonkers/bop#isActedOnBy">is acted on by</a>
+      </li>
+      <li>
+         <a href="#isCollectionOf"
+            title="http://www.github.com/AlexDonkers/bop#isCollectionOf">is collection of</a>
+      </li>
+      <li>
+         <a href="#isComplexPropertyOf"
+            title="http://www.github.com/AlexDonkers/bop#isComplexPropertyOf">is complex property of</a>
       </li>
       <li>
          <a href="#isExternalDatabaseOf"
             title="http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf">is external database of</a>
       </li>
       <li>
+         <a href="#isFeatureOfInterestOf"
+            title="http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf">is feature of interest of</a>
+      </li>
+      <li>
          <a href="#isHostedBy" title="http://www.github.com/AlexDonkers/bop#isHostedBy">is hosted by</a>
+      </li>
+      <li>
+         <a href="#isPartOfPropertySet"
+            title="http://www.github.com/AlexDonkers/bop#isPartOfPropertySet">is part of property set</a>
+      </li>
+      <li>
+         <a href="#isPropertyOf"
+            title="http://www.github.com/AlexDonkers/bop#isPropertyOf">is property of</a>
+      </li>
+      <li>
+         <a href="#isPropertyStateOf"
+            title="http://www.github.com/AlexDonkers/bop#isPropertyStateOf">is property state of</a>
+      </li>
+      <li>
+         <a href="#isResultOf" title="http://www.github.com/AlexDonkers/bop#isResultOf">is result of</a>
+      </li>
+      <li>
+         <a href="#isSubActuatorOf"
+            title="http://www.github.com/AlexDonkers/bop#isSubActuatorOf">is sub-actuator of</a>
+      </li>
+      <li>
+         <a href="#isSubExecutorOf"
+            title="http://www.github.com/AlexDonkers/bop#isSubExecutorOf">is sub-executor of</a>
+      </li>
+      <li>
+         <a href="#isSubSensorOf"
+            title="http://www.github.com/AlexDonkers/bop#isSubSensorOf">is sub-sensor of</a>
+      </li>
+      <li>
+         <a href="#isUnitOf" title="http://www.github.com/AlexDonkers/bop#isUnitOf">is unit of</a>
+      </li>
+      <li>
+         <a href="#isUsedFor" title="http://www.github.com/AlexDonkers/bop#isUsedFor">is used for</a>
       </li>
       <li>
          <a href="#observedBy" title="http://www.github.com/AlexDonkers/bop#observedBy">observed by</a>
       </li>
       <li>
          <a href="#performedActuation"
-            title="http://www.github.com/AlexDonkers/bop#performedActuation">
-            <span>performed actuation</span>
-         </a>
+            title="http://www.github.com/AlexDonkers/bop#performedActuation">performed actuation</a>
       </li>
       <li>
-         <a href="#performedEvaluation"
-            title="http://www.github.com/AlexDonkers/bop#performedEvaluation">
-            <span>performed evaluation</span>
-         </a>
+         <a href="#performedExecution"
+            title="http://www.github.com/AlexDonkers/bop#performedExecution">performed execution</a>
       </li>
       <li>
          <a href="#performedObservation"
-            title="http://www.github.com/AlexDonkers/bop#performedObservation">
-            <span>performed observation</span>
-         </a>
+            title="http://www.github.com/AlexDonkers/bop#performedObservation">performed observation</a>
+      </li>
+      <li>
+         <a href="#usedProcedure"
+            title="http://www.github.com/AlexDonkers/bop#usedProcedure">used procedure</a>
       </li>
    </ul>
+   <div class="entity" id="actsOn">
+      <h3>acts on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#actsOn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isActedOnBy"
+                  title="http://www.github.com/AlexDonkers/bop#isActedOnBy">is acted on by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="actuatedBy">
       <h3>actuated by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -596,7 +962,23 @@ The database class is used to describe an external database, storing results of 
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.github.com/AlexDonkers/bop#executedBy">executed by</span>
+               <a href="#executedBy" title="http://www.github.com/AlexDonkers/bop#executedBy">executed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Actuation" title="http://www.github.com/AlexDonkers/bop#Actuation">Actuation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Actuator" title="http://www.github.com/AlexDonkers/bop#Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#performedActuation"
+                  title="http://www.github.com/AlexDonkers/bop#performedActuation">performed actuation</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -624,129 +1006,99 @@ The database class is used to describe an external database, storing results of 
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <span class="dotted"
-                     title="http://www.github.com/AlexDonkers/bop#partOfPropertySet">part of property set</span>
+               <a href="#isPartOfPropertySet"
+                  title="http://www.github.com/AlexDonkers/bop#isPartOfPropertySet">is part of property set</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="evaluatedBy">
-      <h3>evaluated by<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="executedBy">
+      <h3>executed by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#evaluatedBy</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted" title="http://www.github.com/AlexDonkers/bop#executedBy">executed by</span>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has sub-properties</dt>
-            <dd>
-               <a href="#observedBy" title="http://www.github.com/AlexDonkers/bop#observedBy">observed by</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasComplexActuation">
-      <h3>has complex actuation<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasComplexActuation</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#hasComplexEvaluation"
-                  title="http://www.github.com/AlexDonkers/bop#hasComplexEvaluation">has complex evaluation</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasComplexEvaluation">
-      <h3>has complex evaluation<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasComplexEvaluation</p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#executedBy</p>
       <div class="description">
          <dl>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#hasComplexActuation"
-                  title="http://www.github.com/AlexDonkers/bop#hasComplexActuation">has complex actuation</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#hasComplexObservation"
-                  title="http://www.github.com/AlexDonkers/bop#hasComplexObservation">has complex observation</a>
+               <a href="#actuatedBy" title="http://www.github.com/AlexDonkers/bop#actuatedBy">actuated by</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#observedBy" title="http://www.github.com/AlexDonkers/bop#observedBy">observed by</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+               <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasComplexObservation">
-      <h3>has complex observation<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasComplexObservation</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#hasComplexEvaluation"
-                  title="http://www.github.com/AlexDonkers/bop#hasComplexEvaluation">has complex evaluation</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasComplexUnit">
-      <h3>has complex unit<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasComplexUnit</p>
-      <div class="description">
-         <p>
-            <strong>has characteristics:</strong> functional</p>
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#hasComplexUnit"
-                  title="http://www.github.com/AlexDonkers/bop#hasComplexUnit">has complex unit</a>
-               <sup class="type-op" title="object property">op</sup> 
-               <span class="logic">exactly</span> 1 <a href="#Unit" title="http://www.github.com/AlexDonkers/bop#Unit">Unit</a>
+               <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#isComplexUnitOf"
-                  title="http://www.github.com/AlexDonkers/bop#isComplexUnitOf">is complex unit of</a>
+               <a href="#performedExecution"
+                  title="http://www.github.com/AlexDonkers/bop#performedExecution">performed execution</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCollection">
+      <h3>has collection<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasCollection</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Database" title="http://www.github.com/AlexDonkers/bop#Database">Database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Collection" title="http://www.github.com/AlexDonkers/bop#Collection">Collection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isCollectionOf"
+                  title="http://www.github.com/AlexDonkers/bop#isCollectionOf">is collection of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasComplexProperty">
+      <h3>has complex property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasComplexProperty</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FeatureOfInterest"
+                  title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isComplexPropertyOf"
+                  title="http://www.github.com/AlexDonkers/bop#isComplexPropertyOf">is complex property of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -789,63 +1141,157 @@ The database class is used to describe an external database, storing results of 
          <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest</p>
       <div class="description">
          <dl>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#isFeatureOfInterestOf"
-                  title="http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf">has feature of interest</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="isFeatureOfInterestOf">
-      <h3>has feature of interest<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf</p>
-      <div class="description">
-         <dl>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#hasFeatureOfInterest"
-                  title="http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest">has feature of interest</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="https://w3id.org/bot#hasSubElement">
-      <h3>has sub element<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/bot#hasSubElement</p>
-      <div class="description">
-         <dl>
-            <dt>has sub-properties</dt>
-            <dd>
-               <a href="#hasSubExecutor"
-                  title="http://www.github.com/AlexDonkers/bop#hasSubExecutor">has sub executor</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Element" title="http://www.github.com/AlexDonkers/bop#Element">Element</a>
+               <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Element" title="http://www.github.com/AlexDonkers/bop#Element">Element</a>
+               <a href="#FeatureOfInterest"
+                  title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isFeatureOfInterestOf"
+                  title="http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf">is feature of interest of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasProperty">
+      <h3>has property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasProperty</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FeatureOfInterest"
+                  title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isPropertyOf"
+                  title="http://www.github.com/AlexDonkers/bop#isPropertyOf">is property of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPropertyState">
+      <h3>has property state<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasPropertyState</p>
+      <div class="comment">
+         <span class="markdown">Linking a property with a result</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>This object property is used to directly link a property to a property state. 
+
+Example: Temperature -- hasPropertyState --&gt; CurrentTemperatureState</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isPropertyStateOf"
+                  title="http://www.github.com/AlexDonkers/bop#isPropertyStateOf">is property state of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasResult">
+      <h3>has result<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasResult</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isResultOf" title="http://www.github.com/AlexDonkers/bop#isResultOf">is result of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSubActuator">
+      <h3>has sub-actuator<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasSubActuator</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasSubExecutor"
+                  title="http://www.github.com/AlexDonkers/bop#hasSubExecutor">has sub-executor</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Actuator" title="http://www.github.com/AlexDonkers/bop#Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Actuator" title="http://www.github.com/AlexDonkers/bop#Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isSubActuatorOf"
+                  title="http://www.github.com/AlexDonkers/bop#isSubActuatorOf">is sub-actuator of</a>
+               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="hasSubExecutor">
-      <h3>has sub executor<sup class="type-op" title="object property">op</sup>
+      <h3>has sub-executor<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -855,13 +1301,14 @@ The database class is used to describe an external database, storing results of 
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#https://w3id.org/bot#hasSubElement" title="https://w3id.org/bot#hasSubElement">has sub element</a>
-               <sup class="type-op" title="object property">op</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#hasSubSensor"
-                  title="http://www.github.com/AlexDonkers/bop#hasSubSensor">has sub sensor</a>
+               <a href="#hasSubActuator"
+                  title="http://www.github.com/AlexDonkers/bop#hasSubActuator">has sub-actuator</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasSubSensor"
+                  title="http://www.github.com/AlexDonkers/bop#hasSubSensor">has sub-sensor</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has domain</dt>
@@ -874,11 +1321,39 @@ The database class is used to describe an external database, storing results of 
                <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isSubExecutorOf"
+                  title="http://www.github.com/AlexDonkers/bop#isSubExecutorOf">is sub-executor of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSubProperty">
+      <h3>has sub-property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasSubProperty</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="hasSubSensor">
-      <h3>has sub sensor<sup class="type-op" title="object property">op</sup>
+      <h3>has sub-sensor<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -889,7 +1364,7 @@ The database class is used to describe an external database, storing results of 
             <dt>has super-properties</dt>
             <dd>
                <a href="#hasSubExecutor"
-                  title="http://www.github.com/AlexDonkers/bop#hasSubExecutor">has sub executor</a>
+                  title="http://www.github.com/AlexDonkers/bop#hasSubExecutor">has sub-executor</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has domain</dt>
@@ -902,18 +1377,65 @@ The database class is used to describe an external database, storing results of 
                <a href="#Sensor" title="http://www.github.com/AlexDonkers/bop#Sensor">Sensor</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isSubSensorOf"
+                  title="http://www.github.com/AlexDonkers/bop#isSubSensorOf">is sub-sensor of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="hostsExecutor">
+   <div class="entity" id="hasUnit">
+      <h3>has unit<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasUnit</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#hasUnit" title="http://www.github.com/AlexDonkers/bop#hasUnit">has unit</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">exactly</span> 1 <a href="#Unit" title="http://www.github.com/AlexDonkers/bop#Unit">Unit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isUnitOf" title="http://www.github.com/AlexDonkers/bop#isUnitOf">is unit of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hosts">
       <h3>hosts<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hostsExecutor</p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hosts</p>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Platform" title="http://www.github.com/AlexDonkers/bop#Platform">Platform</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#isHostedBy" title="http://www.github.com/AlexDonkers/bop#isHostedBy">is hosted by</a>
@@ -922,21 +1444,162 @@ The database class is used to describe an external database, storing results of 
          </dl>
       </div>
    </div>
-   <div class="entity" id="isComplexUnitOf">
-      <h3>is complex unit of<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="implementedBy">
+      <h3>implemented by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isComplexUnitOf</p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#implementedBy</p>
       <div class="description">
-         <p>
-            <strong>has characteristics:</strong> inverse functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#hasComplexUnit"
-                  title="http://www.github.com/AlexDonkers/bop#hasComplexUnit">has complex unit</a>
+               <a href="#implementsProcedure"
+                  title="http://www.github.com/AlexDonkers/bop#implementsProcedure">implements procedure</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="implementsProcedure">
+      <h3>implements procedure<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#implementsProcedure</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#implementedBy"
+                  title="http://www.github.com/AlexDonkers/bop#implementedBy">implemented by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isActedOnBy">
+      <h3>is acted on by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isActedOnBy</p>
+      <div class="comment">
+         <span class="markdown">Linking a property with the executor which acts on this property.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#actsOn" title="http://www.github.com/AlexDonkers/bop#actsOn">acts on</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isCollectionOf">
+      <h3>is collection of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isCollectionOf</p>
+      <div class="comment">
+         <span class="markdown">Linking a collection with the database it is part of.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Collection" title="http://www.github.com/AlexDonkers/bop#Collection">Collection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Database" title="http://www.github.com/AlexDonkers/bop#Database">Database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasCollection"
+                  title="http://www.github.com/AlexDonkers/bop#hasCollection">has collection</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isComplexPropertyOf">
+      <h3>is complex property of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isComplexPropertyOf</p>
+      <div class="comment">
+         <span class="markdown">Linking a result with a feature of interest</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>This object property is used to directly link the current state of a property to a feature of interest. It is the shortest route to link a result to a feature of interest. 
+
+Example: CurrentWallLength --isComplexPropertyOf --&gt; Wall</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FeatureOfInterest"
+                  title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasComplexProperty"
+                  title="http://www.github.com/AlexDonkers/bop#hasComplexProperty">has complex property</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -970,6 +1633,35 @@ The database class is used to describe an external database, storing results of 
          </dl>
       </div>
    </div>
+   <div class="entity" id="isFeatureOfInterestOf">
+      <h3>is feature of interest of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FeatureOfInterest"
+                  title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasFeatureOfInterest"
+                  title="http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest">has feature of interest</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="isHostedBy">
       <h3>is hosted by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -984,10 +1676,329 @@ The database class is used to describe an external database, storing results of 
                <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Platform" title="http://www.github.com/AlexDonkers/bop#Platform">Platform</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#hostsExecutor"
-                  title="http://www.github.com/AlexDonkers/bop#hostsExecutor">hosts</a>
+               <a href="#hosts" title="http://www.github.com/AlexDonkers/bop#hosts">hosts</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isPartOfPropertySet">
+      <h3>is part of property set<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isPartOfPropertySet</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#PropertySet"
+                  title="http://www.github.com/AlexDonkers/bop#PropertySet">Property set</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#containsProperty"
+                  title="http://www.github.com/AlexDonkers/bop#containsProperty">contains property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isPropertyOf">
+      <h3>is property of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isPropertyOf</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FeatureOfInterest"
+                  title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasProperty"
+                  title="http://www.github.com/AlexDonkers/bop#hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isPropertyStateOf">
+      <h3>is property state of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isPropertyStateOf</p>
+      <div class="comment">
+         <span class="markdown">Linking a result with a property</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>This object property is used to directly link the current state of a property to a property. It is the shortest route to link a result to a property. 
+
+Example: CurrentTemperatureState -- isPropertyStateOf --&gt; Temperature</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasPropertyState"
+                  title="http://www.github.com/AlexDonkers/bop#hasPropertyState">has property state</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isResultOf">
+      <h3>is result of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isResultOf</p>
+      <div class="comment">
+         <span class="markdown">Linking a result with an execution.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasResult" title="http://www.github.com/AlexDonkers/bop#hasResult">has result</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isSubActuatorOf">
+      <h3>is sub-actuator of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isSubActuatorOf</p>
+      <div class="comment">
+         <span class="markdown">Relation between an actuator and sub-actuators. The sub-actuators are of type actuator and could function as individual actuators.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>The object property could be used to model actuators which have multiple components with their own functions.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#isSubExecutorOf"
+                  title="http://www.github.com/AlexDonkers/bop#isSubExecutorOf">is sub-executor of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Actuator" title="http://www.github.com/AlexDonkers/bop#Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Actuator" title="http://www.github.com/AlexDonkers/bop#Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasSubActuator"
+                  title="http://www.github.com/AlexDonkers/bop#hasSubActuator">has sub-actuator</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isSubExecutorOf">
+      <h3>is sub-executor of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isSubExecutorOf</p>
+      <div class="comment">
+         <span class="markdown">Relation between an executor and sub-executors. The sub-executors are of type executor and could function as individual executors.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>The object property could be used to model devices which have multiple components with their own functions. A multisensor - for example - consists of multiple sub-sensors which individually perform a sensing function.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#isSubActuatorOf"
+                  title="http://www.github.com/AlexDonkers/bop#isSubActuatorOf">is sub-actuator of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#isSubSensorOf"
+                  title="http://www.github.com/AlexDonkers/bop#isSubSensorOf">is sub-sensor of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasSubExecutor"
+                  title="http://www.github.com/AlexDonkers/bop#hasSubExecutor">has sub-executor</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isSubSensorOf">
+      <h3>is sub-sensor of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isSubSensorOf</p>
+      <div class="comment">
+         <span class="markdown">Relation between a sensor and sub-sensors. The sub-sensors are of type sensor and could function as individual sensors.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>The object property could be used to model sensors which have multiple components with their own functions.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#isSubExecutorOf"
+                  title="http://www.github.com/AlexDonkers/bop#isSubExecutorOf">is sub-executor of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sensor" title="http://www.github.com/AlexDonkers/bop#Sensor">Sensor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sensor" title="http://www.github.com/AlexDonkers/bop#Sensor">Sensor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasSubSensor"
+                  title="http://www.github.com/AlexDonkers/bop#hasSubSensor">has sub-sensor</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isUnitOf">
+      <h3>is unit of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isUnitOf</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> inverse functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Unit" title="http://www.github.com/AlexDonkers/bop#Unit">Unit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasUnit" title="http://www.github.com/AlexDonkers/bop#hasUnit">has unit</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isUsedFor">
+      <h3>is used for<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#isUsedFor</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#usedProcedure"
+                  title="http://www.github.com/AlexDonkers/bop#usedProcedure">used procedure</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -1004,19 +2015,25 @@ The database class is used to describe an external database, storing results of 
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#evaluatedBy" title="http://www.github.com/AlexDonkers/bop#evaluatedBy">evaluated by</a>
+               <a href="#executedBy" title="http://www.github.com/AlexDonkers/bop#executedBy">executed by</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+               <a href="#Observation"
+                  title="http://www.github.com/AlexDonkers/bop#Observation">Observation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Observation"
-                  title="http://www.github.com/AlexDonkers/bop#Observation">Observation</a>
+               <a href="#Sensor" title="http://www.github.com/AlexDonkers/bop#Sensor">Sensor</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#performedObservation"
+                  title="http://www.github.com/AlexDonkers/bop#performedObservation">performed observation</a>
+               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -1032,32 +2049,58 @@ The database class is used to describe an external database, storing results of 
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="http://www.github.com/AlexDonkers/bop#performedExecution">performed execution</span>
+               <a href="#performedExecution"
+                  title="http://www.github.com/AlexDonkers/bop#performedExecution">performed execution</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Actuator" title="http://www.github.com/AlexDonkers/bop#Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Actuation" title="http://www.github.com/AlexDonkers/bop#Actuation">Actuation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#actuatedBy" title="http://www.github.com/AlexDonkers/bop#actuatedBy">actuated by</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="performedEvaluation">
-      <h3>performed evaluation<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="performedExecution">
+      <h3>performed execution<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#performedEvaluation</p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#performedExecution</p>
       <div class="description">
          <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted"
-                     title="http://www.github.com/AlexDonkers/bop#performedExecution">performed execution</span>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#performedObservation"
+               <a href="#performedActuation"
+                  title="http://www.github.com/AlexDonkers/bop#performedActuation">performed actuation</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#performedObservation"
                   title="http://www.github.com/AlexDonkers/bop#performedObservation">performed observation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Executor" title="http://www.github.com/AlexDonkers/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#executedBy" title="http://www.github.com/AlexDonkers/bop#executedBy">executed by</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -1074,8 +2117,51 @@ The database class is used to describe an external database, storing results of 
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <a href="#performedEvaluation"
-                  title="http://www.github.com/AlexDonkers/bop#performedEvaluation">performed evaluation</a>
+               <a href="#performedExecution"
+                  title="http://www.github.com/AlexDonkers/bop#performedExecution">performed execution</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sensor" title="http://www.github.com/AlexDonkers/bop#Sensor">Sensor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Observation"
+                  title="http://www.github.com/AlexDonkers/bop#Observation">Observation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#observedBy" title="http://www.github.com/AlexDonkers/bop#observedBy">observed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="usedProcedure">
+      <h3>used procedure<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#usedProcedure</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isUsedFor" title="http://www.github.com/AlexDonkers/bop#isUsedFor">is used for</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -1090,33 +2176,23 @@ The database class is used to describe an external database, storing results of 
          </a>
       </li>
       <li>
-         <a href="#hasSimpleEvaluation"
-            title="http://www.github.com/AlexDonkers/bop#hasSimpleEvaluation">
-            <span>has simple evaluation</span>
-         </a>
+         <a href="#hasSimpleProperty"
+            title="http://www.github.com/AlexDonkers/bop#hasSimpleProperty">has simple property</a>
       </li>
       <li>
-         <a href="#hasSimpleProperty"
-            title="http://www.github.com/AlexDonkers/bop#hasSimpleProperty">
-            <span>has simple property</span>
-         </a>
+         <a href="#hasSimplePropertyState"
+            title="http://www.github.com/AlexDonkers/bop#hasSimplePropertyState">has simple property state</a>
       </li>
       <li>
          <a href="#hasSimpleResult"
-            title="http://www.github.com/AlexDonkers/bop#hasSimpleResult">
-            <span>has simple result</span>
-         </a>
+            title="http://www.github.com/AlexDonkers/bop#hasSimpleResult">has simple result</a>
       </li>
       <li>
          <a href="#hasSimpleUnit"
-            title="http://www.github.com/AlexDonkers/bop#hasSimpleUnit">
-            <span>has simple unit</span>
-         </a>
+            title="http://www.github.com/AlexDonkers/bop#hasSimpleUnit">has simple unit</a>
       </li>
       <li>
-         <a href="#hasValue" title="http://www.github.com/AlexDonkers/bop#hasValue">
-            <span>has value</span>
-         </a>
+         <a href="#hasValue" title="http://www.github.com/AlexDonkers/bop#hasValue">has value</a>
       </li>
    </ul>
    <div class="entity" id="http://www.w3.org/ns/prov#generatedAtTime">
@@ -1126,14 +2202,17 @@ The database class is used to describe an external database, storing results of 
       </h3>
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/prov#generatedAtTime</p>
-   </div>
-   <div class="entity" id="hasSimpleEvaluation">
-      <h3>has simple evaluation<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasSimpleEvaluation</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasSimpleProperty">
       <h3>has simple property<sup class="type-dp" title="data property">dp</sup>
@@ -1142,6 +2221,43 @@ The database class is used to describe an external database, storing results of 
       </h3>
       <p>
          <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasSimpleProperty</p>
+      <div class="comment">
+         <span class="markdown">Linking a feature of interest with a simple property value described as a literal.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FeatureOfInterest"
+                  title="http://www.github.com/AlexDonkers/bop#FeatureOfInterest">Feature of interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSimplePropertyState">
+      <h3>has simple property state<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasSimplePropertyState</p>
+      <div class="comment">
+         <span class="markdown">Linking a property with a simple property state value described as a literal.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasSimpleResult">
       <h3>has simple result<sup class="type-dp" title="data property">dp</sup>
@@ -1150,6 +2266,20 @@ The database class is used to describe an external database, storing results of 
       </h3>
       <p>
          <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasSimpleResult</p>
+      <div class="comment">
+         <span class="markdown">Linking an execution with a simple result value described as a literal.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasSimpleUnit">
       <h3>has simple unit<sup class="type-dp" title="data property">dp</sup>
@@ -1158,6 +2288,20 @@ The database class is used to describe an external database, storing results of 
       </h3>
       <p>
          <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasSimpleUnit</p>
+      <div class="comment">
+         <span class="markdown">Linking a result with a unit described by a literal.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasValue">
       <h3>has value<sup class="type-dp" title="data property">dp</sup>
@@ -1166,18 +2310,30 @@ The database class is used to describe an external database, storing results of 
       </h3>
       <p>
          <strong>IRI:</strong> http://www.github.com/AlexDonkers/bop#hasValue</p>
+      <div class="comment">
+         <span class="markdown">The simple value of a result.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Result" title="http://www.github.com/AlexDonkers/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
 </div><div id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
       <li>
-         <a href="#https://orcid.org/0000-0002-8809-3277" title="https://orcid.org/0000-0002-8809-3277">
-            <span>0000 0002 8809 3277</span>
-         </a>
+         <a href="#https://orcid.org/0000-0002-8809-3277" title="https://orcid.org/0000-0002-8809-3277">Alex Donkers</a>
       </li>
    </ul>
    <div class="entity" id="https://orcid.org/0000-0002-8809-3277">
-      <h3>0000 0002 8809 3277<sup class="type-ni" title="named individual">ni</sup>
+      <h3>Alex Donkers<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>

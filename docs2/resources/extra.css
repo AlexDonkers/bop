@@ -1,0 +1,171 @@
+body {
+    text-align: justify;
+    background-color: white;
+}
+
+h1 {
+    line-height: 110%;
+    color:white;
+    font-family: Helvetica;
+    font-weight: bold;
+    background-color: transparent;
+    text-align: center;
+}
+
+.hlist {
+    padding:5px;
+    background-color: #F5F5F5; 
+}
+
+.hlist li {
+    display: inline;
+    display: inline-table;
+    list-style-type: none;
+    padding-right: 20px;
+    
+}
+
+.entity {
+    background-color: #F5F5F5; 
+    margin:5px 0px 5px 0px;
+    padding: 5px;    
+}
+
+.type-c {
+    cursor:help;
+    color:orange;
+}
+
+.type-op {
+    cursor:help;
+    color:navy;    
+}
+
+.type-dp {
+    cursor:help;
+    color:green;    
+}
+
+.type-ap {
+    cursor:help;
+    color:maroon;    
+}
+
+.type-ni {
+    cursor:help;
+    color:brown;    
+}
+
+.logic {
+    color:purple;
+    font-weight:bold;    
+}
+
+h3 {
+    margin-top: 3px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+    color: red;
+}
+
+h3.list {color:black}
+
+h2 {
+    margin-top:40px;
+    font-weight: bold;
+    text-transform: uppercase;    
+}
+
+.dotted {
+    border-bottom: 1px dotted gray;
+}
+
+dt {
+    margin-top:5px;
+}
+
+.description {
+    border-top: 1px dashed gray;
+    border-bottom: 1px dashed gray;
+    background-color:white;
+    margin-top:5px;
+    padding-bottom:5px;
+}
+
+.description dl {
+    background-color: rgb(242, 243, 244);
+}
+
+.description ul {
+    padding-left: 12px;
+    margin-top: 0px;
+}
+
+.backlink {
+    font-size:10pt;
+    text-align:right;
+    float:right;
+    color:black;
+    padding: 2px;
+    background-color: #F5F5F5;
+}
+
+.imageblock {
+	text-align: center;
+}
+
+.imageblock img {
+	border:1px solid gray;
+}
+
+.endnote {
+	margin-top: 40px;
+	border-top: 1px solid gray;
+	padding-top: 10px;
+	text-align: center;
+	color:gray;
+	font-size:70%;
+}
+
+.literal {
+    color:green;
+    font-style:italic;
+}
+
+/* The logos */
+
+#wrapper {
+    text-align: center;
+    background: transparent;
+ }
+  
+  .logo {
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+  }
+  
+  #tue {
+    background-image: url('https://logodix.com/logo/2165230.png');
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: center center;
+  }
+  
+  
+  #kpn {
+    background-image: url('https://kpnventures.com/wp-content/uploads/2018/06/kpn-ventures-logo-white.png');
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: center center;
+  }
+  
+  #isbe {
+  
+    background-image: url('https://raw.githubusercontent.com/AlexDonkers/bop/main/docs/resources/ISBEtue.png');
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: center center;
+  
+  }
+  

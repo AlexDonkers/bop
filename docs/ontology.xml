@@ -7,6 +7,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.github.com/AlexDonkers/bop#">
@@ -78,6 +79,13 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
     <!-- http://xmlns.com/foaf/0.1/name -->
 
 
@@ -97,11 +105,27 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
     
 
 
+    <!-- http://www.github.com/AlexDonkers/bop#actsOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#actsOn">
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#isActedOnBy"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
+        <rdfs:label xml:lang="en">acts on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.github.com/AlexDonkers/bop#actuatedBy -->
 
 
     <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#actuatedBy">
         <rdfs:subPropertyOf rdf:resource="http://www.github.com/AlexDonkers/bop#executedBy"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#performedActuation"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Actuation"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Actuator"/>
+        <rdfs:label xml:lang="en">actuated by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -110,7 +134,7 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
 
 
     <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#containsProperty">
-        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#partOfPropertySet"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#isPartOfPropertySet"/>
         <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#PropertySet"/>
         <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
         <rdfs:label xml:lang="en">contains property</rdfs:label>
@@ -118,46 +142,26 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
     
 
 
-    <!-- http://www.github.com/AlexDonkers/bop#evaluatedBy -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#evaluatedBy">
-        <rdfs:subPropertyOf rdf:resource="http://www.github.com/AlexDonkers/bop#executedBy"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.github.com/AlexDonkers/bop#executedBy -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#executedBy"/>
-    
-
-
-    <!-- http://www.github.com/AlexDonkers/bop#hasComplexActuation -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasComplexActuation">
-        <rdfs:subPropertyOf rdf:resource="http://www.github.com/AlexDonkers/bop#hasComplexEvaluation"/>
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#executedBy">
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#performedExecution"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Execution"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
+        <rdfs:label xml:lang="en">executed by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.github.com/AlexDonkers/bop#hasComplexEvaluation -->
+    <!-- http://www.github.com/AlexDonkers/bop#hasCollection -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasComplexEvaluation">
-        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
-        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.github.com/AlexDonkers/bop#hasComplexObservation -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasComplexObservation">
-        <rdfs:subPropertyOf rdf:resource="http://www.github.com/AlexDonkers/bop#hasComplexEvaluation"/>
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasCollection">
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#isCollectionOf"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Database"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Collection"/>
+        <rdfs:label xml:lang="en">has collection</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -165,32 +169,11 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
     <!-- http://www.github.com/AlexDonkers/bop#hasComplexProperty -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasComplexProperty"/>
-    
-
-
-    <!-- http://www.github.com/AlexDonkers/bop#hasComplexResult -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasComplexResult"/>
-    
-
-
-    <!-- http://www.github.com/AlexDonkers/bop#hasComplexUnit -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasComplexUnit">
-        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#isComplexUnitOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#hasComplexUnit"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.github.com/AlexDonkers/bop#Unit"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:label xml:lang="en">has complex unit</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasComplexProperty">
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#isComplexPropertyOf"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#FeatureOfInterest"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
+        <rdfs:label xml:lang="en">has complex property</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -212,7 +195,62 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
 
     <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest">
         <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Execution"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#FeatureOfInterest"/>
         <rdfs:label xml:lang="en">has feature of interest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#hasProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasProperty">
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#isPropertyOf"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#FeatureOfInterest"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
+        <rdfs:label xml:lang="en">has property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#hasPropertyState -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasPropertyState">
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#isPropertyStateOf"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
+        <rdfs:comment xml:lang="en">Linking a property with a result</rdfs:comment>
+        <rdfs:label xml:lang="en">has property state</rdfs:label>
+        <skos:example xml:lang="en">This object property is used to directly link a property to a property state. 
+
+Example: Temperature -- hasPropertyState --&gt; CurrentTemperatureState</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#hasResult -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasResult">
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#isResultOf"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Execution"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
+        <rdfs:label xml:lang="en">has result</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#hasSubActuator -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasSubActuator">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/AlexDonkers/bop#hasSubExecutor"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#isSubActuatorOf"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Actuator"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Actuator"/>
+        <rdfs:label xml:lang="en">has sub-actuator</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -221,9 +259,22 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
 
 
     <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasSubExecutor">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#isSubExecutorOf"/>
         <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
         <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
+        <rdfs:label xml:lang="en">has sub-executor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#hasSubProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasSubProperty">
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
+        <rdfs:label xml:lang="en">has sub-property</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -233,27 +284,104 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
 
     <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasSubSensor">
         <rdfs:subPropertyOf rdf:resource="http://www.github.com/AlexDonkers/bop#hasSubExecutor"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#isSubSensorOf"/>
         <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Sensor"/>
         <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Sensor"/>
+        <rdfs:label xml:lang="en">has sub-sensor</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.github.com/AlexDonkers/bop#hostsExecutor -->
+    <!-- http://www.github.com/AlexDonkers/bop#hasUnit -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hostsExecutor">
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasUnit">
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#isUnitOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#hasUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.github.com/AlexDonkers/bop#Unit"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#hosts -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#hosts">
         <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#isHostedBy"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Platform"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
         <rdfs:label xml:lang="en">hosts</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.github.com/AlexDonkers/bop#isComplexUnitOf -->
+    <!-- http://www.github.com/AlexDonkers/bop#implementedBy -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isComplexUnitOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#implementedBy">
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#implementsProcedure"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Procedure"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
+        <rdfs:label xml:lang="en">implemented by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#implementsProcedure -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#implementsProcedure">
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Procedure"/>
+        <rdfs:label xml:lang="en">implements procedure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#isActedOnBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isActedOnBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
+        <rdfs:comment xml:lang="en">Linking a property with the executor which acts on this property.</rdfs:comment>
+        <rdfs:label xml:lang="en">is acted on by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#isCollectionOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isCollectionOf">
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Collection"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Database"/>
+        <rdfs:comment xml:lang="en">Linking a collection with the database it is part of.</rdfs:comment>
+        <rdfs:label xml:lang="en">is collection of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#isComplexPropertyOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isComplexPropertyOf">
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#FeatureOfInterest"/>
+        <rdfs:comment xml:lang="en">Linking a result with a feature of interest</rdfs:comment>
+        <rdfs:label xml:lang="en">is complex property of</rdfs:label>
+        <skos:example xml:lang="en">This object property is used to directly link the current state of a property to a feature of interest. It is the shortest route to link a result to a feature of interest. 
+
+Example: CurrentWallLength --isComplexPropertyOf --&gt; Wall</skos:example>
     </owl:ObjectProperty>
     
 
@@ -273,7 +401,9 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
 
 
     <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf">
-        <rdfs:label xml:lang="en">has feature of interest</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#FeatureOfInterest"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Execution"/>
+        <rdfs:label xml:lang="en">is feature of interest of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -283,7 +413,122 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
 
     <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isHostedBy">
         <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Platform"/>
         <rdfs:label xml:lang="en">is hosted by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#isPartOfPropertySet -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isPartOfPropertySet">
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#PropertySet"/>
+        <rdfs:label xml:lang="en">is part of property set</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#isPropertyOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isPropertyOf">
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#FeatureOfInterest"/>
+        <rdfs:label xml:lang="en">is property of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#isPropertyStateOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isPropertyStateOf">
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
+        <rdfs:comment xml:lang="en">Linking a result with a property</rdfs:comment>
+        <rdfs:label xml:lang="en">is property state of</rdfs:label>
+        <skos:example xml:lang="en">This object property is used to directly link the current state of a property to a property. It is the shortest route to link a result to a property. 
+
+Example: CurrentTemperatureState -- isPropertyStateOf --&gt; Temperature</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#isResultOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isResultOf">
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Execution"/>
+        <rdfs:comment xml:lang="en">Linking a result with an execution.</rdfs:comment>
+        <rdfs:label xml:lang="en">is result of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#isSubActuatorOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isSubActuatorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/AlexDonkers/bop#isSubExecutorOf"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Actuator"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Actuator"/>
+        <rdfs:comment xml:lang="en">Relation between an actuator and sub-actuators. The sub-actuators are of type actuator and could function as individual actuators.</rdfs:comment>
+        <rdfs:label xml:lang="en">is sub-actuator of</rdfs:label>
+        <skos:example xml:lang="en">The object property could be used to model actuators which have multiple components with their own functions.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#isSubExecutorOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isSubExecutorOf">
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
+        <rdfs:comment xml:lang="en">Relation between an executor and sub-executors. The sub-executors are of type executor and could function as individual executors.</rdfs:comment>
+        <rdfs:label xml:lang="en">is sub-executor of</rdfs:label>
+        <skos:example xml:lang="en">The object property could be used to model devices which have multiple components with their own functions. A multisensor - for example - consists of multiple sub-sensors which individually perform a sensing function.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#isSubSensorOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isSubSensorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/AlexDonkers/bop#isSubExecutorOf"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Sensor"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Sensor"/>
+        <rdfs:comment xml:lang="en">Relation between a sensor and sub-sensors. The sub-sensors are of type sensor and could function as individual sensors.</rdfs:comment>
+        <rdfs:label xml:lang="en">is sub-sensor of</rdfs:label>
+        <skos:example xml:lang="en">The object property could be used to model sensors which have multiple components with their own functions.</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#isUnitOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isUnitOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Unit"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
+        <rdfs:label xml:lang="en">is unit of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#isUsedFor -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#isUsedFor">
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#usedProcedure"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Procedure"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Execution"/>
+        <rdfs:label xml:lang="en">is used for</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -292,18 +537,12 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
 
 
     <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#observedBy">
-        <rdfs:subPropertyOf rdf:resource="http://www.github.com/AlexDonkers/bop#evaluatedBy"/>
-        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
-        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Observation"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/AlexDonkers/bop#executedBy"/>
+        <owl:inverseOf rdf:resource="http://www.github.com/AlexDonkers/bop#performedObservation"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Observation"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Sensor"/>
         <rdfs:label xml:lang="en">observed by</rdfs:label>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.github.com/AlexDonkers/bop#partOfPropertySet -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#partOfPropertySet"/>
     
 
 
@@ -312,15 +551,9 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
 
     <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#performedActuation">
         <rdfs:subPropertyOf rdf:resource="http://www.github.com/AlexDonkers/bop#performedExecution"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.github.com/AlexDonkers/bop#performedEvaluation -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#performedEvaluation">
-        <rdfs:subPropertyOf rdf:resource="http://www.github.com/AlexDonkers/bop#performedExecution"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Actuator"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Actuation"/>
+        <rdfs:label xml:lang="en">performed actuation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -328,7 +561,11 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
     <!-- http://www.github.com/AlexDonkers/bop#performedExecution -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#performedExecution"/>
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#performedExecution">
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Execution"/>
+        <rdfs:label xml:lang="en">performed execution</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -336,18 +573,21 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
 
 
     <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#performedObservation">
-        <rdfs:subPropertyOf rdf:resource="http://www.github.com/AlexDonkers/bop#performedEvaluation"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.github.com/AlexDonkers/bop#performedExecution"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Sensor"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Observation"/>
+        <rdfs:label xml:lang="en">performed observation</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://w3id.org/bot#hasSubElement -->
+    <!-- http://www.github.com/AlexDonkers/bop#usedProcedure -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#hasSubElement">
-        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Element"/>
-        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Element"/>
-        <rdfs:label xml:lang="en">has sub element</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://www.github.com/AlexDonkers/bop#usedProcedure">
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Execution"/>
+        <rdfs:range rdf:resource="http://www.github.com/AlexDonkers/bop#Procedure"/>
+        <rdfs:label xml:lang="en">used procedure</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -364,20 +604,26 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
     
 
 
-    <!-- http://www.github.com/AlexDonkers/bop#hasSimpleEvaluation -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasSimpleEvaluation">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.github.com/AlexDonkers/bop#hasSimpleProperty -->
 
 
     <owl:DatatypeProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasSimpleProperty">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#FeatureOfInterest"/>
+        <rdfs:comment xml:lang="en">Linking a feature of interest with a simple property value described as a literal.</rdfs:comment>
+        <rdfs:label xml:lang="en">has simple property</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#hasSimplePropertyState -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasSimplePropertyState">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
+        <rdfs:comment xml:lang="en">Linking a property with a simple property state value described as a literal.</rdfs:comment>
+        <rdfs:label xml:lang="en">has simple property state</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -387,6 +633,9 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
 
     <owl:DatatypeProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasSimpleResult">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Execution"/>
+        <rdfs:comment xml:lang="en">Linking an execution with a simple result value described as a literal.</rdfs:comment>
+        <rdfs:label xml:lang="en">has simple result</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -396,6 +645,9 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
 
     <owl:DatatypeProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasSimpleUnit">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
+        <rdfs:comment xml:lang="en">Linking a result with a unit described by a literal.</rdfs:comment>
+        <rdfs:label xml:lang="en">has simple unit</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -405,6 +657,9 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
 
     <owl:DatatypeProperty rdf:about="http://www.github.com/AlexDonkers/bop#hasValue">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
+        <rdfs:comment xml:lang="en">The simple value of a result.</rdfs:comment>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -414,6 +669,7 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#generatedAtTime">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
     </owl:DatatypeProperty>
     
 
@@ -441,6 +697,7 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
                 <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Actuator"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An act of carrying out an actuation procedure by an actuator to change the state of a property.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuation</rdfs:label>
         <rdfs:label xml:lang="nl">Bediening</rdfs:label>
     </owl:Class>
@@ -451,9 +708,52 @@ By (re-)using concepts from major ontologies in the field, BOP could easily be i
 
 
     <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#Actuator">
-        <rdfs:subClassOf rdf:resource="http://www.github.com/AlexDonkers/bop#Device"/>
+        <rdfs:subClassOf rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#hasSubActuator"/>
+                <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Actuator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#performedActuation"/>
+                <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Actuation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An agent that can implement an actuation procedure to change the state of a property..</rdfs:comment>
         <rdfs:label xml:lang="en">Actuator</rdfs:label>
         <rdfs:label xml:lang="nl">Actuator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#Collection -->
+
+
+    <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#Collection">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#isCollectionOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Database"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A collection of documents in a database.</rdfs:comment>
+        <rdfs:label xml:lang="nl">Collectie</rdfs:label>
+        <rdfs:label xml:lang="en">Collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#CurrentState -->
+
+
+    <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#CurrentState">
+        <rdfs:subClassOf rdf:resource="http://www.github.com/AlexDonkers/bop#Result"/>
+        <rdfs:comment xml:lang="en">The most recently defined state of a property.</rdfs:comment>
+        <rdfs:label xml:lang="en">Current state</rdfs:label>
+        <rdfs:label xml:lang="nl">Huidige staat</rdfs:label>
     </owl:Class>
     
 
@@ -478,41 +778,6 @@ The database class is used to describe an external database, storing results of 
     
 
 
-    <!-- http://www.github.com/AlexDonkers/bop#Device -->
-
-
-    <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#Device">
-        <rdfs:subClassOf rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
-        <rdfs:comment xml:lang="en">An object or machine that can implement a procedure to perform an execution.</rdfs:comment>
-        <rdfs:comment xml:lang="nl">Een object of machine die een taak kan uitvoeren op basis van een procedure.</rdfs:comment>
-        <rdfs:label xml:lang="nl">Apparaat</rdfs:label>
-        <rdfs:label xml:lang="en">Device</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.github.com/AlexDonkers/bop#Element -->
-
-
-    <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#Element">
-        <rdfs:subClassOf rdf:resource="http://www.github.com/AlexDonkers/bop#FeatureOfInterest"/>
-        <rdfs:label xml:lang="en">Element</rdfs:label>
-        <rdfs:label xml:lang="nl">Element</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.github.com/AlexDonkers/bop#Evaluation -->
-
-
-    <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#Evaluation">
-        <rdfs:subClassOf rdf:resource="http://www.github.com/AlexDonkers/bop#Execution"/>
-        <rdfs:label xml:lang="nl">Evaluatie</rdfs:label>
-        <rdfs:label xml:lang="en">Evaluation</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.github.com/AlexDonkers/bop#Execution -->
 
 
@@ -523,8 +788,14 @@ The database class is used to describe an external database, storing results of 
                 <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#implementedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Procedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An act of carrying out a procedure by an executor on a property</rdfs:comment>
         <rdfs:comment xml:lang="nl">Het doen of uitvoeren van iets. Een uitvoering kan worden uitgevoerd door een uitvoerder, eventueel op basis van een procedure.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The act of doing or performing something. An execution could be performed by an executor, possibly based on a procedure.</rdfs:comment>
         <rdfs:label xml:lang="en">Execution</rdfs:label>
         <rdfs:label xml:lang="nl">Uitvoering</rdfs:label>
     </owl:Class>
@@ -537,8 +808,26 @@ The database class is used to describe an external database, storing results of 
     <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#Executor">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#actsOn"/>
+                <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#hasSubExecutor"/>
+                <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#isHostedBy"/>
                 <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Platform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#performedExecution"/>
+                <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Execution"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -548,7 +837,6 @@ The database class is used to describe an external database, storing results of 
                 <owl:onClass rdf:resource="http://www.github.com/AlexDonkers/bop#Platform"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://www.github.com/AlexDonkers/bop#Platform"/>
         <rdfs:comment xml:lang="en">An agent that can implement a procedure to perform an execution.</rdfs:comment>
         <rdfs:comment xml:lang="nl">Iets wat een taak kan uitvoeren op basis van een procedure.</rdfs:comment>
         <rdfs:label xml:lang="en">Executor</rdfs:label>
@@ -567,10 +855,18 @@ The database class is used to describe an external database, storing results of 
                 <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An abstraction of a real world phenomena (object, part, zone, event, etc).</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An abstraction of a real-world phenomenon which could be described in terms of its properties.</rdfs:comment>
         <rdfs:comment xml:lang="nl">Een abstractie van een fenomeen uit de echte wereld (object, onderdeel, zone, evenement, etc).</rdfs:comment>
         <rdfs:label xml:lang="en">Feature of interest</rdfs:label>
         <rdfs:label xml:lang="nl">Kenmerk van belang</rdfs:label>
+        <skos:example xml:lang="en">An object, part, zone, event etc.</skos:example>
     </owl:Class>
     
 
@@ -580,19 +876,9 @@ The database class is used to describe an external database, storing results of 
 
     <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#Function">
         <rdfs:subClassOf rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
+        <rdfs:comment xml:lang="en">A function of a feature of interest.</rdfs:comment>
         <rdfs:label xml:lang="nl">Functie</rdfs:label>
         <rdfs:label xml:lang="en">Function</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.github.com/AlexDonkers/bop#Interface -->
-
-
-    <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#Interface">
-        <rdfs:subClassOf rdf:resource="http://www.github.com/AlexDonkers/bop#FeatureOfInterest"/>
-        <rdfs:label xml:lang="en">Interface</rdfs:label>
-        <rdfs:label xml:lang="nl">Raakvlak</rdfs:label>
     </owl:Class>
     
 
@@ -601,13 +887,20 @@ The database class is used to describe an external database, storing results of 
 
 
     <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#Observation">
-        <rdfs:subClassOf rdf:resource="http://www.github.com/AlexDonkers/bop#Evaluation"/>
+        <rdfs:subClassOf rdf:resource="http://www.github.com/AlexDonkers/bop#Execution"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#observedBy"/>
                 <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Sensor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#usedProcedure"/>
+                <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Procedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An act of carrying out an observation procedure by a sensor to observe the state of a property.</rdfs:comment>
         <rdfs:label xml:lang="nl">Observatie</rdfs:label>
         <rdfs:label xml:lang="en">Observation</rdfs:label>
     </owl:Class>
@@ -620,7 +913,7 @@ The database class is used to describe an external database, storing results of 
     <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#Platform">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#hostsExecutor"/>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#hosts"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
             </owl:Restriction>
@@ -628,6 +921,28 @@ The database class is used to describe an external database, storing results of 
         <rdfs:comment xml:lang="en">An entity that hosts an executor.</rdfs:comment>
         <rdfs:label xml:lang="en">Platform</rdfs:label>
         <rdfs:label xml:lang="nl">Platform</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.github.com/AlexDonkers/bop#Procedure -->
+
+
+    <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#Procedure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#implementedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#isUsedFor"/>
+                <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Execution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Procedure</rdfs:label>
+        <rdfs:label xml:lang="nl">Procedure</rdfs:label>
     </owl:Class>
     
 
@@ -642,7 +957,26 @@ The database class is used to describe an external database, storing results of 
                 <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#FeatureOfInterest"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A characteristic of a feature of interest. The property is intrinsic to and cannot exist without the feature of interest.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#hasSubProperty"/>
+                <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#isActedOnBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Observation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.github.com/AlexDonkers/bop#FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A measurable and intrinsic characteristic of a feature of interest.</rdfs:comment>
         <rdfs:comment xml:lang="nl">Een kenmerk van een feature of interest. Het kenmerk is intrinsiek aan en kan niet bestaan zonder de feature of interest.</rdfs:comment>
         <rdfs:label xml:lang="nl">Eigenschap</rdfs:label>
         <rdfs:label xml:lang="en">Property</rdfs:label>
@@ -672,8 +1006,10 @@ The database class is used to describe an external database, storing results of 
 
 
     <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#Result">
+        <rdfs:comment xml:lang="en">The outcome of an execution.</rdfs:comment>
         <rdfs:label xml:lang="en">Result</rdfs:label>
         <rdfs:label xml:lang="nl">Resultaat</rdfs:label>
+        <skos:example xml:lang="en">The result may hold, for example, a value, a unit, a result time and other provenance data.</skos:example>
     </owl:Class>
     
 
@@ -682,7 +1018,20 @@ The database class is used to describe an external database, storing results of 
 
 
     <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#Sensor">
-        <rdfs:subClassOf rdf:resource="http://www.github.com/AlexDonkers/bop#Device"/>
+        <rdfs:subClassOf rdf:resource="http://www.github.com/AlexDonkers/bop#Executor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#hasSubSensor"/>
+                <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.github.com/AlexDonkers/bop#performedObservation"/>
+                <owl:allValuesFrom rdf:resource="http://www.github.com/AlexDonkers/bop#Observation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An agent that can implement an observation procedure to measure the state of a property.</rdfs:comment>
         <rdfs:label xml:lang="en">Sensor</rdfs:label>
         <rdfs:label xml:lang="nl">Sensor</rdfs:label>
     </owl:Class>
@@ -697,17 +1046,6 @@ The database class is used to describe an external database, storing results of 
         <rdfs:comment xml:lang="nl">Een specifieke waarde van een natuurkundige grootheid die is gekozen als een schaal voor het meten van andere hoeveelheden van diezelfde grootheid.</rdfs:comment>
         <rdfs:label xml:lang="nl">Eenheid</rdfs:label>
         <rdfs:label xml:lang="en">Unit</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.github.com/AlexDonkers/bop#Zone -->
-
-
-    <owl:Class rdf:about="http://www.github.com/AlexDonkers/bop#Zone">
-        <rdfs:subClassOf rdf:resource="http://www.github.com/AlexDonkers/bop#FeatureOfInterest"/>
-        <rdfs:label xml:lang="en">Zone</rdfs:label>
-        <rdfs:label xml:lang="nl">Zone</rdfs:label>
     </owl:Class>
     
 
@@ -743,8 +1081,36 @@ The database class is used to describe an external database, storing results of 
 
     <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-8809-3277">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label>Alex Donkers</rdfs:label>
         <foaf:name>Alex Donkers</foaf:name>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.github.com/AlexDonkers/bop#Database"/>
+            <rdf:Description rdf:about="http://www.github.com/AlexDonkers/bop#Execution"/>
+            <rdf:Description rdf:about="http://www.github.com/AlexDonkers/bop#Executor"/>
+            <rdf:Description rdf:about="http://www.github.com/AlexDonkers/bop#FeatureOfInterest"/>
+            <rdf:Description rdf:about="http://www.github.com/AlexDonkers/bop#Platform"/>
+            <rdf:Description rdf:about="http://www.github.com/AlexDonkers/bop#Procedure"/>
+            <rdf:Description rdf:about="http://www.github.com/AlexDonkers/bop#Property"/>
+            <rdf:Description rdf:about="http://www.github.com/AlexDonkers/bop#PropertySet"/>
+            <rdf:Description rdf:about="http://www.github.com/AlexDonkers/bop#Result"/>
+            <rdf:Description rdf:about="http://www.github.com/AlexDonkers/bop#Unit"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 

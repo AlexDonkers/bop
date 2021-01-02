@@ -1,0 +1,1037 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "nl", "undefined" ],
+    "baseIris" : [ "https://w3id.org/bot", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1", "http://www.github.com/AlexDonkers/bop" ],
+    "title" : {
+      "en" : "Building Performance Ontology"
+    },
+    "iri" : "http://www.github.com/AlexDonkers/bop#",
+    "version" : "1.1",
+    "author" : [ "https://orcid.org/0000-0002-8809-3277" ],
+    "description" : {
+      "en" : "The Building Performance Ontology (BOP) is a set of ontological constructs which allows integration of data related to building performance. By (re-)using ontology patterns from major ontologies in the field, BOP provides a method to integrate both static and dynamic (time-series) properties to buildings, zones, elements and products. \n\nIt's aim is to facilitate building managers and facility managers with a common data structure to ease the process of data integration and to allow software tools to deal with the large heterogeneity of data. \n\nBy (re-)using concepts from major ontologies in the field, BOP could easily be integrated with a wide range of existing ontologies and datasets. BOP could be seen as an extension of existing work rather than an individual ontology."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-8809-3277",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "bop",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.1",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://www.github.com/AlexDonkers/bop#",
+        "type" : "iri"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Building Performance Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "7",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Interface",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Interface",
+      "en" : "Interface",
+      "nl" : "Raakvlak"
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Element",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Element",
+      "en" : "Element",
+      "nl" : "Element"
+    },
+    "id" : "3",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Zone",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Zone",
+      "en" : "Zone",
+      "nl" : "Zone"
+    },
+    "id" : "11",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Executor",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Executor",
+      "en" : "Executor",
+      "nl" : "Uitvoerder"
+    },
+    "subClasses" : [ "14" ],
+    "comment" : {
+      "en" : "An agent that can implement a procedure to perform an execution.",
+      "nl" : "Iets wat een taak kan uitvoeren op basis van een procedure."
+    },
+    "id" : "25"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Function",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Function",
+      "en" : "Function",
+      "nl" : "Functie"
+    },
+    "id" : "31",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#PropertySet",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PropertySet",
+      "en" : "Property set",
+      "nl" : "Verzameling van eigenschappen"
+    },
+    "comment" : {
+      "en" : "A collection of properties. The collection could also be a singleton or a null set.",
+      "nl" : "Een collectie van eigenschappen. De collectie kan ook een eenpuntsverzameling of een lege verzameling zijn."
+    },
+    "id" : "33"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Database",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Database",
+      "en" : "Database",
+      "nl" : "Databank"
+    },
+    "comment" : {
+      "en" : "A collection of data.\n\nThe database class is used to describe an external database, storing results of executions, such as a time-series database."
+    },
+    "id" : "34"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Property",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Property",
+      "en" : "Property",
+      "nl" : "Eigenschap"
+    },
+    "subClasses" : [ "31" ],
+    "comment" : {
+      "en" : "A characteristic of a feature of interest. The property is intrinsic to and cannot exist without the feature of interest.",
+      "nl" : "Een kenmerk van een feature of interest. Het kenmerk is intrinsiek aan en kan niet bestaan zonder de feature of interest."
+    },
+    "id" : "32"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "individuals" : [ {
+      "iri" : "https://orcid.org/0000-0002-8809-3277",
+      "baseIri" : "https://orcid.org",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Alex Donkers",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "0000-0002-8809-3277"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Actuation",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Actuation",
+      "en" : "Actuation",
+      "nl" : "Bediening"
+    },
+    "id" : "24",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Sensor",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sensor",
+      "en" : "Sensor",
+      "nl" : "Sensor"
+    },
+    "id" : "13",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#FeatureOfInterest",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FeatureOfInterest",
+      "en" : "Feature of interest",
+      "nl" : "Kenmerk van belang"
+    },
+    "subClasses" : [ "0", "3", "11" ],
+    "comment" : {
+      "en" : "An abstraction of a real world phenomena (object, part, zone, event, etc).",
+      "nl" : "Een abstractie van een fenomeen uit de echte wereld (object, onderdeel, zone, evenement, etc)."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "54",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "7",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Platform",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Platform",
+      "en" : "Platform",
+      "nl" : "Platform"
+    },
+    "comment" : {
+      "en" : "An entity that hosts an executor."
+    },
+    "id" : "56"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Result",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Result",
+      "en" : "Result",
+      "nl" : "Resultaat"
+    },
+    "id" : "6"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Actuator",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Actuator",
+      "en" : "Actuator",
+      "nl" : "Actuator"
+    },
+    "id" : "16",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Execution",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Execution",
+      "en" : "Execution",
+      "nl" : "Uitvoering"
+    },
+    "subClasses" : [ "18", "24" ],
+    "comment" : {
+      "en" : "The act of doing or performing something. An execution could be performed by an executor, possibly based on a procedure.",
+      "nl" : "Het doen of uitvoeren van iets. Een uitvoering kan worden uitgevoerd door een uitvoerder, eventueel op basis van een procedure."
+    },
+    "id" : "19"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Evaluation",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Evaluation",
+      "en" : "Evaluation",
+      "nl" : "Evaluatie"
+    },
+    "subClasses" : [ "22" ],
+    "id" : "18",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Observation",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Observation",
+      "en" : "Observation",
+      "nl" : "Observatie"
+    },
+    "id" : "22",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Device",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Device",
+      "en" : "Device",
+      "nl" : "Apparaat"
+    },
+    "subClasses" : [ "16", "13" ],
+    "comment" : {
+      "en" : "An object or machine that can implement a procedure to perform an execution.",
+      "nl" : "Een object of machine die een taak kan uitvoeren op basis van een procedure."
+    },
+    "id" : "14",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#Unit",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Unit",
+      "en" : "Unit",
+      "nl" : "Eenheid"
+    },
+    "comment" : {
+      "en" : "A particular quantity value that has been chosen as a scale for measuring other quantities of the same kind.",
+      "nl" : "Een specifieke waarde van een natuurkundige grootheid die is gekozen als een schaal voor het meten van andere hoeveelheden van diezelfde grootheid."
+    },
+    "id" : "75"
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "57",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "58",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "62",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "64",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "66",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/bot#hasSubElement",
+    "baseIri" : "https://w3id.org/bot",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasSubElement",
+      "en" : "has sub element"
+    },
+    "domain" : "3",
+    "subproperty" : [ "4" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasComplexUnit",
+    "inverse" : "8",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasComplexUnit",
+      "en" : "has complex unit"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "functional" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasComplexProperty",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasComplexProperty"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasComplexResult",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasComplexResult"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "10"
+  }, {
+    "range" : "14",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  }, {
+    "range" : "14",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
+  }, {
+    "range" : "19",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "17"
+  }, {
+    "range" : "1",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "20"
+  }, {
+    "range" : "18",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "range" : "19",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#evaluatedBy",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "evaluatedBy"
+    },
+    "superproperty" : [ "27" ],
+    "domain" : "7",
+    "subproperty" : [ "28" ],
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#performedActuation",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "performedActuation"
+    },
+    "superproperty" : [ "30" ],
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#performedEvaluation",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "performedEvaluation"
+    },
+    "superproperty" : [ "30" ],
+    "domain" : "7",
+    "subproperty" : [ "36" ],
+    "attributes" : [ "object" ],
+    "id" : "35"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
+  }, {
+    "range" : "32",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#generatedAtTime",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "generatedAtTime"
+    },
+    "domain" : "7",
+    "attributes" : [ "external", "datatype", "functional" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "isExternalDatabaseOf",
+      "en" : "is external database of"
+    },
+    "domain" : "34",
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "range" : "1",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "range" : "25",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasSubSensor",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "hasSubSensor"
+    },
+    "superproperty" : [ "4" ],
+    "domain" : "13",
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasComplexActuation",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasComplexActuation"
+    },
+    "superproperty" : [ "49" ],
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#isHostedBy",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "isHostedBy",
+      "en" : "is hosted by"
+    },
+    "domain" : "25",
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#performedObservation",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "performedObservation"
+    },
+    "superproperty" : [ "35" ],
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#isHostedBy",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "isHostedBy",
+      "en" : "is hosted by"
+    },
+    "domain" : "25",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "55"
+  }, {
+    "range" : "56",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "isFeatureOfInterestOf",
+      "en" : "has feature of interest"
+    },
+    "domain" : "1",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasComplexObservation",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasComplexObservation"
+    },
+    "superproperty" : [ "49" ],
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#partOfPropertySet",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "partOfPropertySet"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#observedBy",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "observedBy",
+      "en" : "observed by"
+    },
+    "superproperty" : [ "26" ],
+    "domain" : "22",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest",
+    "inverse" : "63",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasFeatureOfInterest",
+      "en" : "has feature of interest"
+    },
+    "domain" : "32",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#containsProperty",
+    "inverse" : "60",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "containsProperty",
+      "en" : "contains property"
+    },
+    "domain" : "33",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#observedBy",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "observedBy",
+      "en" : "observed by"
+    },
+    "superproperty" : [ "26" ],
+    "domain" : "32",
+    "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasComplexEvaluation",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasComplexEvaluation"
+    },
+    "domain" : "32",
+    "subproperty" : [ "59", "48" ],
+    "attributes" : [ "object" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#isComplexUnitOf",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isComplexUnitOf"
+    },
+    "domain" : "7",
+    "attributes" : [ "object", "inverse functional" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#actuatedBy",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "actuatedBy"
+    },
+    "superproperty" : [ "27" ],
+    "domain" : "24",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#executedBy",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "executedBy"
+    },
+    "domain" : "19",
+    "subproperty" : [ "26", "67" ],
+    "attributes" : [ "allValues", "object" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#performedExecution",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "performedExecution"
+    },
+    "domain" : "7",
+    "subproperty" : [ "35", "29" ],
+    "attributes" : [ "object" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasValue",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "hasValue"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasSimpleProperty",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "hasSimpleProperty"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#containsProperty",
+    "inverse" : "60",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "containsProperty",
+      "en" : "contains property"
+    },
+    "domain" : "33",
+    "attributes" : [ "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hostsExecutor",
+    "inverse" : "53",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "hostsExecutor",
+      "en" : "hosts"
+    },
+    "domain" : "54",
+    "attributes" : [ "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasExternalDatabase",
+    "inverse" : "41",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasExternalDatabase",
+      "en" : "has external database"
+    },
+    "domain" : "25",
+    "attributes" : [ "object" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasSubExecutor",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "hasSubExecutor"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "25",
+    "subproperty" : [ "45" ],
+    "attributes" : [ "object" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasSimpleEvaluation",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "hasSimpleEvaluation"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasSimpleResult",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "hasSimpleResult"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://www.github.com/AlexDonkers/bop#hasSimpleUnit",
+    "baseIri" : "http://www.github.com/AlexDonkers/bop",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "hasSimpleUnit"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "76"
+  } ]
+}

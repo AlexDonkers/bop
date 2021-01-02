@@ -10,16 +10,14 @@ This ontology has the following classes and properties.</span>
       <a href="#Actuator" title="http://www.github.com/AlexDonkers/bop#Actuator">Actuator</a>
    </li>
    <li>
+      <a href="#Collection" title="http://www.github.com/AlexDonkers/bop#Collection">Collection</a>
+   </li>
+   <li>
+      <a href="#CurrentState"
+         title="http://www.github.com/AlexDonkers/bop#CurrentState">Current state</a>
+   </li>
+   <li>
       <a href="#Database" title="http://www.github.com/AlexDonkers/bop#Database">Database</a>
-   </li>
-   <li>
-      <a href="#Device" title="http://www.github.com/AlexDonkers/bop#Device">Device</a>
-   </li>
-   <li>
-      <a href="#Element" title="http://www.github.com/AlexDonkers/bop#Element">Element</a>
-   </li>
-   <li>
-      <a href="#Evaluation" title="http://www.github.com/AlexDonkers/bop#Evaluation">Evaluation</a>
    </li>
    <li>
       <a href="#Execution" title="http://www.github.com/AlexDonkers/bop#Execution">Execution</a>
@@ -35,14 +33,14 @@ This ontology has the following classes and properties.</span>
       <a href="#Function" title="http://www.github.com/AlexDonkers/bop#Function">Function</a>
    </li>
    <li>
-      <a href="#Interface" title="http://www.github.com/AlexDonkers/bop#Interface">Interface</a>
-   </li>
-   <li>
       <a href="#Observation"
          title="http://www.github.com/AlexDonkers/bop#Observation">Observation</a>
    </li>
    <li>
       <a href="#Platform" title="http://www.github.com/AlexDonkers/bop#Platform">Platform</a>
+   </li>
+   <li>
+      <a href="#Procedure" title="http://www.github.com/AlexDonkers/bop#Procedure">Procedure</a>
    </li>
    <li>
       <a href="#Property" title="http://www.github.com/AlexDonkers/bop#Property">Property</a>
@@ -60,45 +58,27 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#Unit" title="http://www.github.com/AlexDonkers/bop#Unit">Unit</a>
    </li>
-   <li>
-      <a href="#Zone" title="http://www.github.com/AlexDonkers/bop#Zone">Zone</a>
-   </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
    <li>
-      <a href="#actuatedBy" title="http://www.github.com/AlexDonkers/bop#actuatedBy">
-         <span>actuated by</span>
-      </a>
+      <a href="#actsOn" title="http://www.github.com/AlexDonkers/bop#actsOn">acts on</a>
+   </li>
+   <li>
+      <a href="#actuatedBy" title="http://www.github.com/AlexDonkers/bop#actuatedBy">actuated by</a>
    </li>
    <li>
       <a href="#containsProperty"
          title="http://www.github.com/AlexDonkers/bop#containsProperty">contains property</a>
    </li>
    <li>
-      <a href="#evaluatedBy" title="http://www.github.com/AlexDonkers/bop#evaluatedBy">
-         <span>evaluated by</span>
-      </a>
+      <a href="#executedBy" title="http://www.github.com/AlexDonkers/bop#executedBy">executed by</a>
    </li>
    <li>
-      <a href="#hasComplexActuation"
-         title="http://www.github.com/AlexDonkers/bop#hasComplexActuation">
-         <span>has complex actuation</span>
-      </a>
+      <a href="#hasCollection"
+         title="http://www.github.com/AlexDonkers/bop#hasCollection">has collection</a>
    </li>
    <li>
-      <a href="#hasComplexEvaluation"
-         title="http://www.github.com/AlexDonkers/bop#hasComplexEvaluation">
-         <span>has complex evaluation</span>
-      </a>
-   </li>
-   <li>
-      <a href="#hasComplexObservation"
-         title="http://www.github.com/AlexDonkers/bop#hasComplexObservation">
-         <span>has complex observation</span>
-      </a>
-   </li>
-   <li>
-      <a href="#hasComplexUnit"
-         title="http://www.github.com/AlexDonkers/bop#hasComplexUnit">has complex unit</a>
+      <a href="#hasComplexProperty"
+         title="http://www.github.com/AlexDonkers/bop#hasComplexProperty">has complex property</a>
    </li>
    <li>
       <a href="#hasExternalDatabase"
@@ -109,61 +89,120 @@ This ontology has the following classes and properties.</span>
          title="http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest">has feature of interest</a>
    </li>
    <li>
-      <a href="#isFeatureOfInterestOf"
-         title="http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf">has feature of interest</a>
+      <a href="#hasProperty"
+         title="http://www.github.com/AlexDonkers/bop#hasProperty">has property</a>
    </li>
    <li>
-      <a href="#https://w3id.org/bot#hasSubElement" title="https://w3id.org/bot#hasSubElement">has sub element</a>
+      <a href="#hasPropertyState"
+         title="http://www.github.com/AlexDonkers/bop#hasPropertyState">has property state</a>
+   </li>
+   <li>
+      <a href="#hasResult" title="http://www.github.com/AlexDonkers/bop#hasResult">has result</a>
+   </li>
+   <li>
+      <a href="#hasSubActuator"
+         title="http://www.github.com/AlexDonkers/bop#hasSubActuator">has sub-actuator</a>
    </li>
    <li>
       <a href="#hasSubExecutor"
-         title="http://www.github.com/AlexDonkers/bop#hasSubExecutor">
-         <span>has sub executor</span>
-      </a>
+         title="http://www.github.com/AlexDonkers/bop#hasSubExecutor">has sub-executor</a>
+   </li>
+   <li>
+      <a href="#hasSubProperty"
+         title="http://www.github.com/AlexDonkers/bop#hasSubProperty">has sub-property</a>
    </li>
    <li>
       <a href="#hasSubSensor"
-         title="http://www.github.com/AlexDonkers/bop#hasSubSensor">
-         <span>has sub sensor</span>
-      </a>
+         title="http://www.github.com/AlexDonkers/bop#hasSubSensor">has sub-sensor</a>
    </li>
    <li>
-      <a href="#hostsExecutor"
-         title="http://www.github.com/AlexDonkers/bop#hostsExecutor">hosts</a>
+      <a href="#hasUnit" title="http://www.github.com/AlexDonkers/bop#hasUnit">has unit</a>
    </li>
    <li>
-      <a href="#isComplexUnitOf"
-         title="http://www.github.com/AlexDonkers/bop#isComplexUnitOf">
-         <span>is complex unit of</span>
-      </a>
+      <a href="#hosts" title="http://www.github.com/AlexDonkers/bop#hosts">hosts</a>
+   </li>
+   <li>
+      <a href="#implementedBy"
+         title="http://www.github.com/AlexDonkers/bop#implementedBy">implemented by</a>
+   </li>
+   <li>
+      <a href="#implementsProcedure"
+         title="http://www.github.com/AlexDonkers/bop#implementsProcedure">implements procedure</a>
+   </li>
+   <li>
+      <a href="#isActedOnBy"
+         title="http://www.github.com/AlexDonkers/bop#isActedOnBy">is acted on by</a>
+   </li>
+   <li>
+      <a href="#isCollectionOf"
+         title="http://www.github.com/AlexDonkers/bop#isCollectionOf">is collection of</a>
+   </li>
+   <li>
+      <a href="#isComplexPropertyOf"
+         title="http://www.github.com/AlexDonkers/bop#isComplexPropertyOf">is complex property of</a>
    </li>
    <li>
       <a href="#isExternalDatabaseOf"
          title="http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf">is external database of</a>
    </li>
    <li>
+      <a href="#isFeatureOfInterestOf"
+         title="http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf">is feature of interest of</a>
+   </li>
+   <li>
       <a href="#isHostedBy" title="http://www.github.com/AlexDonkers/bop#isHostedBy">is hosted by</a>
+   </li>
+   <li>
+      <a href="#isPartOfPropertySet"
+         title="http://www.github.com/AlexDonkers/bop#isPartOfPropertySet">is part of property set</a>
+   </li>
+   <li>
+      <a href="#isPropertyOf"
+         title="http://www.github.com/AlexDonkers/bop#isPropertyOf">is property of</a>
+   </li>
+   <li>
+      <a href="#isPropertyStateOf"
+         title="http://www.github.com/AlexDonkers/bop#isPropertyStateOf">is property state of</a>
+   </li>
+   <li>
+      <a href="#isResultOf" title="http://www.github.com/AlexDonkers/bop#isResultOf">is result of</a>
+   </li>
+   <li>
+      <a href="#isSubActuatorOf"
+         title="http://www.github.com/AlexDonkers/bop#isSubActuatorOf">is sub-actuator of</a>
+   </li>
+   <li>
+      <a href="#isSubExecutorOf"
+         title="http://www.github.com/AlexDonkers/bop#isSubExecutorOf">is sub-executor of</a>
+   </li>
+   <li>
+      <a href="#isSubSensorOf"
+         title="http://www.github.com/AlexDonkers/bop#isSubSensorOf">is sub-sensor of</a>
+   </li>
+   <li>
+      <a href="#isUnitOf" title="http://www.github.com/AlexDonkers/bop#isUnitOf">is unit of</a>
+   </li>
+   <li>
+      <a href="#isUsedFor" title="http://www.github.com/AlexDonkers/bop#isUsedFor">is used for</a>
    </li>
    <li>
       <a href="#observedBy" title="http://www.github.com/AlexDonkers/bop#observedBy">observed by</a>
    </li>
    <li>
       <a href="#performedActuation"
-         title="http://www.github.com/AlexDonkers/bop#performedActuation">
-         <span>performed actuation</span>
-      </a>
+         title="http://www.github.com/AlexDonkers/bop#performedActuation">performed actuation</a>
    </li>
    <li>
-      <a href="#performedEvaluation"
-         title="http://www.github.com/AlexDonkers/bop#performedEvaluation">
-         <span>performed evaluation</span>
-      </a>
+      <a href="#performedExecution"
+         title="http://www.github.com/AlexDonkers/bop#performedExecution">performed execution</a>
    </li>
    <li>
       <a href="#performedObservation"
-         title="http://www.github.com/AlexDonkers/bop#performedObservation">
-         <span>performed observation</span>
-      </a>
+         title="http://www.github.com/AlexDonkers/bop#performedObservation">performed observation</a>
+   </li>
+   <li>
+      <a href="#usedProcedure"
+         title="http://www.github.com/AlexDonkers/bop#usedProcedure">used procedure</a>
    </li>
 </ul><h4>Data Properties</h4><ul class="hlist">
    <li>
@@ -172,38 +211,26 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#hasSimpleEvaluation"
-         title="http://www.github.com/AlexDonkers/bop#hasSimpleEvaluation">
-         <span>has simple evaluation</span>
-      </a>
+      <a href="#hasSimpleProperty"
+         title="http://www.github.com/AlexDonkers/bop#hasSimpleProperty">has simple property</a>
    </li>
    <li>
-      <a href="#hasSimpleProperty"
-         title="http://www.github.com/AlexDonkers/bop#hasSimpleProperty">
-         <span>has simple property</span>
-      </a>
+      <a href="#hasSimplePropertyState"
+         title="http://www.github.com/AlexDonkers/bop#hasSimplePropertyState">has simple property state</a>
    </li>
    <li>
       <a href="#hasSimpleResult"
-         title="http://www.github.com/AlexDonkers/bop#hasSimpleResult">
-         <span>has simple result</span>
-      </a>
+         title="http://www.github.com/AlexDonkers/bop#hasSimpleResult">has simple result</a>
    </li>
    <li>
       <a href="#hasSimpleUnit"
-         title="http://www.github.com/AlexDonkers/bop#hasSimpleUnit">
-         <span>has simple unit</span>
-      </a>
+         title="http://www.github.com/AlexDonkers/bop#hasSimpleUnit">has simple unit</a>
    </li>
    <li>
-      <a href="#hasValue" title="http://www.github.com/AlexDonkers/bop#hasValue">
-         <span>has value</span>
-      </a>
+      <a href="#hasValue" title="http://www.github.com/AlexDonkers/bop#hasValue">has value</a>
    </li>
 </ul><h4>Named Individuals</h4><ul class="hlist">
    <li>
-      <a href="#https://orcid.org/0000-0002-8809-3277" title="https://orcid.org/0000-0002-8809-3277">
-         <span>0000 0002 8809 3277</span>
-      </a>
+      <a href="#https://orcid.org/0000-0002-8809-3277" title="https://orcid.org/0000-0002-8809-3277">Alex Donkers</a>
    </li>
 </ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
