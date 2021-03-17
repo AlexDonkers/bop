@@ -75,6 +75,7 @@ h3.list {
 h2 {
   margin-top: 40px;
   font-weight: bold;
+  text-transform: none;
 }
 
 .dotted {
