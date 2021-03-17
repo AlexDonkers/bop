@@ -7,9 +7,10 @@ h1 {
   line-height: 110%;
   color: white;
   font-family: "Ubuntu";
+  font-size: 250%;
   font-weight: bold;
   background-color: transparent;
-  text-align: center;
+  text-align: left;
 }
 
 .hlist {
