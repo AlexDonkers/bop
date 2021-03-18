@@ -1,295 +1,80 @@
 [ {
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Unit"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#hasUnit"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#hasSubExecutor"
-  } ]
-}, {
-  "@id" : "_:genid11",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Platform"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isHostedBy"
-  } ]
-}, {
-  "@id" : "_:genid12",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Execution"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#performedExecution"
-  } ]
-}, {
-  "@id" : "_:genid13",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Platform"
+    "@id" : "https://www.w3id.org/bop#Platform"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isHostedBy"
-  } ]
-}, {
-  "@id" : "_:genid14",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf"
-  } ]
-}, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf"
-  } ]
-}, {
-  "@id" : "_:genid16",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Sensor"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#observedBy"
-  } ]
-}, {
-  "@id" : "_:genid17",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Procedure"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#usedProcedure"
-  } ]
-}, {
-  "@id" : "_:genid18",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#hosts"
-  } ]
-}, {
-  "@id" : "_:genid19",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#implementedBy"
+    "@id" : "https://www.w3id.org/bop#isHostedBy"
   } ]
 }, {
   "@id" : "_:genid2",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Actuator"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#actuatedBy"
-  } ]
-}, {
-  "@id" : "_:genid20",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Execution"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isUsedFor"
-  } ]
-}, {
-  "@id" : "_:genid21",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#FeatureOfInterest"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest"
-  } ]
-}, {
-  "@id" : "_:genid22",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#hasSubProperty"
-  } ]
-}, {
-  "@id" : "_:genid23",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Observation"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isActedOnBy"
-  } ]
-}, {
-  "@id" : "_:genid24",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#FeatureOfInterest"
+    "@id" : "https://www.w3id.org/bop#Property"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest"
-  } ]
-}, {
-  "@id" : "_:genid25",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#containsProperty"
-  } ]
-}, {
-  "@id" : "_:genid26",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Sensor"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#hasSubSensor"
-  } ]
-}, {
-  "@id" : "_:genid27",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Observation"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#performedObservation"
-  } ]
-}, {
-  "@id" : "_:genid28",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
-  "http://www.w3.org/2002/07/owl#members" : [ {
-    "@list" : [ {
-      "@id" : "http://www.github.com/AlexDonkers/bop#Database"
-    }, {
-      "@id" : "http://www.github.com/AlexDonkers/bop#Execution"
-    }, {
-      "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
-    }, {
-      "@id" : "http://www.github.com/AlexDonkers/bop#FeatureOfInterest"
-    }, {
-      "@id" : "http://www.github.com/AlexDonkers/bop#Platform"
-    }, {
-      "@id" : "http://www.github.com/AlexDonkers/bop#Procedure"
-    }, {
-      "@id" : "http://www.github.com/AlexDonkers/bop#Property"
-    }, {
-      "@id" : "http://www.github.com/AlexDonkers/bop#PropertySet"
-    }, {
-      "@id" : "http://www.github.com/AlexDonkers/bop#Result"
-    }, {
-      "@id" : "http://www.github.com/AlexDonkers/bop#Unit"
-    } ]
+    "@id" : "https://www.w3id.org/bop#hasProperty"
   } ]
 }, {
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Actuator"
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://www.w3id.org/bop#Executor"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#hasSubActuator"
+    "@id" : "https://www.w3id.org/bop#hosts"
   } ]
 }, {
   "@id" : "_:genid4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Actuation"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#performedActuation"
-  } ]
-}, {
-  "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Database"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isCollectionOf"
-  } ]
-}, {
-  "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
+    "@id" : "https://www.w3id.org/bop#FeatureOfInterest"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf"
+    "@id" : "https://www.w3id.org/bop#isPropertyOf"
   } ]
 }, {
-  "@id" : "_:genid7",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#executedBy"
-  } ]
-}, {
-  "@id" : "_:genid8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Procedure"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#implementedBy"
-  } ]
-}, {
-  "@id" : "_:genid9",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#actsOn"
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://www.w3id.org/bop#Database"
+    }, {
+      "@id" : "https://www.w3id.org/bop#Execution"
+    }, {
+      "@id" : "https://www.w3id.org/bop#Executor"
+    }, {
+      "@id" : "https://www.w3id.org/bop#FeatureOfInterest"
+    }, {
+      "@id" : "https://www.w3id.org/bop#Platform"
+    }, {
+      "@id" : "https://www.w3id.org/bop#Procedure"
+    }, {
+      "@id" : "https://www.w3id.org/bop#Property"
+    }, {
+      "@id" : "https://www.w3id.org/bop#PropertySet"
+    }, {
+      "@id" : "https://www.w3id.org/bop#Result"
+    }, {
+      "@id" : "https://www.w3id.org/bop#Unit"
+    } ]
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/contributor",
@@ -310,14 +95,38 @@
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#",
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/weblog",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://orcid.org/0000-0002-8809-3277",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://xmlns.com/foaf/0.1/Person" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Alex Donkers"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Alex Donkers"
+  } ],
+  "http://xmlns.com/foaf/0.1/weblog" : [ {
+    "@value" : "https://linktr.ee/AlexDonkers"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/bop#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/creator" : [ {
     "@id" : "https://orcid.org/0000-0002-8809-3277"
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
-    "@value" : "The Building Performance Ontology (BOP) is a set of ontological constructs which allows integration of data related to building performance. By (re-)using ontology patterns from major ontologies in the field, BOP provides a method to integrate both static and dynamic (time-series) properties to buildings, zones, elements and products. \n\nIt's aim is to facilitate building managers and facility managers with a common data structure to ease the process of data integration and to allow software tools to deal with the large heterogeneity of data. \n\nBy (re-)using concepts from major ontologies in the field, BOP could easily be integrated with a wide range of existing ontologies and datasets. BOP could be seen as an extension of existing work rather than an individual ontology."
+    "@value" : "The Building Performance Ontology (BOP) aims to enable the integration of topological building information with static and dynamic properties,  to create a homogeneous data environment used by complex building performance assessments. It helps building managers and their software to deal with the large heterogeneity of information. \n\nWhile the data describing static and dynamic properties is fundamentally different, they share a similar context with a complex spatio-temporal resolution. The goal of this ontology is to represent this complex contextual information similarly for different types of information, which will increase the opportunities for using the linked data in complex equations and improves machine-readability. We tried to be as semantically correct as possible, while also aiming for simple and intuitive queries. By (re-)using concepts from major ontologies in the field, BOP could easily be integrated with a wide range of existing ontologies and datasets."
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -327,14 +136,14 @@
     "@value" : "bop"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#"
+    "@id" : "https://www.w3id.org/bop#"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "1.1"
+    "@value" : "1.2"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#Actuation",
+  "@id" : "https://www.w3id.org/bop#Actuation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -348,16 +157,20 @@
     "@value" : "Bediening"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Execution"
-  }, {
-    "@id" : "_:genid2"
+    "@id" : "https://www.w3id.org/bop#Execution"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://www.w3id.org/bop#Observation"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#Actuator",
+  "@id" : "https://www.w3id.org/bop#Actuator",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "An agent that can implement an actuation procedure to change the state of a property.."
+  }, {
+    "@language" : "nl",
+    "@value" : "Iets wat een actie kan uitvoeren op basis van een procedure om de status van een eigenschap te veranderen."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -367,14 +180,13 @@
     "@value" : "Actuator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
-  }, {
-    "@id" : "_:genid3"
-  }, {
-    "@id" : "_:genid4"
+    "@id" : "https://www.w3id.org/bop#Executor"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://www.w3id.org/bop#Sensor"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#Collection",
+  "@id" : "https://www.w3id.org/bop#Collection",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -388,12 +200,10 @@
     "@value" : "Collection"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Result"
-  }, {
-    "@id" : "_:genid5"
+    "@id" : "https://www.w3id.org/bop#Result"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#CurrentState",
+  "@id" : "https://www.w3id.org/bop#CurrentState",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -407,10 +217,10 @@
     "@value" : "Huidige staat"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Result"
+    "@id" : "https://www.w3id.org/bop#Result"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#Database",
+  "@id" : "https://www.w3id.org/bop#Database",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -422,12 +232,9 @@
   }, {
     "@language" : "en",
     "@value" : "Database"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid6"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#Execution",
+  "@id" : "https://www.w3id.org/bop#Execution",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -442,14 +249,9 @@
   }, {
     "@language" : "nl",
     "@value" : "Uitvoering"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid7"
-  }, {
-    "@id" : "_:genid8"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#Executor",
+  "@id" : "https://www.w3id.org/bop#Executor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -466,18 +268,10 @@
     "@value" : "Uitvoerder"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid9"
-  }, {
-    "@id" : "_:genid10"
-  }, {
-    "@id" : "_:genid11"
-  }, {
-    "@id" : "_:genid12"
-  }, {
-    "@id" : "_:genid13"
+    "@id" : "_:genid1"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#FeatureOfInterest",
+  "@id" : "https://www.w3id.org/bop#FeatureOfInterest",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -494,16 +288,14 @@
     "@value" : "Kenmerk van belang"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid14"
-  }, {
-    "@id" : "_:genid15"
+    "@id" : "_:genid2"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "An object, part, zone, event etc."
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#Function",
+  "@id" : "https://www.w3id.org/bop#Function",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -517,10 +309,10 @@
     "@value" : "Function"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
+    "@id" : "https://www.w3id.org/bop#Property"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#Observation",
+  "@id" : "https://www.w3id.org/bop#Observation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -534,14 +326,10 @@
     "@value" : "Observation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Execution"
-  }, {
-    "@id" : "_:genid16"
-  }, {
-    "@id" : "_:genid17"
+    "@id" : "https://www.w3id.org/bop#Execution"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#Platform",
+  "@id" : "https://www.w3id.org/bop#Platform",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -555,25 +343,24 @@
     "@value" : "Platform"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid18"
+    "@id" : "_:genid3"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#Procedure",
+  "@id" : "https://www.w3id.org/bop#Procedure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A workflow, protocol, plan, algorithm, or computational method specifying how to perform an execution."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Procedure"
   }, {
     "@language" : "nl",
     "@value" : "Procedure"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid19"
-  }, {
-    "@id" : "_:genid20"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#Property",
+  "@id" : "https://www.w3id.org/bop#Property",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -590,16 +377,10 @@
     "@value" : "Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid21"
-  }, {
-    "@id" : "_:genid22"
-  }, {
-    "@id" : "_:genid23"
-  }, {
-    "@id" : "_:genid24"
+    "@id" : "_:genid4"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#PropertySet",
+  "@id" : "https://www.w3id.org/bop#PropertySet",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -614,12 +395,9 @@
   }, {
     "@language" : "nl",
     "@value" : "Verzameling van eigenschappen"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid25"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#Result",
+  "@id" : "https://www.w3id.org/bop#Result",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -637,11 +415,14 @@
     "@value" : "The result may hold, for example, a value, a unit, a result time and other provenance data."
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#Sensor",
+  "@id" : "https://www.w3id.org/bop#Sensor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "An agent that can implement an observation procedure to measure the state of a property."
+  }, {
+    "@language" : "nl",
+    "@value" : "Iets wat een meting kan uitvoeren op basis van een procedure om de status van een eigenschap te meten."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -651,14 +432,10 @@
     "@value" : "Sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
-  }, {
-    "@id" : "_:genid26"
-  }, {
-    "@id" : "_:genid27"
+    "@id" : "https://www.w3id.org/bop#Executor"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#Unit",
+  "@id" : "https://www.w3id.org/bop#Unit",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -675,751 +452,1097 @@
     "@value" : "Unit"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#actsOn",
+  "@id" : "https://www.w3id.org/bop#actsOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between an actuator and the property it acts on."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
+    "@id" : "https://www.w3id.org/bop#Actuator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "acts on"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
+    "@id" : "https://www.w3id.org/bop#Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/bop#executesOn"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isActedOnBy"
+    "@id" : "https://www.w3id.org/bop#isActuatedBy"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#actuatedBy",
+  "@id" : "https://www.w3id.org/bop#actuatedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between an actuation and the actuator which performed this actuation."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Actuation"
+    "@id" : "https://www.w3id.org/bop#Actuation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "actuated by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Actuator"
+    "@id" : "https://www.w3id.org/bop#Actuator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#executedBy"
+    "@id" : "https://www.w3id.org/bop#executedBy"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#performedActuation"
+    "@id" : "https://www.w3id.org/bop#performsActuation"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#containsProperty",
+  "@id" : "https://www.w3id.org/bop#actuatedProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between an actuation and the actuated property."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#PropertySet"
+    "@id" : "https://www.w3id.org/bop#Actuation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "actuated property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/bop#Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/bop#executedProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://www.w3id.org/bop#hasActuation"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/bop#containsProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between a property set and a property which is part of this set."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/bop#PropertySet"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "contains property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
+    "@id" : "https://www.w3id.org/bop#Property"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isPartOfPropertySet"
+    "@id" : "https://www.w3id.org/bop#isPartOfPropertySet"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#executedBy",
+  "@id" : "https://www.w3id.org/bop#executedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between an execution and the executor which performed this execution."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Execution"
+    "@id" : "https://www.w3id.org/bop#Execution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "executed by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
+    "@id" : "https://www.w3id.org/bop#Executor"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#performedExecution"
+    "@id" : "https://www.w3id.org/bop#performsExecution"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasCollection",
+  "@id" : "https://www.w3id.org/bop#executedProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between an execution and the executed property."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Database"
+    "@id" : "https://www.w3id.org/bop#Execution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "executed property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/bop#Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://www.w3id.org/bop#hasExecution"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/bop#executesOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between an executor and the property it executes on."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/bop#Executor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "executes on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/bop#Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://www.w3id.org/bop#isExecutedBy"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/bop#hasActuation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between a property and a corresponding actuation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/bop#Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has actuation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/bop#Actuation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/bop#hasExecution"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/bop#hasCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between a database and its collection."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/bop#Database"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has collection"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Collection"
+    "@id" : "https://www.w3id.org/bop#Collection"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isCollectionOf"
+    "@id" : "https://www.w3id.org/bop#isCollectionOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "E.g. the relationship between an InfluxDB database and an InfluxDB bucket."
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasComplexProperty",
+  "@id" : "https://www.w3id.org/bop#hasComplexProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Direct relationship between a feature of interest and a result."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#FeatureOfInterest"
+    "@id" : "https://www.w3id.org/bop#FeatureOfInterest"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has complex property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Result"
+    "@id" : "https://www.w3id.org/bop#Result"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isComplexPropertyOf"
+    "@id" : "https://www.w3id.org/bop#isComplexPropertyOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The object property could be extended by subclassing it with use-case-specific object properties.\n\nOne could for example say: :Wall --ex:hasLength-> :CurrentWallLength, where ex:hasLength is a subclass of bop:hasComplexProperty."
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasExternalDatabase",
+  "@id" : "https://www.w3id.org/bop#hasExecution",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between a property and a corresponding execution."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
+    "@id" : "https://www.w3id.org/bop#Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has execution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/bop#Execution"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/bop#hasExternalDatabase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Linking an executor with the database its results are stored in."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/bop#Executor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has external database"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Database"
+    "@id" : "https://www.w3id.org/bop#Database"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf"
+    "@id" : "https://www.w3id.org/bop#isExternalDatabaseOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "This object property could be used to link a sensor with a time-series database."
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest",
+  "@id" : "https://www.w3id.org/bop#hasFeatureOfInterest",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Linking an execution with its feature of interest."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Execution"
+    "@id" : "https://www.w3id.org/bop#Execution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has feature of interest"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#FeatureOfInterest"
+    "@id" : "https://www.w3id.org/bop#FeatureOfInterest"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf"
+    "@id" : "https://www.w3id.org/bop#isFeatureOfInterestOf"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasProperty",
+  "@id" : "https://www.w3id.org/bop#hasObservation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between a property and a corresponding observation."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#FeatureOfInterest"
+    "@id" : "https://www.w3id.org/bop#Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/bop#Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/bop#hasExecution"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://www.w3id.org/bop#observedProperty"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/bop#hasProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Linking a feature of interest with its property. The property is intrinsic to this feature of interest, and cannot exist without a feature of interest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/bop#FeatureOfInterest"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
+    "@id" : "https://www.w3id.org/bop#Property"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isPropertyOf"
+    "@id" : "https://www.w3id.org/bop#isPropertyOf"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasPropertyState",
+  "@id" : "https://www.w3id.org/bop#hasPropertyState",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Linking a property with a result"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
+    "@id" : "https://www.w3id.org/bop#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has property state"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Result"
+    "@id" : "https://www.w3id.org/bop#Result"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isPropertyStateOf"
+    "@id" : "https://www.w3id.org/bop#isPropertyStateOf"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "This object property is used to directly link a property to a property state. \n\nExample: Temperature -- hasPropertyState --> CurrentTemperatureState"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasResult",
+  "@id" : "https://www.w3id.org/bop#hasResult",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Linking an execution to its result."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Execution"
+    "@id" : "https://www.w3id.org/bop#Execution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has result"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Result"
+    "@id" : "https://www.w3id.org/bop#Result"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isResultOf"
+    "@id" : "https://www.w3id.org/bop#isResultOf"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasSimpleProperty",
+  "@id" : "https://www.w3id.org/bop#hasSimpleProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Linking a feature of interest with a simple property value described as a literal."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#FeatureOfInterest"
+    "@id" : "https://www.w3id.org/bop#FeatureOfInterest"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has simple property"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasSimplePropertyState",
+  "@id" : "https://www.w3id.org/bop#hasSimplePropertyState",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Linking a property with a simple property state value described as a literal."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
+    "@id" : "https://www.w3id.org/bop#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has simple property state"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasSimpleResult",
+  "@id" : "https://www.w3id.org/bop#hasSimpleResult",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Linking an execution with a simple result value described as a literal."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Execution"
+    "@id" : "https://www.w3id.org/bop#Execution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has simple result"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasSimpleUnit",
+  "@id" : "https://www.w3id.org/bop#hasSimpleUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Linking a result with a unit described by a literal."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Result"
+    "@id" : "https://www.w3id.org/bop#Result"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has simple unit"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasSubActuator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://www.w3id.org/bop#hasSubActuator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Describing a whole-part relationship between an actuator and its sub-actuator."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Actuator"
+    "@id" : "https://www.w3id.org/bop#Actuator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has sub-actuator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Actuator"
+    "@id" : "https://www.w3id.org/bop#Actuator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#hasSubExecutor"
+    "@id" : "https://www.w3id.org/bop#hasSubExecutor"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isSubActuatorOf"
+    "@id" : "https://www.w3id.org/bop#isSubActuatorOf"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasSubExecutor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://www.w3id.org/bop#hasSubExecutor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Describing a whole-part relationship between an executor and its sub-executor."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
+    "@id" : "https://www.w3id.org/bop#Executor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has sub-executor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+    "@id" : "https://www.w3id.org/bop#Executor"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isSubExecutorOf"
+    "@id" : "https://www.w3id.org/bop#isSubExecutorOf"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasSubProperty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://www.w3id.org/bop#hasSubProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Describing a whole-part relationship between a property and its sub-property.."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
+    "@id" : "https://www.w3id.org/bop#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has sub-property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
+    "@id" : "https://www.w3id.org/bop#Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://www.w3id.org/bop#isSubPropertyOf"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasSubSensor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://www.w3id.org/bop#hasSubSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Describing a whole-part relationship between a sensor and its sub-sensor.."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Sensor"
+    "@id" : "https://www.w3id.org/bop#Sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has sub-sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Sensor"
+    "@id" : "https://www.w3id.org/bop#Sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#hasSubExecutor"
+    "@id" : "https://www.w3id.org/bop#hasSubExecutor"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isSubSensorOf"
+    "@id" : "https://www.w3id.org/bop#isSubSensorOf"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasUnit",
+  "@id" : "https://www.w3id.org/bop#hasUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Linking a result with a unit."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Result"
+    "@id" : "https://www.w3id.org/bop#Result"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has unit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid1"
+    "@id" : "https://www.w3id.org/bop#Unit"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isUnitOf"
+    "@id" : "https://www.w3id.org/bop#isUnitOf"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hasValue",
+  "@id" : "https://www.w3id.org/bop#hasValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The simple value of a result."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Result"
+    "@id" : "https://www.w3id.org/bop#Result"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has value"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#hosts",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://www.w3id.org/bop#hosts",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Describing the relation between a platform and the executor which is hosted by this platform."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Platform"
+    "@id" : "https://www.w3id.org/bop#Platform"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "hosts"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
+    "@id" : "https://www.w3id.org/bop#Executor"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isHostedBy"
+    "@id" : "https://www.w3id.org/bop#isHostedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "This object property could be used to describe the relationship between a wall and a sensor hosted by this wall."
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#implementedBy",
+  "@id" : "https://www.w3id.org/bop#implementedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Describing the relation between a procedure and the executor implementing this procedure."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Procedure"
+    "@id" : "https://www.w3id.org/bop#Procedure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "implemented by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
+    "@id" : "https://www.w3id.org/bop#Executor"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#implementsProcedure"
+    "@id" : "https://www.w3id.org/bop#implementsProcedure"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#implementsProcedure",
+  "@id" : "https://www.w3id.org/bop#implementsProcedure",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Describing the relationship between an executor and the procedure it implements."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
+    "@id" : "https://www.w3id.org/bop#Executor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "implements procedure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Procedure"
+    "@id" : "https://www.w3id.org/bop#Procedure"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isActedOnBy",
+  "@id" : "https://www.w3id.org/bop#isActuatedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Linking a property with the executor which acts on this property."
+    "@value" : "Relationship between a property and the actuator which acts on the property."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
+    "@id" : "https://www.w3id.org/bop#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "is acted on by"
+    "@value" : "is actuated by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
+    "@id" : "https://www.w3id.org/bop#Actuator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+    "@id" : "https://www.w3id.org/bop#isExecutedBy"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isCollectionOf",
+  "@id" : "https://www.w3id.org/bop#isCollectionOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Linking a collection with the database it is part of."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Collection"
+    "@id" : "https://www.w3id.org/bop#Collection"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is collection of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Database"
+    "@id" : "https://www.w3id.org/bop#Database"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isComplexPropertyOf",
+  "@id" : "https://www.w3id.org/bop#isComplexPropertyOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Linking a result with a feature of interest"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Result"
+    "@id" : "https://www.w3id.org/bop#Result"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is complex property of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#FeatureOfInterest"
+    "@id" : "https://www.w3id.org/bop#FeatureOfInterest"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
-    "@value" : "This object property is used to directly link the current state of a property to a feature of interest. It is the shortest route to link a result to a feature of interest. \n\nExample: CurrentWallLength --isComplexPropertyOf --> Wall"
+    "@value" : "This object property is used to directly link the current state of a property to a feature of interest. It is the shortest route to link a result to a feature of interest. \nThe object property could be extended by subclassing it with use-case-specific object properties.\n\nOne could for example say: :CurrentWallLength --ex:isLengthOf-> :Wall, where ex:hasLength is a subclass of bop:isComplexPropertyOf."
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf",
+  "@id" : "https://www.w3id.org/bop#isExecutedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between a property and the executor which executes on the property."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/bop#Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is executed by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/bop#Executor"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/bop#isExternalDatabaseOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Database"
+    "@id" : "https://www.w3id.org/bop#Database"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is external database of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
+    "@id" : "https://www.w3id.org/bop#Executor"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "Linking a database with the executor which results are stored in this database."
+  }, {
+    "@language" : "en",
+    "@value" : "This object property could be used to link a time-series database with a sensor."
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf",
+  "@id" : "https://www.w3id.org/bop#isFeatureOfInterestOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Linking a feature of interest with an execution which executes on a property of this feature of interest."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#FeatureOfInterest"
+    "@id" : "https://www.w3id.org/bop#FeatureOfInterest"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is feature of interest of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Execution"
+    "@id" : "https://www.w3id.org/bop#Execution"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isHostedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://www.w3id.org/bop#isHostedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Describing the relation between an executor and the platform hosting this executor."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
+    "@id" : "https://www.w3id.org/bop#Executor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is hosted by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Platform"
+    "@id" : "https://www.w3id.org/bop#Platform"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "This object property could be used to describe the relationship between a sensor and a wall hosting this sensor."
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isPartOfPropertySet",
+  "@id" : "https://www.w3id.org/bop#isObservedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between a property and the sensor which observes the property."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
+    "@id" : "https://www.w3id.org/bop#Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is observed by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/bop#Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/bop#isExecutedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://www.w3id.org/bop#observes"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/bop#isPartOfPropertySet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between a property and the property set it is part of."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/bop#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is part of property set"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#PropertySet"
+    "@id" : "https://www.w3id.org/bop#PropertySet"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isPropertyOf",
+  "@id" : "https://www.w3id.org/bop#isPropertyOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Linking a property with its feature of interest. The property is intrinsic to this feature of interest, and cannot exist without a feature of interest."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
+    "@id" : "https://www.w3id.org/bop#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is property of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#FeatureOfInterest"
+    "@id" : "https://www.w3id.org/bop#FeatureOfInterest"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isPropertyStateOf",
+  "@id" : "https://www.w3id.org/bop#isPropertyStateOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Linking a result with a property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Result"
+    "@id" : "https://www.w3id.org/bop#Result"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is property state of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Property"
+    "@id" : "https://www.w3id.org/bop#Property"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "This object property is used to directly link the current state of a property to a property. It is the shortest route to link a result to a property. \n\nExample: CurrentTemperatureState -- isPropertyStateOf --> Temperature"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isResultOf",
+  "@id" : "https://www.w3id.org/bop#isResultOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Linking a result with an execution."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Result"
+    "@id" : "https://www.w3id.org/bop#Result"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is result of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Execution"
+    "@id" : "https://www.w3id.org/bop#Execution"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isSubActuatorOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://www.w3id.org/bop#isSubActuatorOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Relation between an actuator and sub-actuators. The sub-actuators are of type actuator and could function as individual actuators."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Actuator"
+    "@id" : "https://www.w3id.org/bop#Actuator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is sub-actuator of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Actuator"
+    "@id" : "https://www.w3id.org/bop#Actuator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isSubExecutorOf"
+    "@id" : "https://www.w3id.org/bop#isSubExecutorOf"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "The object property could be used to model actuators which have multiple components with their own functions."
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isSubExecutorOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://www.w3id.org/bop#isSubExecutorOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Relation between an executor and sub-executors. The sub-executors are of type executor and could function as individual executors."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
+    "@id" : "https://www.w3id.org/bop#Executor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is sub-executor of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
+    "@id" : "https://www.w3id.org/bop#Executor"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "The object property could be used to model devices which have multiple components with their own functions. A multisensor - for example - consists of multiple sub-sensors which individually perform a sensing function."
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isSubSensorOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://www.w3id.org/bop#isSubPropertyOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relation between a sub-property and its parent property."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/bop#Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is sub-property of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/bop#Property"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The object property describes a typical whole-part relationship between a property and its sub-properties. It is used in cases where properties are so complex that it is desirable to decompose them into separate properties. The separate properties might also be individually linked to their own results."
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/bop#isSubSensorOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Relation between a sensor and sub-sensors. The sub-sensors are of type sensor and could function as individual sensors."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Sensor"
+    "@id" : "https://www.w3id.org/bop#Sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is sub-sensor of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Sensor"
+    "@id" : "https://www.w3id.org/bop#Sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#isSubExecutorOf"
+    "@id" : "https://www.w3id.org/bop#isSubExecutorOf"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "The object property could be used to model sensors which have multiple components with their own functions."
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isUnitOf",
+  "@id" : "https://www.w3id.org/bop#isUnitOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Linking a unit with a result."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Unit"
+    "@id" : "https://www.w3id.org/bop#Unit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is unit of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Result"
+    "@id" : "https://www.w3id.org/bop#Result"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#isUsedFor",
+  "@id" : "https://www.w3id.org/bop#isUsedFor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between a procedure and an execution which used this procedure."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Procedure"
+    "@id" : "https://www.w3id.org/bop#Procedure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is used for"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Execution"
+    "@id" : "https://www.w3id.org/bop#Execution"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#usedProcedure"
+    "@id" : "https://www.w3id.org/bop#usesProcedure"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#observedBy",
+  "@id" : "https://www.w3id.org/bop#observedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between an observation and the sensor which performed this observation."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Observation"
+    "@id" : "https://www.w3id.org/bop#Observation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "observed by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Sensor"
+    "@id" : "https://www.w3id.org/bop#Sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#executedBy"
+    "@id" : "https://www.w3id.org/bop#executedBy"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#performedObservation"
+    "@id" : "https://www.w3id.org/bop#performsObservation"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#performedActuation",
+  "@id" : "https://www.w3id.org/bop#observedProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between an observation and the observed property."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Actuator"
+    "@id" : "https://www.w3id.org/bop#Observation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "performed actuation"
+    "@value" : "observed property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Actuation"
+    "@id" : "https://www.w3id.org/bop#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#performedExecution"
+    "@id" : "https://www.w3id.org/bop#executedProperty"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#performedExecution",
+  "@id" : "https://www.w3id.org/bop#observes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between a sensor and the property it observes."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Executor"
+    "@id" : "https://www.w3id.org/bop#Sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "performed execution"
+    "@value" : "observes"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Execution"
-  } ]
-}, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#performedObservation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Sensor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "performed observation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Observation"
+    "@id" : "https://www.w3id.org/bop#Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#performedExecution"
+    "@id" : "https://www.w3id.org/bop#executesOn"
   } ]
 }, {
-  "@id" : "http://www.github.com/AlexDonkers/bop#usedProcedure",
+  "@id" : "https://www.w3id.org/bop#performsActuation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between an actuator and the actuation it performs."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Execution"
+    "@id" : "https://www.w3id.org/bop#Actuator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "used procedure"
+    "@value" : "performs actuation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Procedure"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/2004/02/skos/core#example",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://www.w3.org/ns/prov#generatedAtTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.github.com/AlexDonkers/bop#Result"
-  } ]
-}, {
-  "@id" : "http://xmlns.com/foaf/0.1/Person",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://xmlns.com/foaf/0.1/name",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://orcid.org/0000-0002-8809-3277",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://xmlns.com/foaf/0.1/Person" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Alex Donkers"
+    "@id" : "https://www.w3id.org/bop#Actuation"
   } ],
-  "http://xmlns.com/foaf/0.1/name" : [ {
-    "@value" : "Alex Donkers"
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/bop#performsExecution"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/bop#performsExecution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between an executor and the execution it performs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/bop#Executor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "performs execution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/bop#Execution"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/bop#performsObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship between a sensor and the observation it performs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/bop#Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "performs observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/bop#Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://www.w3id.org/bop#performsExecution"
+  } ]
+}, {
+  "@id" : "https://www.w3id.org/bop#usesProcedure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The relationship between an execution and the used procedure."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://www.w3id.org/bop#Execution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "uses procedure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3id.org/bop#Procedure"
   } ]
 } ]

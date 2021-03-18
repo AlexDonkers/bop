@@ -1,0 +1,680 @@
+<http://www.github.com/AlexDonkers/bop#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.github.com/AlexDonkers/bop#> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-8809-3277> .
+<http://www.github.com/AlexDonkers/bop#> <http://purl.org/dc/terms/description> "The Building Performance Ontology (BOP) is a set of ontological constructs which allows integration of data related to building performance. By (re-)using ontology patterns from major ontologies in the field, BOP provides a method to integrate both static and dynamic (time-series) properties to buildings, zones, elements and products. \n\nIt's aim is to facilitate building managers and facility managers with a common data structure to ease the process of data integration and to allow software tools to deal with the large heterogeneity of data. \n\nBy (re-)using concepts from major ontologies in the field, BOP could easily be integrated with a wide range of existing ontologies and datasets. BOP could be seen as an extension of existing work rather than an individual ontology."@en .
+<http://www.github.com/AlexDonkers/bop#> <http://purl.org/dc/terms/title> "Building Performance Ontology"@en .
+<http://www.github.com/AlexDonkers/bop#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "bop" .
+<http://www.github.com/AlexDonkers/bop#> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.github.com/AlexDonkers/bop#> .
+<http://www.github.com/AlexDonkers/bop#> <http://www.w3.org/2002/07/owl#versionInfo> "1.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.github.com/AlexDonkers/bop#actsOn
+<http://www.github.com/AlexDonkers/bop#actsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#actsOn> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#isActedOnBy> .
+<http://www.github.com/AlexDonkers/bop#actsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#actsOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#actsOn> <http://www.w3.org/2000/01/rdf-schema#label> "acts on"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#actuatedBy
+<http://www.github.com/AlexDonkers/bop#actuatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#actuatedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.github.com/AlexDonkers/bop#executedBy> .
+<http://www.github.com/AlexDonkers/bop#actuatedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#performedActuation> .
+<http://www.github.com/AlexDonkers/bop#actuatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Actuation> .
+<http://www.github.com/AlexDonkers/bop#actuatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Actuator> .
+<http://www.github.com/AlexDonkers/bop#actuatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "actuated by"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#containsProperty
+<http://www.github.com/AlexDonkers/bop#containsProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#containsProperty> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#isPartOfPropertySet> .
+<http://www.github.com/AlexDonkers/bop#containsProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#PropertySet> .
+<http://www.github.com/AlexDonkers/bop#containsProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#containsProperty> <http://www.w3.org/2000/01/rdf-schema#label> "contains property"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#executedBy
+<http://www.github.com/AlexDonkers/bop#executedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#executedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#performedExecution> .
+<http://www.github.com/AlexDonkers/bop#executedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Execution> .
+<http://www.github.com/AlexDonkers/bop#executedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#executedBy> <http://www.w3.org/2000/01/rdf-schema#label> "executed by"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasCollection
+<http://www.github.com/AlexDonkers/bop#hasCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#hasCollection> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#isCollectionOf> .
+<http://www.github.com/AlexDonkers/bop#hasCollection> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Database> .
+<http://www.github.com/AlexDonkers/bop#hasCollection> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Collection> .
+<http://www.github.com/AlexDonkers/bop#hasCollection> <http://www.w3.org/2000/01/rdf-schema#label> "has collection"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasComplexProperty
+<http://www.github.com/AlexDonkers/bop#hasComplexProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#hasComplexProperty> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#isComplexPropertyOf> .
+<http://www.github.com/AlexDonkers/bop#hasComplexProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#FeatureOfInterest> .
+<http://www.github.com/AlexDonkers/bop#hasComplexProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Result> .
+<http://www.github.com/AlexDonkers/bop#hasComplexProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has complex property"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasExternalDatabase
+<http://www.github.com/AlexDonkers/bop#hasExternalDatabase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#hasExternalDatabase> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf> .
+<http://www.github.com/AlexDonkers/bop#hasExternalDatabase> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#hasExternalDatabase> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Database> .
+<http://www.github.com/AlexDonkers/bop#hasExternalDatabase> <http://www.w3.org/2000/01/rdf-schema#label> "has external database"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest
+<http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf> .
+<http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Execution> .
+<http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#FeatureOfInterest> .
+<http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has feature of interest"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasProperty
+<http://www.github.com/AlexDonkers/bop#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#isPropertyOf> .
+<http://www.github.com/AlexDonkers/bop#hasProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#FeatureOfInterest> .
+<http://www.github.com/AlexDonkers/bop#hasProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasPropertyState
+<http://www.github.com/AlexDonkers/bop#hasPropertyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#hasPropertyState> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#isPropertyStateOf> .
+<http://www.github.com/AlexDonkers/bop#hasPropertyState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#hasPropertyState> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Result> .
+<http://www.github.com/AlexDonkers/bop#hasPropertyState> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking a property with a result"@en .
+<http://www.github.com/AlexDonkers/bop#hasPropertyState> <http://www.w3.org/2000/01/rdf-schema#label> "has property state"@en .
+<http://www.github.com/AlexDonkers/bop#hasPropertyState> <http://www.w3.org/2004/02/skos/core#example> "This object property is used to directly link a property to a property state. \n\nExample: Temperature -- hasPropertyState --> CurrentTemperatureState"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasResult
+<http://www.github.com/AlexDonkers/bop#hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#hasResult> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#isResultOf> .
+<http://www.github.com/AlexDonkers/bop#hasResult> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Execution> .
+<http://www.github.com/AlexDonkers/bop#hasResult> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Result> .
+<http://www.github.com/AlexDonkers/bop#hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "has result"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasSubActuator
+<http://www.github.com/AlexDonkers/bop#hasSubActuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#hasSubActuator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.github.com/AlexDonkers/bop#hasSubExecutor> .
+<http://www.github.com/AlexDonkers/bop#hasSubActuator> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#isSubActuatorOf> .
+<http://www.github.com/AlexDonkers/bop#hasSubActuator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Actuator> .
+<http://www.github.com/AlexDonkers/bop#hasSubActuator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Actuator> .
+<http://www.github.com/AlexDonkers/bop#hasSubActuator> <http://www.w3.org/2000/01/rdf-schema#label> "has sub-actuator"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasSubExecutor
+<http://www.github.com/AlexDonkers/bop#hasSubExecutor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#hasSubExecutor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#hasSubExecutor> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#isSubExecutorOf> .
+<http://www.github.com/AlexDonkers/bop#hasSubExecutor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#hasSubExecutor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#hasSubExecutor> <http://www.w3.org/2000/01/rdf-schema#label> "has sub-executor"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasSubProperty
+<http://www.github.com/AlexDonkers/bop#hasSubProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#hasSubProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#hasSubProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#hasSubProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has sub-property"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasSubSensor
+<http://www.github.com/AlexDonkers/bop#hasSubSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#hasSubSensor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.github.com/AlexDonkers/bop#hasSubExecutor> .
+<http://www.github.com/AlexDonkers/bop#hasSubSensor> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#isSubSensorOf> .
+<http://www.github.com/AlexDonkers/bop#hasSubSensor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Sensor> .
+<http://www.github.com/AlexDonkers/bop#hasSubSensor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Sensor> .
+<http://www.github.com/AlexDonkers/bop#hasSubSensor> <http://www.w3.org/2000/01/rdf-schema#label> "has sub-sensor"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasUnit
+<http://www.github.com/AlexDonkers/bop#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#hasUnit> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#isUnitOf> .
+<http://www.github.com/AlexDonkers/bop#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.github.com/AlexDonkers/bop#hasUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Result> .
+<http://www.github.com/AlexDonkers/bop#hasUnit> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#hasUnit> .
+_:genid1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <http://www.github.com/AlexDonkers/bop#Unit> .
+<http://www.github.com/AlexDonkers/bop#hasUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has unit"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hosts
+<http://www.github.com/AlexDonkers/bop#hosts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#hosts> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#isHostedBy> .
+<http://www.github.com/AlexDonkers/bop#hosts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Platform> .
+<http://www.github.com/AlexDonkers/bop#hosts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#hosts> <http://www.w3.org/2000/01/rdf-schema#label> "hosts"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#implementedBy
+<http://www.github.com/AlexDonkers/bop#implementedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#implementedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#implementsProcedure> .
+<http://www.github.com/AlexDonkers/bop#implementedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Procedure> .
+<http://www.github.com/AlexDonkers/bop#implementedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#implementedBy> <http://www.w3.org/2000/01/rdf-schema#label> "implemented by"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#implementsProcedure
+<http://www.github.com/AlexDonkers/bop#implementsProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#implementsProcedure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#implementsProcedure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Procedure> .
+<http://www.github.com/AlexDonkers/bop#implementsProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "implements procedure"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isActedOnBy
+<http://www.github.com/AlexDonkers/bop#isActedOnBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isActedOnBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isActedOnBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#isActedOnBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#isActedOnBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking a property with the executor which acts on this property."@en .
+<http://www.github.com/AlexDonkers/bop#isActedOnBy> <http://www.w3.org/2000/01/rdf-schema#label> "is acted on by"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isCollectionOf
+<http://www.github.com/AlexDonkers/bop#isCollectionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isCollectionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Collection> .
+<http://www.github.com/AlexDonkers/bop#isCollectionOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Database> .
+<http://www.github.com/AlexDonkers/bop#isCollectionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking a collection with the database it is part of."@en .
+<http://www.github.com/AlexDonkers/bop#isCollectionOf> <http://www.w3.org/2000/01/rdf-schema#label> "is collection of"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isComplexPropertyOf
+<http://www.github.com/AlexDonkers/bop#isComplexPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isComplexPropertyOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Result> .
+<http://www.github.com/AlexDonkers/bop#isComplexPropertyOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#FeatureOfInterest> .
+<http://www.github.com/AlexDonkers/bop#isComplexPropertyOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking a result with a feature of interest"@en .
+<http://www.github.com/AlexDonkers/bop#isComplexPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> "is complex property of"@en .
+<http://www.github.com/AlexDonkers/bop#isComplexPropertyOf> <http://www.w3.org/2004/02/skos/core#example> "This object property is used to directly link the current state of a property to a feature of interest. It is the shortest route to link a result to a feature of interest. \n\nExample: CurrentWallLength --isComplexPropertyOf --> Wall"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf
+<http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Database> .
+<http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf> <http://www.w3.org/2000/01/rdf-schema#label> "is external database of"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf
+<http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#FeatureOfInterest> .
+<http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Execution> .
+<http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#label> "is feature of interest of"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isHostedBy
+<http://www.github.com/AlexDonkers/bop#isHostedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Platform> .
+<http://www.github.com/AlexDonkers/bop#isHostedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is hosted by"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isPartOfPropertySet
+<http://www.github.com/AlexDonkers/bop#isPartOfPropertySet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isPartOfPropertySet> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#isPartOfPropertySet> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#PropertySet> .
+<http://www.github.com/AlexDonkers/bop#isPartOfPropertySet> <http://www.w3.org/2000/01/rdf-schema#label> "is part of property set"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isPropertyOf
+<http://www.github.com/AlexDonkers/bop#isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#FeatureOfInterest> .
+<http://www.github.com/AlexDonkers/bop#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> "is property of"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isPropertyStateOf
+<http://www.github.com/AlexDonkers/bop#isPropertyStateOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isPropertyStateOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Result> .
+<http://www.github.com/AlexDonkers/bop#isPropertyStateOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#isPropertyStateOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking a result with a property"@en .
+<http://www.github.com/AlexDonkers/bop#isPropertyStateOf> <http://www.w3.org/2000/01/rdf-schema#label> "is property state of"@en .
+<http://www.github.com/AlexDonkers/bop#isPropertyStateOf> <http://www.w3.org/2004/02/skos/core#example> "This object property is used to directly link the current state of a property to a property. It is the shortest route to link a result to a property. \n\nExample: CurrentTemperatureState -- isPropertyStateOf --> Temperature"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isResultOf
+<http://www.github.com/AlexDonkers/bop#isResultOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isResultOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Result> .
+<http://www.github.com/AlexDonkers/bop#isResultOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Execution> .
+<http://www.github.com/AlexDonkers/bop#isResultOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking a result with an execution."@en .
+<http://www.github.com/AlexDonkers/bop#isResultOf> <http://www.w3.org/2000/01/rdf-schema#label> "is result of"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isSubActuatorOf
+<http://www.github.com/AlexDonkers/bop#isSubActuatorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isSubActuatorOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.github.com/AlexDonkers/bop#isSubExecutorOf> .
+<http://www.github.com/AlexDonkers/bop#isSubActuatorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Actuator> .
+<http://www.github.com/AlexDonkers/bop#isSubActuatorOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Actuator> .
+<http://www.github.com/AlexDonkers/bop#isSubActuatorOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an actuator and sub-actuators. The sub-actuators are of type actuator and could function as individual actuators."@en .
+<http://www.github.com/AlexDonkers/bop#isSubActuatorOf> <http://www.w3.org/2000/01/rdf-schema#label> "is sub-actuator of"@en .
+<http://www.github.com/AlexDonkers/bop#isSubActuatorOf> <http://www.w3.org/2004/02/skos/core#example> "The object property could be used to model actuators which have multiple components with their own functions."@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isSubExecutorOf
+<http://www.github.com/AlexDonkers/bop#isSubExecutorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isSubExecutorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#isSubExecutorOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#isSubExecutorOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an executor and sub-executors. The sub-executors are of type executor and could function as individual executors."@en .
+<http://www.github.com/AlexDonkers/bop#isSubExecutorOf> <http://www.w3.org/2000/01/rdf-schema#label> "is sub-executor of"@en .
+<http://www.github.com/AlexDonkers/bop#isSubExecutorOf> <http://www.w3.org/2004/02/skos/core#example> "The object property could be used to model devices which have multiple components with their own functions. A multisensor - for example - consists of multiple sub-sensors which individually perform a sensing function."@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isSubSensorOf
+<http://www.github.com/AlexDonkers/bop#isSubSensorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isSubSensorOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.github.com/AlexDonkers/bop#isSubExecutorOf> .
+<http://www.github.com/AlexDonkers/bop#isSubSensorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Sensor> .
+<http://www.github.com/AlexDonkers/bop#isSubSensorOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Sensor> .
+<http://www.github.com/AlexDonkers/bop#isSubSensorOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a sensor and sub-sensors. The sub-sensors are of type sensor and could function as individual sensors."@en .
+<http://www.github.com/AlexDonkers/bop#isSubSensorOf> <http://www.w3.org/2000/01/rdf-schema#label> "is sub-sensor of"@en .
+<http://www.github.com/AlexDonkers/bop#isSubSensorOf> <http://www.w3.org/2004/02/skos/core#example> "The object property could be used to model sensors which have multiple components with their own functions."@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isUnitOf
+<http://www.github.com/AlexDonkers/bop#isUnitOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isUnitOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.github.com/AlexDonkers/bop#isUnitOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Unit> .
+<http://www.github.com/AlexDonkers/bop#isUnitOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Result> .
+<http://www.github.com/AlexDonkers/bop#isUnitOf> <http://www.w3.org/2000/01/rdf-schema#label> "is unit of"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#isUsedFor
+<http://www.github.com/AlexDonkers/bop#isUsedFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#isUsedFor> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#usedProcedure> .
+<http://www.github.com/AlexDonkers/bop#isUsedFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Procedure> .
+<http://www.github.com/AlexDonkers/bop#isUsedFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Execution> .
+<http://www.github.com/AlexDonkers/bop#isUsedFor> <http://www.w3.org/2000/01/rdf-schema#label> "is used for"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#observedBy
+<http://www.github.com/AlexDonkers/bop#observedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#observedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.github.com/AlexDonkers/bop#executedBy> .
+<http://www.github.com/AlexDonkers/bop#observedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.github.com/AlexDonkers/bop#performedObservation> .
+<http://www.github.com/AlexDonkers/bop#observedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Observation> .
+<http://www.github.com/AlexDonkers/bop#observedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Sensor> .
+<http://www.github.com/AlexDonkers/bop#observedBy> <http://www.w3.org/2000/01/rdf-schema#label> "observed by"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#performedActuation
+<http://www.github.com/AlexDonkers/bop#performedActuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#performedActuation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.github.com/AlexDonkers/bop#performedExecution> .
+<http://www.github.com/AlexDonkers/bop#performedActuation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Actuator> .
+<http://www.github.com/AlexDonkers/bop#performedActuation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Actuation> .
+<http://www.github.com/AlexDonkers/bop#performedActuation> <http://www.w3.org/2000/01/rdf-schema#label> "performed actuation"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#performedExecution
+<http://www.github.com/AlexDonkers/bop#performedExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#performedExecution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#performedExecution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Execution> .
+<http://www.github.com/AlexDonkers/bop#performedExecution> <http://www.w3.org/2000/01/rdf-schema#label> "performed execution"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#performedObservation
+<http://www.github.com/AlexDonkers/bop#performedObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#performedObservation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.github.com/AlexDonkers/bop#performedExecution> .
+<http://www.github.com/AlexDonkers/bop#performedObservation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Sensor> .
+<http://www.github.com/AlexDonkers/bop#performedObservation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Observation> .
+<http://www.github.com/AlexDonkers/bop#performedObservation> <http://www.w3.org/2000/01/rdf-schema#label> "performed observation"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#usedProcedure
+<http://www.github.com/AlexDonkers/bop#usedProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.github.com/AlexDonkers/bop#usedProcedure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Execution> .
+<http://www.github.com/AlexDonkers/bop#usedProcedure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.github.com/AlexDonkers/bop#Procedure> .
+<http://www.github.com/AlexDonkers/bop#usedProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "used procedure"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.github.com/AlexDonkers/bop#hasSimpleProperty
+<http://www.github.com/AlexDonkers/bop#hasSimpleProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.github.com/AlexDonkers/bop#hasSimpleProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.github.com/AlexDonkers/bop#hasSimpleProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#FeatureOfInterest> .
+<http://www.github.com/AlexDonkers/bop#hasSimpleProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking a feature of interest with a simple property value described as a literal."@en .
+<http://www.github.com/AlexDonkers/bop#hasSimpleProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has simple property"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasSimplePropertyState
+<http://www.github.com/AlexDonkers/bop#hasSimplePropertyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.github.com/AlexDonkers/bop#hasSimplePropertyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.github.com/AlexDonkers/bop#hasSimplePropertyState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#hasSimplePropertyState> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking a property with a simple property state value described as a literal."@en .
+<http://www.github.com/AlexDonkers/bop#hasSimplePropertyState> <http://www.w3.org/2000/01/rdf-schema#label> "has simple property state"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasSimpleResult
+<http://www.github.com/AlexDonkers/bop#hasSimpleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.github.com/AlexDonkers/bop#hasSimpleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.github.com/AlexDonkers/bop#hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Execution> .
+<http://www.github.com/AlexDonkers/bop#hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking an execution with a simple result value described as a literal."@en .
+<http://www.github.com/AlexDonkers/bop#hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#label> "has simple result"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasSimpleUnit
+<http://www.github.com/AlexDonkers/bop#hasSimpleUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.github.com/AlexDonkers/bop#hasSimpleUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.github.com/AlexDonkers/bop#hasSimpleUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Result> .
+<http://www.github.com/AlexDonkers/bop#hasSimpleUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking a result with a unit described by a literal."@en .
+<http://www.github.com/AlexDonkers/bop#hasSimpleUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has simple unit"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#hasValue
+<http://www.github.com/AlexDonkers/bop#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.github.com/AlexDonkers/bop#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.github.com/AlexDonkers/bop#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Result> .
+<http://www.github.com/AlexDonkers/bop#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The simple value of a result."@en .
+<http://www.github.com/AlexDonkers/bop#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en .
+# 
+# http://www.w3.org/ns/prov#generatedAtTime
+<http://www.w3.org/ns/prov#generatedAtTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/prov#generatedAtTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.w3.org/ns/prov#generatedAtTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.github.com/AlexDonkers/bop#Result> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.github.com/AlexDonkers/bop#Actuation
+<http://www.github.com/AlexDonkers/bop#Actuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.github.com/AlexDonkers/bop#Execution> .
+<http://www.github.com/AlexDonkers/bop#Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#actuatedBy> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Actuator> .
+<http://www.github.com/AlexDonkers/bop#Actuation> <http://www.w3.org/2000/01/rdf-schema#comment> "An act of carrying out an actuation procedure by an actuator to change the state of a property."@en .
+<http://www.github.com/AlexDonkers/bop#Actuation> <http://www.w3.org/2000/01/rdf-schema#label> "Actuation"@en .
+<http://www.github.com/AlexDonkers/bop#Actuation> <http://www.w3.org/2000/01/rdf-schema#label> "Bediening"@nl .
+# 
+# http://www.github.com/AlexDonkers/bop#Actuator
+<http://www.github.com/AlexDonkers/bop#Actuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#hasSubActuator> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Actuator> .
+<http://www.github.com/AlexDonkers/bop#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#performedActuation> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Actuation> .
+<http://www.github.com/AlexDonkers/bop#Actuator> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent that can implement an actuation procedure to change the state of a property.."@en .
+<http://www.github.com/AlexDonkers/bop#Actuator> <http://www.w3.org/2000/01/rdf-schema#label> "Actuator"@en .
+<http://www.github.com/AlexDonkers/bop#Actuator> <http://www.w3.org/2000/01/rdf-schema#label> "Actuator"@nl .
+# 
+# http://www.github.com/AlexDonkers/bop#Collection
+<http://www.github.com/AlexDonkers/bop#Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.github.com/AlexDonkers/bop#Result> .
+<http://www.github.com/AlexDonkers/bop#Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#isCollectionOf> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Database> .
+<http://www.github.com/AlexDonkers/bop#Collection> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of documents in a database."@en .
+<http://www.github.com/AlexDonkers/bop#Collection> <http://www.w3.org/2000/01/rdf-schema#label> "Collectie"@nl .
+<http://www.github.com/AlexDonkers/bop#Collection> <http://www.w3.org/2000/01/rdf-schema#label> "Collection"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#CurrentState
+<http://www.github.com/AlexDonkers/bop#CurrentState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#CurrentState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.github.com/AlexDonkers/bop#Result> .
+<http://www.github.com/AlexDonkers/bop#CurrentState> <http://www.w3.org/2000/01/rdf-schema#comment> "The most recently defined state of a property."@en .
+<http://www.github.com/AlexDonkers/bop#CurrentState> <http://www.w3.org/2000/01/rdf-schema#label> "Current state"@en .
+<http://www.github.com/AlexDonkers/bop#CurrentState> <http://www.w3.org/2000/01/rdf-schema#label> "Huidige staat"@nl .
+# 
+# http://www.github.com/AlexDonkers/bop#Database
+<http://www.github.com/AlexDonkers/bop#Database> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#Database> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#isExternalDatabaseOf> .
+_:genid6 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#Database> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of data.\n\nThe database class is used to describe an external database, storing results of executions, such as a time-series database."@en .
+<http://www.github.com/AlexDonkers/bop#Database> <http://www.w3.org/2000/01/rdf-schema#label> "Databank"@nl .
+<http://www.github.com/AlexDonkers/bop#Database> <http://www.w3.org/2000/01/rdf-schema#label> "Database"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#Execution
+<http://www.github.com/AlexDonkers/bop#Execution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#Execution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#executedBy> .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#Execution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#implementedBy> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Procedure> .
+<http://www.github.com/AlexDonkers/bop#Execution> <http://www.w3.org/2000/01/rdf-schema#comment> "An act of carrying out a procedure by an executor on a property"@en .
+<http://www.github.com/AlexDonkers/bop#Execution> <http://www.w3.org/2000/01/rdf-schema#comment> "Het doen of uitvoeren van iets. Een uitvoering kan worden uitgevoerd door een uitvoerder, eventueel op basis van een procedure."@nl .
+<http://www.github.com/AlexDonkers/bop#Execution> <http://www.w3.org/2000/01/rdf-schema#label> "Execution"@en .
+<http://www.github.com/AlexDonkers/bop#Execution> <http://www.w3.org/2000/01/rdf-schema#label> "Uitvoering"@nl .
+# 
+# http://www.github.com/AlexDonkers/bop#Executor
+<http://www.github.com/AlexDonkers/bop#Executor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#Executor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#actsOn> .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#Executor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#hasSubExecutor> .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#Executor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#isHostedBy> .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Platform> .
+<http://www.github.com/AlexDonkers/bop#Executor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#performedExecution> .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Execution> .
+<http://www.github.com/AlexDonkers/bop#Executor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#isHostedBy> .
+_:genid13 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://www.github.com/AlexDonkers/bop#Platform> .
+<http://www.github.com/AlexDonkers/bop#Executor> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent that can implement a procedure to perform an execution."@en .
+<http://www.github.com/AlexDonkers/bop#Executor> <http://www.w3.org/2000/01/rdf-schema#comment> "Iets wat een taak kan uitvoeren op basis van een procedure."@nl .
+<http://www.github.com/AlexDonkers/bop#Executor> <http://www.w3.org/2000/01/rdf-schema#label> "Executor"@en .
+<http://www.github.com/AlexDonkers/bop#Executor> <http://www.w3.org/2000/01/rdf-schema#label> "Uitvoerder"@nl .
+# 
+# http://www.github.com/AlexDonkers/bop#FeatureOfInterest
+<http://www.github.com/AlexDonkers/bop#FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#isFeatureOfInterestOf> .
+_:genid15 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onClass> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "An abstraction of a real-world phenomenon which could be described in terms of its properties."@en .
+<http://www.github.com/AlexDonkers/bop#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "Een abstractie van een fenomeen uit de echte wereld (object, onderdeel, zone, evenement, etc)."@nl .
+<http://www.github.com/AlexDonkers/bop#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Feature of interest"@en .
+<http://www.github.com/AlexDonkers/bop#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Kenmerk van belang"@nl .
+<http://www.github.com/AlexDonkers/bop#FeatureOfInterest> <http://www.w3.org/2004/02/skos/core#example> "An object, part, zone, event etc."@en .
+# 
+# http://www.github.com/AlexDonkers/bop#Function
+<http://www.github.com/AlexDonkers/bop#Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#Function> <http://www.w3.org/2000/01/rdf-schema#comment> "A function of a feature of interest."@en .
+<http://www.github.com/AlexDonkers/bop#Function> <http://www.w3.org/2000/01/rdf-schema#label> "Functie"@nl .
+<http://www.github.com/AlexDonkers/bop#Function> <http://www.w3.org/2000/01/rdf-schema#label> "Function"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#Observation
+<http://www.github.com/AlexDonkers/bop#Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.github.com/AlexDonkers/bop#Execution> .
+<http://www.github.com/AlexDonkers/bop#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#observedBy> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Sensor> .
+<http://www.github.com/AlexDonkers/bop#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#usedProcedure> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Procedure> .
+<http://www.github.com/AlexDonkers/bop#Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "An act of carrying out an observation procedure by a sensor to observe the state of a property."@en .
+<http://www.github.com/AlexDonkers/bop#Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observatie"@nl .
+<http://www.github.com/AlexDonkers/bop#Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#Platform
+<http://www.github.com/AlexDonkers/bop#Platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#Platform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#hosts> .
+_:genid18 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onClass> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#Platform> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity that hosts an executor."@en .
+<http://www.github.com/AlexDonkers/bop#Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Platform"@en .
+<http://www.github.com/AlexDonkers/bop#Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Platform"@nl .
+# 
+# http://www.github.com/AlexDonkers/bop#Procedure
+<http://www.github.com/AlexDonkers/bop#Procedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#Procedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#implementedBy> .
+_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#Procedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#isUsedFor> .
+_:genid20 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Execution> .
+<http://www.github.com/AlexDonkers/bop#Procedure> <http://www.w3.org/2000/01/rdf-schema#label> "Procedure"@en .
+<http://www.github.com/AlexDonkers/bop#Procedure> <http://www.w3.org/2000/01/rdf-schema#label> "Procedure"@nl .
+# 
+# http://www.github.com/AlexDonkers/bop#Property
+<http://www.github.com/AlexDonkers/bop#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest> .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#FeatureOfInterest> .
+<http://www.github.com/AlexDonkers/bop#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#hasSubProperty> .
+_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#isActedOnBy> .
+_:genid23 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Observation> .
+<http://www.github.com/AlexDonkers/bop#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#hasFeatureOfInterest> .
+_:genid24 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/2002/07/owl#onClass> <http://www.github.com/AlexDonkers/bop#FeatureOfInterest> .
+<http://www.github.com/AlexDonkers/bop#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "A measurable and intrinsic characteristic of a feature of interest."@en .
+<http://www.github.com/AlexDonkers/bop#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "Een kenmerk van een feature of interest. Het kenmerk is intrinsiek aan en kan niet bestaan zonder de feature of interest."@nl .
+<http://www.github.com/AlexDonkers/bop#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Eigenschap"@nl .
+<http://www.github.com/AlexDonkers/bop#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en .
+# 
+# http://www.github.com/AlexDonkers/bop#PropertySet
+<http://www.github.com/AlexDonkers/bop#PropertySet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#PropertySet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#containsProperty> .
+_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Property> .
+<http://www.github.com/AlexDonkers/bop#PropertySet> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of properties. The collection could also be a singleton or a null set."@en .
+<http://www.github.com/AlexDonkers/bop#PropertySet> <http://www.w3.org/2000/01/rdf-schema#comment> "Een collectie van eigenschappen. De collectie kan ook een eenpuntsverzameling of een lege verzameling zijn."@nl .
+<http://www.github.com/AlexDonkers/bop#PropertySet> <http://www.w3.org/2000/01/rdf-schema#label> "Property set"@en .
+<http://www.github.com/AlexDonkers/bop#PropertySet> <http://www.w3.org/2000/01/rdf-schema#label> "Verzameling van eigenschappen"@nl .
+# 
+# http://www.github.com/AlexDonkers/bop#Result
+<http://www.github.com/AlexDonkers/bop#Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#Result> <http://www.w3.org/2000/01/rdf-schema#comment> "The outcome of an execution."@en .
+<http://www.github.com/AlexDonkers/bop#Result> <http://www.w3.org/2000/01/rdf-schema#label> "Result"@en .
+<http://www.github.com/AlexDonkers/bop#Result> <http://www.w3.org/2000/01/rdf-schema#label> "Resultaat"@nl .
+<http://www.github.com/AlexDonkers/bop#Result> <http://www.w3.org/2004/02/skos/core#example> "The result may hold, for example, a value, a unit, a result time and other provenance data."@en .
+# 
+# http://www.github.com/AlexDonkers/bop#Sensor
+<http://www.github.com/AlexDonkers/bop#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.github.com/AlexDonkers/bop#Executor> .
+<http://www.github.com/AlexDonkers/bop#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#hasSubSensor> .
+_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Sensor> .
+<http://www.github.com/AlexDonkers/bop#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://www.github.com/AlexDonkers/bop#performedObservation> .
+_:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.github.com/AlexDonkers/bop#Observation> .
+<http://www.github.com/AlexDonkers/bop#Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent that can implement an observation procedure to measure the state of a property."@en .
+<http://www.github.com/AlexDonkers/bop#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@en .
+<http://www.github.com/AlexDonkers/bop#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@nl .
+# 
+# http://www.github.com/AlexDonkers/bop#Unit
+<http://www.github.com/AlexDonkers/bop#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.github.com/AlexDonkers/bop#Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "A particular quantity value that has been chosen as a scale for measuring other quantities of the same kind."@en .
+<http://www.github.com/AlexDonkers/bop#Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "Een specifieke waarde van een natuurkundige grootheid die is gekozen als een schaal voor het meten van andere hoeveelheden van diezelfde grootheid."@nl .
+<http://www.github.com/AlexDonkers/bop#Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Eenheid"@nl .
+<http://www.github.com/AlexDonkers/bop#Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit"@en .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.github.com/AlexDonkers/bop#
+<http://www.github.com/AlexDonkers/bop#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://orcid.org/0000-0002-8809-3277
+<https://orcid.org/0000-0002-8809-3277> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://orcid.org/0000-0002-8809-3277> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://orcid.org/0000-0002-8809-3277> <http://www.w3.org/2000/01/rdf-schema#label> "Alex Donkers" .
+<https://orcid.org/0000-0002-8809-3277> <http://xmlns.com/foaf/0.1/name> "Alex Donkers" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid28 <http://www.w3.org/2002/07/owl#members> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.github.com/AlexDonkers/bop#Database> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.github.com/AlexDonkers/bop#Execution> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.github.com/AlexDonkers/bop#Executor> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.github.com/AlexDonkers/bop#FeatureOfInterest> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.github.com/AlexDonkers/bop#Platform> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.github.com/AlexDonkers/bop#Procedure> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.github.com/AlexDonkers/bop#Property> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.github.com/AlexDonkers/bop#PropertySet> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.github.com/AlexDonkers/bop#Result> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.github.com/AlexDonkers/bop#Unit> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
