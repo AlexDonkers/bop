@@ -8,7 +8,11 @@
 /* $Id: base.css,v 1.25 2006/04/18 08:42:53 bbos Exp $ */
 
 body {
+<<<<<<< HEAD
   padding: 0em 0em 2em 39px;
+=======
+  padding: 0em 0em 2em 38px;
+>>>>>>> daf9b3c0381c7c83438872f4aac4812f498f4f2d
   margin: 0;
   font-family: sans-serif;
   color: black;

@@ -7,8 +7,11 @@
 
 div.head {
   text-align: left;
+<<<<<<< HEAD
   background-repeat: no-repeat;
   background-size: cover;
+=======
+>>>>>>> daf9b3c0381c7c83438872f4aac4812f498f4f2d
   color: white;
 }
 
@@ -22,8 +25,13 @@ div.syntaxmenu {
 .container {
   margin-right: auto;
   margin-left: auto;
+<<<<<<< HEAD
   padding-left: 15px;
   padding-right: 15px;
+=======
+  padding-left: 100px;
+  padding-right: 100px;
+>>>>>>> daf9b3c0381c7c83438872f4aac4812f498f4f2d
 }
 
 @media print {

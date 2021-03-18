@@ -75,6 +75,10 @@ h3.list {
 h2 {
   margin-top: 40px;
   font-weight: bold;
+<<<<<<< HEAD
+=======
+  text-transform: none;
+>>>>>>> daf9b3c0381c7c83438872f4aac4812f498f4f2d
 }
 
 .dotted {
