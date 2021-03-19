@@ -33,31 +33,31 @@ h1 {
 
 .type-c {
   cursor: help;
-  color: orange;
+  color: black;
 }
 
 .type-op {
   cursor: help;
-  color: navy;
+  color: black;
 }
 
 .type-dp {
   cursor: help;
-  color: green;
+  color: black;
 }
 
 .type-ap {
   cursor: help;
-  color: maroon;
+  color: black;
 }
 
 .type-ni {
   cursor: help;
-  color: brown;
+  color: black;
 }
 
 .logic {
-  color: purple;
+  color: black;
   font-weight: bold;
 }
 
