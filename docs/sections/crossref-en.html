@@ -1,0 +1,2805 @@
+<h2 id="crossreference" class="list">Cross reference for Building Performance Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Building Performance Ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Actuation" title="https://www.w3id.org/bop#Actuation">Actuation</a>
+      </li>
+      <li>
+         <a href="#Actuator" title="https://www.w3id.org/bop#Actuator">Actuator</a>
+      </li>
+      <li>
+         <a href="#Collection" title="https://www.w3id.org/bop#Collection">Collection</a>
+      </li>
+      <li>
+         <a href="#CurrentState" title="https://www.w3id.org/bop#CurrentState">Current state</a>
+      </li>
+      <li>
+         <a href="#Database" title="https://www.w3id.org/bop#Database">Database</a>
+      </li>
+      <li>
+         <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+      </li>
+      <li>
+         <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+      </li>
+      <li>
+         <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+      </li>
+      <li>
+         <a href="#Function" title="https://www.w3id.org/bop#Function">Function</a>
+      </li>
+      <li>
+         <a href="#Observation" title="https://www.w3id.org/bop#Observation">Observation</a>
+      </li>
+      <li>
+         <a href="#Platform" title="https://www.w3id.org/bop#Platform">Platform</a>
+      </li>
+      <li>
+         <a href="#Procedure" title="https://www.w3id.org/bop#Procedure">Procedure</a>
+      </li>
+      <li>
+         <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+      </li>
+      <li>
+         <a href="#PropertySet" title="https://www.w3id.org/bop#PropertySet">Property set</a>
+      </li>
+      <li>
+         <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+      </li>
+      <li>
+         <a href="#Sensor" title="https://www.w3id.org/bop#Sensor">Sensor</a>
+      </li>
+      <li>
+         <a href="#Unit" title="https://www.w3id.org/bop#Unit">Unit</a>
+      </li>
+   </ul>
+   <div class="entity" id="Actuation">
+      <h3>Actuation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#Actuation</p>
+      <div class="comment">
+         <span class="markdown">An act of carrying out an actuation procedure by an actuator to change the state of a property.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#actuatedBy" title="https://www.w3id.org/bop#actuatedBy">actuated by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#actuatedProperty" title="https://www.w3id.org/bop#actuatedProperty">actuated property</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasActuation" title="https://www.w3id.org/bop#hasActuation">has actuation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#performsActuation" title="https://www.w3id.org/bop#performsActuation">performs actuation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Observation" title="https://www.w3id.org/bop#Observation">Observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Actuator">
+      <h3>Actuator<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#Actuator</p>
+      <div class="comment">
+         <span class="markdown">An agent that can implement an actuation procedure to change the state of a property..</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#actsOn" title="https://www.w3id.org/bop#actsOn">acts on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSubActuator" title="https://www.w3id.org/bop#hasSubActuator">has sub-actuator</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSubActuatorOf" title="https://www.w3id.org/bop#isSubActuatorOf">is sub-actuator of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#performsActuation" title="https://www.w3id.org/bop#performsActuation">performs actuation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#actuatedBy" title="https://www.w3id.org/bop#actuatedBy">actuated by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSubActuator" title="https://www.w3id.org/bop#hasSubActuator">has sub-actuator</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isActuatedBy" title="https://www.w3id.org/bop#isActuatedBy">is actuated by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSubActuatorOf" title="https://www.w3id.org/bop#isSubActuatorOf">is sub-actuator of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Sensor" title="https://www.w3id.org/bop#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Collection">
+      <h3>Collection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#Collection</p>
+      <div class="comment">
+         <span class="markdown">A collection of documents in a database.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isCollectionOf" title="https://www.w3id.org/bop#isCollectionOf">is collection of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasCollection" title="https://www.w3id.org/bop#hasCollection">has collection</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CurrentState">
+      <h3>Current state<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#CurrentState</p>
+      <div class="comment">
+         <span class="markdown">The most recently defined state of a property.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Database">
+      <h3>Database<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#Database</p>
+      <div class="comment">
+         <span class="markdown">A collection of data.
+
+The database class is used to describe an external database, storing results of executions, such as a time-series database.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasCollection" title="https://www.w3id.org/bop#hasCollection">has collection</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isExternalDatabaseOf" title="https://www.w3id.org/bop#isExternalDatabaseOf">is external database of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasExternalDatabase" title="https://www.w3id.org/bop#hasExternalDatabase">has external database</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isCollectionOf" title="https://www.w3id.org/bop#isCollectionOf">is collection of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="https://www.w3id.org/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="https://www.w3id.org/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet" title="https://www.w3id.org/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="https://www.w3id.org/bop#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Execution">
+      <h3>Execution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#Execution</p>
+      <div class="comment">
+         <span class="markdown">An act of carrying out a procedure by an executor on a property</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Actuation" title="https://www.w3id.org/bop#Actuation">Actuation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Observation" title="https://www.w3id.org/bop#Observation">Observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#executedBy" title="https://www.w3id.org/bop#executedBy">executed by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#executedProperty" title="https://www.w3id.org/bop#executedProperty">executed property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasFeatureOfInterest" title="https://www.w3id.org/bop#hasFeatureOfInterest">has feature of interest</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasResult" title="https://www.w3id.org/bop#hasResult">has result</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSimpleResult" title="https://www.w3id.org/bop#hasSimpleResult">has simple result</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#usesProcedure" title="https://www.w3id.org/bop#usesProcedure">uses procedure</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasExecution" title="https://www.w3id.org/bop#hasExecution">has execution</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isFeatureOfInterestOf" title="https://www.w3id.org/bop#isFeatureOfInterestOf">is feature of interest of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isResultOf" title="https://www.w3id.org/bop#isResultOf">is result of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isUsedFor" title="https://www.w3id.org/bop#isUsedFor">is used for</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#performsExecution" title="https://www.w3id.org/bop#performsExecution">performs execution</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="https://www.w3id.org/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="https://www.w3id.org/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="https://www.w3id.org/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet" title="https://www.w3id.org/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="https://www.w3id.org/bop#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Executor">
+      <h3>Executor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#Executor</p>
+      <div class="comment">
+         <span class="markdown">An agent that can implement a procedure to perform an execution.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Actuator" title="https://www.w3id.org/bop#Actuator">Actuator</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Sensor" title="https://www.w3id.org/bop#Sensor">Sensor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#executesOn" title="https://www.w3id.org/bop#executesOn">executes on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasExternalDatabase" title="https://www.w3id.org/bop#hasExternalDatabase">has external database</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSubExecutor" title="https://www.w3id.org/bop#hasSubExecutor">has sub-executor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#implementsProcedure" title="https://www.w3id.org/bop#implementsProcedure">implements procedure</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isHostedBy" title="https://www.w3id.org/bop#isHostedBy">is hosted by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSubExecutorOf" title="https://www.w3id.org/bop#isSubExecutorOf">is sub-executor of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#performsExecution" title="https://www.w3id.org/bop#performsExecution">performs execution</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#executedBy" title="https://www.w3id.org/bop#executedBy">executed by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSubExecutor" title="https://www.w3id.org/bop#hasSubExecutor">has sub-executor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hosts" title="https://www.w3id.org/bop#hosts">hosts</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#implementedBy" title="https://www.w3id.org/bop#implementedBy">implemented by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isExecutedBy" title="https://www.w3id.org/bop#isExecutedBy">is executed by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isExternalDatabaseOf" title="https://www.w3id.org/bop#isExternalDatabaseOf">is external database of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSubExecutorOf" title="https://www.w3id.org/bop#isSubExecutorOf">is sub-executor of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="https://www.w3id.org/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="https://www.w3id.org/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="https://www.w3id.org/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet" title="https://www.w3id.org/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="https://www.w3id.org/bop#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FeatureOfInterest">
+      <h3>Feature of interest<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#FeatureOfInterest</p>
+      <div class="comment">
+         <span class="markdown">An abstraction of a real-world phenomenon which could be described in terms of its properties.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>An object, part, zone, event etc.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasComplexProperty" title="https://www.w3id.org/bop#hasComplexProperty">has complex property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasProperty" title="https://www.w3id.org/bop#hasProperty">has property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSimpleProperty" title="https://www.w3id.org/bop#hasSimpleProperty">has simple property</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isFeatureOfInterestOf" title="https://www.w3id.org/bop#isFeatureOfInterestOf">is feature of interest of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasFeatureOfInterest" title="https://www.w3id.org/bop#hasFeatureOfInterest">has feature of interest</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isComplexPropertyOf" title="https://www.w3id.org/bop#isComplexPropertyOf">is complex property of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isPropertyOf" title="https://www.w3id.org/bop#isPropertyOf">is property of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="https://www.w3id.org/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="https://www.w3id.org/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="https://www.w3id.org/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet" title="https://www.w3id.org/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="https://www.w3id.org/bop#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Function">
+      <h3>Function<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#Function</p>
+      <div class="comment">
+         <span class="markdown">A function of a feature of interest.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Observation">
+      <h3>Observation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#Observation</p>
+      <div class="comment">
+         <span class="markdown">An act of carrying out an observation procedure by a sensor to observe the state of a property.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#observedBy" title="https://www.w3id.org/bop#observedBy">observed by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#observedProperty" title="https://www.w3id.org/bop#observedProperty">observed property</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasObservation" title="https://www.w3id.org/bop#hasObservation">has observation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#performsObservation" title="https://www.w3id.org/bop#performsObservation">performs observation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Actuation" title="https://www.w3id.org/bop#Actuation">Actuation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Platform">
+      <h3>Platform<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#Platform</p>
+      <div class="comment">
+         <span class="markdown">An entity that hosts an executor.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hosts" title="https://www.w3id.org/bop#hosts">hosts</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isHostedBy" title="https://www.w3id.org/bop#isHostedBy">is hosted by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="https://www.w3id.org/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="https://www.w3id.org/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet" title="https://www.w3id.org/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="https://www.w3id.org/bop#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Procedure">
+      <h3>Procedure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#Procedure</p>
+      <div class="comment">
+         <span class="markdown">A workflow, protocol, plan, algorithm, or computational method specifying how to perform an execution.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#implementedBy" title="https://www.w3id.org/bop#implementedBy">implemented by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isUsedFor" title="https://www.w3id.org/bop#isUsedFor">is used for</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#implementsProcedure" title="https://www.w3id.org/bop#implementsProcedure">implements procedure</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#usesProcedure" title="https://www.w3id.org/bop#usesProcedure">uses procedure</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="https://www.w3id.org/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="https://www.w3id.org/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet" title="https://www.w3id.org/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="https://www.w3id.org/bop#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Property">
+      <h3>Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#Property</p>
+      <div class="comment">
+         <span class="markdown">A measurable and intrinsic characteristic of a feature of interest.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Function" title="https://www.w3id.org/bop#Function">Function</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasActuation" title="https://www.w3id.org/bop#hasActuation">has actuation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasExecution" title="https://www.w3id.org/bop#hasExecution">has execution</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasObservation" title="https://www.w3id.org/bop#hasObservation">has observation</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPropertyState" title="https://www.w3id.org/bop#hasPropertyState">has property state</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSimplePropertyState" title="https://www.w3id.org/bop#hasSimplePropertyState">has simple property state</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSubProperty" title="https://www.w3id.org/bop#hasSubProperty">has sub-property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isActuatedBy" title="https://www.w3id.org/bop#isActuatedBy">is actuated by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isExecutedBy" title="https://www.w3id.org/bop#isExecutedBy">is executed by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isObservedBy" title="https://www.w3id.org/bop#isObservedBy">is observed by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isPartOfPropertySet" title="https://www.w3id.org/bop#isPartOfPropertySet">is part of property set</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isPropertyOf" title="https://www.w3id.org/bop#isPropertyOf">is property of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSubPropertyOf" title="https://www.w3id.org/bop#isSubPropertyOf">is sub-property of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#actsOn" title="https://www.w3id.org/bop#actsOn">acts on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#actuatedProperty" title="https://www.w3id.org/bop#actuatedProperty">actuated property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#containsProperty" title="https://www.w3id.org/bop#containsProperty">contains property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#executedProperty" title="https://www.w3id.org/bop#executedProperty">executed property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#executesOn" title="https://www.w3id.org/bop#executesOn">executes on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasProperty" title="https://www.w3id.org/bop#hasProperty">has property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSubProperty" title="https://www.w3id.org/bop#hasSubProperty">has sub-property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isPropertyStateOf" title="https://www.w3id.org/bop#isPropertyStateOf">is property state of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSubPropertyOf" title="https://www.w3id.org/bop#isSubPropertyOf">is sub-property of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#observedProperty" title="https://www.w3id.org/bop#observedProperty">observed property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#observes" title="https://www.w3id.org/bop#observes">observes</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="https://www.w3id.org/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="https://www.w3id.org/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="https://www.w3id.org/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet" title="https://www.w3id.org/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="https://www.w3id.org/bop#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PropertySet">
+      <h3>Property set<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#PropertySet</p>
+      <div class="comment">
+         <span class="markdown">A collection of properties. The collection could also be a singleton or a null set.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#containsProperty" title="https://www.w3id.org/bop#containsProperty">contains property</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isPartOfPropertySet" title="https://www.w3id.org/bop#isPartOfPropertySet">is part of property set</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="https://www.w3id.org/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="https://www.w3id.org/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="https://www.w3id.org/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="https://www.w3id.org/bop#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Result">
+      <h3>Result<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#Result</p>
+      <div class="comment">
+         <span class="markdown">The outcome of an execution.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>The result may hold, for example, a value, a unit, a result time and other provenance data.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Collection" title="https://www.w3id.org/bop#Collection">Collection</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CurrentState" title="https://www.w3id.org/bop#CurrentState">Current state</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasSimpleUnit" title="https://www.w3id.org/bop#hasSimpleUnit">has simple unit</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasUnit" title="https://www.w3id.org/bop#hasUnit">has unit</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasValue" title="https://www.w3id.org/bop#hasValue">has value</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isComplexPropertyOf" title="https://www.w3id.org/bop#isComplexPropertyOf">is complex property of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isPropertyStateOf" title="https://www.w3id.org/bop#isPropertyStateOf">is property state of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isResultOf" title="https://www.w3id.org/bop#isResultOf">is result of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasComplexProperty" title="https://www.w3id.org/bop#hasComplexProperty">has complex property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPropertyState" title="https://www.w3id.org/bop#hasPropertyState">has property state</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasResult" title="https://www.w3id.org/bop#hasResult">has result</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isUnitOf" title="https://www.w3id.org/bop#isUnitOf">is unit of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="https://www.w3id.org/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="https://www.w3id.org/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="https://www.w3id.org/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet" title="https://www.w3id.org/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Unit" title="https://www.w3id.org/bop#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Sensor">
+      <h3>Sensor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#Sensor</p>
+      <div class="comment">
+         <span class="markdown">An agent that can implement an observation procedure to measure the state of a property.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasSubSensor" title="https://www.w3id.org/bop#hasSubSensor">has sub-sensor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSubSensorOf" title="https://www.w3id.org/bop#isSubSensorOf">is sub-sensor of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#observes" title="https://www.w3id.org/bop#observes">observes</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#performsObservation" title="https://www.w3id.org/bop#performsObservation">performs observation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasSubSensor" title="https://www.w3id.org/bop#hasSubSensor">has sub-sensor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isObservedBy" title="https://www.w3id.org/bop#isObservedBy">is observed by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isSubSensorOf" title="https://www.w3id.org/bop#isSubSensorOf">is sub-sensor of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#observedBy" title="https://www.w3id.org/bop#observedBy">observed by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Actuator" title="https://www.w3id.org/bop#Actuator">Actuator</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Unit">
+      <h3>Unit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#Unit</p>
+      <div class="comment">
+         <span class="markdown">A particular quantity value that has been chosen as a scale for measuring other quantities of the same kind.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isUnitOf" title="https://www.w3id.org/bop#isUnitOf">is unit of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasUnit" title="https://www.w3id.org/bop#hasUnit">has unit</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Database" title="https://www.w3id.org/bop#Database">Database</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Platform" title="https://www.w3id.org/bop#Platform">Platform</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Procedure" title="https://www.w3id.org/bop#Procedure">Procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertySet" title="https://www.w3id.org/bop#PropertySet">Property set</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#actsOn" title="https://www.w3id.org/bop#actsOn">acts on</a>
+      </li>
+      <li>
+         <a href="#actuatedBy" title="https://www.w3id.org/bop#actuatedBy">actuated by</a>
+      </li>
+      <li>
+         <a href="#actuatedProperty" title="https://www.w3id.org/bop#actuatedProperty">actuated property</a>
+      </li>
+      <li>
+         <a href="#containsProperty" title="https://www.w3id.org/bop#containsProperty">contains property</a>
+      </li>
+      <li>
+         <a href="#executedBy" title="https://www.w3id.org/bop#executedBy">executed by</a>
+      </li>
+      <li>
+         <a href="#executedProperty" title="https://www.w3id.org/bop#executedProperty">executed property</a>
+      </li>
+      <li>
+         <a href="#executesOn" title="https://www.w3id.org/bop#executesOn">executes on</a>
+      </li>
+      <li>
+         <a href="#hasActuation" title="https://www.w3id.org/bop#hasActuation">has actuation</a>
+      </li>
+      <li>
+         <a href="#hasCollection" title="https://www.w3id.org/bop#hasCollection">has collection</a>
+      </li>
+      <li>
+         <a href="#hasComplexProperty" title="https://www.w3id.org/bop#hasComplexProperty">has complex property</a>
+      </li>
+      <li>
+         <a href="#hasExecution" title="https://www.w3id.org/bop#hasExecution">has execution</a>
+      </li>
+      <li>
+         <a href="#hasExternalDatabase" title="https://www.w3id.org/bop#hasExternalDatabase">has external database</a>
+      </li>
+      <li>
+         <a href="#hasFeatureOfInterest" title="https://www.w3id.org/bop#hasFeatureOfInterest">has feature of interest</a>
+      </li>
+      <li>
+         <a href="#hasObservation" title="https://www.w3id.org/bop#hasObservation">has observation</a>
+      </li>
+      <li>
+         <a href="#hasProperty" title="https://www.w3id.org/bop#hasProperty">has property</a>
+      </li>
+      <li>
+         <a href="#hasPropertyState" title="https://www.w3id.org/bop#hasPropertyState">has property state</a>
+      </li>
+      <li>
+         <a href="#hasResult" title="https://www.w3id.org/bop#hasResult">has result</a>
+      </li>
+      <li>
+         <a href="#hasSubActuator" title="https://www.w3id.org/bop#hasSubActuator">has sub-actuator</a>
+      </li>
+      <li>
+         <a href="#hasSubExecutor" title="https://www.w3id.org/bop#hasSubExecutor">has sub-executor</a>
+      </li>
+      <li>
+         <a href="#hasSubProperty" title="https://www.w3id.org/bop#hasSubProperty">has sub-property</a>
+      </li>
+      <li>
+         <a href="#hasSubSensor" title="https://www.w3id.org/bop#hasSubSensor">has sub-sensor</a>
+      </li>
+      <li>
+         <a href="#hasUnit" title="https://www.w3id.org/bop#hasUnit">has unit</a>
+      </li>
+      <li>
+         <a href="#hosts" title="https://www.w3id.org/bop#hosts">hosts</a>
+      </li>
+      <li>
+         <a href="#implementedBy" title="https://www.w3id.org/bop#implementedBy">implemented by</a>
+      </li>
+      <li>
+         <a href="#implementsProcedure" title="https://www.w3id.org/bop#implementsProcedure">implements procedure</a>
+      </li>
+      <li>
+         <a href="#isActuatedBy" title="https://www.w3id.org/bop#isActuatedBy">is actuated by</a>
+      </li>
+      <li>
+         <a href="#isCollectionOf" title="https://www.w3id.org/bop#isCollectionOf">is collection of</a>
+      </li>
+      <li>
+         <a href="#isComplexPropertyOf" title="https://www.w3id.org/bop#isComplexPropertyOf">is complex property of</a>
+      </li>
+      <li>
+         <a href="#isExecutedBy" title="https://www.w3id.org/bop#isExecutedBy">is executed by</a>
+      </li>
+      <li>
+         <a href="#isExternalDatabaseOf" title="https://www.w3id.org/bop#isExternalDatabaseOf">is external database of</a>
+      </li>
+      <li>
+         <a href="#isFeatureOfInterestOf" title="https://www.w3id.org/bop#isFeatureOfInterestOf">is feature of interest of</a>
+      </li>
+      <li>
+         <a href="#isHostedBy" title="https://www.w3id.org/bop#isHostedBy">is hosted by</a>
+      </li>
+      <li>
+         <a href="#isObservedBy" title="https://www.w3id.org/bop#isObservedBy">is observed by</a>
+      </li>
+      <li>
+         <a href="#isPartOfPropertySet" title="https://www.w3id.org/bop#isPartOfPropertySet">is part of property set</a>
+      </li>
+      <li>
+         <a href="#isPropertyOf" title="https://www.w3id.org/bop#isPropertyOf">is property of</a>
+      </li>
+      <li>
+         <a href="#isPropertyStateOf" title="https://www.w3id.org/bop#isPropertyStateOf">is property state of</a>
+      </li>
+      <li>
+         <a href="#isResultOf" title="https://www.w3id.org/bop#isResultOf">is result of</a>
+      </li>
+      <li>
+         <a href="#isSubActuatorOf" title="https://www.w3id.org/bop#isSubActuatorOf">is sub-actuator of</a>
+      </li>
+      <li>
+         <a href="#isSubExecutorOf" title="https://www.w3id.org/bop#isSubExecutorOf">is sub-executor of</a>
+      </li>
+      <li>
+         <a href="#isSubPropertyOf" title="https://www.w3id.org/bop#isSubPropertyOf">is sub-property of</a>
+      </li>
+      <li>
+         <a href="#isSubSensorOf" title="https://www.w3id.org/bop#isSubSensorOf">is sub-sensor of</a>
+      </li>
+      <li>
+         <a href="#isUnitOf" title="https://www.w3id.org/bop#isUnitOf">is unit of</a>
+      </li>
+      <li>
+         <a href="#isUsedFor" title="https://www.w3id.org/bop#isUsedFor">is used for</a>
+      </li>
+      <li>
+         <a href="#observedBy" title="https://www.w3id.org/bop#observedBy">observed by</a>
+      </li>
+      <li>
+         <a href="#observedProperty" title="https://www.w3id.org/bop#observedProperty">observed property</a>
+      </li>
+      <li>
+         <a href="#observes" title="https://www.w3id.org/bop#observes">observes</a>
+      </li>
+      <li>
+         <a href="#performsActuation" title="https://www.w3id.org/bop#performsActuation">performs actuation</a>
+      </li>
+      <li>
+         <a href="#performsExecution" title="https://www.w3id.org/bop#performsExecution">performs execution</a>
+      </li>
+      <li>
+         <a href="#performsObservation" title="https://www.w3id.org/bop#performsObservation">performs observation</a>
+      </li>
+      <li>
+         <a href="#usesProcedure" title="https://www.w3id.org/bop#usesProcedure">uses procedure</a>
+      </li>
+   </ul>
+   <div class="entity" id="actsOn">
+      <h3>acts on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#actsOn</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an actuator and the property it acts on.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#executesOn" title="https://www.w3id.org/bop#executesOn">executes on</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Actuator" title="https://www.w3id.org/bop#Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isActuatedBy" title="https://www.w3id.org/bop#isActuatedBy">is actuated by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="actuatedBy">
+      <h3>actuated by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#actuatedBy</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an actuation and the actuator which performed this actuation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#executedBy" title="https://www.w3id.org/bop#executedBy">executed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Actuation" title="https://www.w3id.org/bop#Actuation">Actuation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Actuator" title="https://www.w3id.org/bop#Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#performsActuation" title="https://www.w3id.org/bop#performsActuation">performs actuation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="actuatedProperty">
+      <h3>actuated property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#actuatedProperty</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an actuation and the actuated property.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#executedProperty" title="https://www.w3id.org/bop#executedProperty">executed property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Actuation" title="https://www.w3id.org/bop#Actuation">Actuation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasActuation" title="https://www.w3id.org/bop#hasActuation">has actuation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="containsProperty">
+      <h3>contains property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#containsProperty</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a property set and a property which is part of this set.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PropertySet" title="https://www.w3id.org/bop#PropertySet">Property set</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isPartOfPropertySet" title="https://www.w3id.org/bop#isPartOfPropertySet">is part of property set</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="executedBy">
+      <h3>executed by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#executedBy</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an execution and the executor which performed this execution.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#actuatedBy" title="https://www.w3id.org/bop#actuatedBy">actuated by</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#observedBy" title="https://www.w3id.org/bop#observedBy">observed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#performsExecution" title="https://www.w3id.org/bop#performsExecution">performs execution</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="executedProperty">
+      <h3>executed property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#executedProperty</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an execution and the executed property.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#actuatedProperty" title="https://www.w3id.org/bop#actuatedProperty">actuated property</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#observedProperty" title="https://www.w3id.org/bop#observedProperty">observed property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasExecution" title="https://www.w3id.org/bop#hasExecution">has execution</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="executesOn">
+      <h3>executes on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#executesOn</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an executor and the property it executes on.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#actsOn" title="https://www.w3id.org/bop#actsOn">acts on</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#observes" title="https://www.w3id.org/bop#observes">observes</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isExecutedBy" title="https://www.w3id.org/bop#isExecutedBy">is executed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasActuation">
+      <h3>has actuation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasActuation</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a property and a corresponding actuation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasExecution" title="https://www.w3id.org/bop#hasExecution">has execution</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Actuation" title="https://www.w3id.org/bop#Actuation">Actuation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#actuatedProperty" title="https://www.w3id.org/bop#actuatedProperty">actuated property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCollection">
+      <h3>has collection<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasCollection</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a database and its collection.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>E.g. the relationship between an InfluxDB database and an InfluxDB bucket.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Database" title="https://www.w3id.org/bop#Database">Database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Collection" title="https://www.w3id.org/bop#Collection">Collection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isCollectionOf" title="https://www.w3id.org/bop#isCollectionOf">is collection of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasComplexProperty">
+      <h3>has complex property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasComplexProperty</p>
+      <div class="comment">
+         <span class="markdown">Direct relationship between a feature of interest and a result.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>The object property could be extended by subclassing it with use-case-specific object properties.
+
+One could for example say: :Wall --ex:hasLength-&gt; :CurrentWallLength, where ex:hasLength is a subclass of bop:hasComplexProperty.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isComplexPropertyOf" title="https://www.w3id.org/bop#isComplexPropertyOf">is complex property of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasExecution">
+      <h3>has execution<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasExecution</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a property and a corresponding execution.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasActuation" title="https://www.w3id.org/bop#hasActuation">has actuation</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasObservation" title="https://www.w3id.org/bop#hasObservation">has observation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#executedProperty" title="https://www.w3id.org/bop#executedProperty">executed property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasExternalDatabase">
+      <h3>has external database<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasExternalDatabase</p>
+      <div class="comment">
+         <span class="markdown">Linking an executor with the database its results are stored in.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>This object property could be used to link a sensor with a time-series database.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Database" title="https://www.w3id.org/bop#Database">Database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isExternalDatabaseOf" title="https://www.w3id.org/bop#isExternalDatabaseOf">is external database of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasFeatureOfInterest">
+      <h3>has feature of interest<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasFeatureOfInterest</p>
+      <div class="comment">
+         <span class="markdown">Linking an execution with its feature of interest.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isFeatureOfInterestOf" title="https://www.w3id.org/bop#isFeatureOfInterestOf">is feature of interest of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasObservation">
+      <h3>has observation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasObservation</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a property and a corresponding observation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasExecution" title="https://www.w3id.org/bop#hasExecution">has execution</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Observation" title="https://www.w3id.org/bop#Observation">Observation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#observedProperty" title="https://www.w3id.org/bop#observedProperty">observed property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasProperty">
+      <h3>has property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasProperty</p>
+      <div class="comment">
+         <span class="markdown">Linking a feature of interest with its property. The property is intrinsic to this feature of interest, and cannot exist without a feature of interest.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isPropertyOf" title="https://www.w3id.org/bop#isPropertyOf">is property of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPropertyState">
+      <h3>has property state<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasPropertyState</p>
+      <div class="comment">
+         <span class="markdown">Linking a property with a result</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>This object property is used to directly link a property to a property state. 
+
+Example: Temperature -- hasPropertyState --&gt; CurrentTemperatureState</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isPropertyStateOf" title="https://www.w3id.org/bop#isPropertyStateOf">is property state of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasResult">
+      <h3>has result<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasResult</p>
+      <div class="comment">
+         <span class="markdown">Linking an execution to its result.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isResultOf" title="https://www.w3id.org/bop#isResultOf">is result of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSubActuator">
+      <h3>has sub-actuator<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasSubActuator</p>
+      <div class="comment">
+         <span class="markdown">Describing a whole-part relationship between an actuator and its sub-actuator.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric, transitive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasSubExecutor" title="https://www.w3id.org/bop#hasSubExecutor">has sub-executor</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Actuator" title="https://www.w3id.org/bop#Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Actuator" title="https://www.w3id.org/bop#Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isSubActuatorOf" title="https://www.w3id.org/bop#isSubActuatorOf">is sub-actuator of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSubExecutor">
+      <h3>has sub-executor<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasSubExecutor</p>
+      <div class="comment">
+         <span class="markdown">Describing a whole-part relationship between an executor and its sub-executor.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric, transitive</p>
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasSubActuator" title="https://www.w3id.org/bop#hasSubActuator">has sub-actuator</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasSubSensor" title="https://www.w3id.org/bop#hasSubSensor">has sub-sensor</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isSubExecutorOf" title="https://www.w3id.org/bop#isSubExecutorOf">is sub-executor of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSubProperty">
+      <h3>has sub-property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasSubProperty</p>
+      <div class="comment">
+         <span class="markdown">Describing a whole-part relationship between a property and its sub-property..</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> transitive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isSubPropertyOf" title="https://www.w3id.org/bop#isSubPropertyOf">is sub-property of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSubSensor">
+      <h3>has sub-sensor<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasSubSensor</p>
+      <div class="comment">
+         <span class="markdown">Describing a whole-part relationship between a sensor and its sub-sensor..</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric, transitive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasSubExecutor" title="https://www.w3id.org/bop#hasSubExecutor">has sub-executor</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sensor" title="https://www.w3id.org/bop#Sensor">Sensor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sensor" title="https://www.w3id.org/bop#Sensor">Sensor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isSubSensorOf" title="https://www.w3id.org/bop#isSubSensorOf">is sub-sensor of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasUnit">
+      <h3>has unit<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasUnit</p>
+      <div class="comment">
+         <span class="markdown">Linking a result with a unit.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Unit" title="https://www.w3id.org/bop#Unit">Unit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isUnitOf" title="https://www.w3id.org/bop#isUnitOf">is unit of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hosts">
+      <h3>hosts<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hosts</p>
+      <div class="comment">
+         <span class="markdown">Describing the relation between a platform and the executor which is hosted by this platform.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>This object property could be used to describe the relationship between a wall and a sensor hosted by this wall.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> inverse functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Platform" title="https://www.w3id.org/bop#Platform">Platform</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isHostedBy" title="https://www.w3id.org/bop#isHostedBy">is hosted by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="implementedBy">
+      <h3>implemented by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#implementedBy</p>
+      <div class="comment">
+         <span class="markdown">Describing the relation between a procedure and the executor implementing this procedure.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Procedure" title="https://www.w3id.org/bop#Procedure">Procedure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#implementsProcedure" title="https://www.w3id.org/bop#implementsProcedure">implements procedure</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="implementsProcedure">
+      <h3>implements procedure<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#implementsProcedure</p>
+      <div class="comment">
+         <span class="markdown">Describing the relationship between an executor and the procedure it implements.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Procedure" title="https://www.w3id.org/bop#Procedure">Procedure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#implementedBy" title="https://www.w3id.org/bop#implementedBy">implemented by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isActuatedBy">
+      <h3>is actuated by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isActuatedBy</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a property and the actuator which acts on the property.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#isExecutedBy" title="https://www.w3id.org/bop#isExecutedBy">is executed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Actuator" title="https://www.w3id.org/bop#Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#actsOn" title="https://www.w3id.org/bop#actsOn">acts on</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isCollectionOf">
+      <h3>is collection of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isCollectionOf</p>
+      <div class="comment">
+         <span class="markdown">Linking a collection with the database it is part of.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Collection" title="https://www.w3id.org/bop#Collection">Collection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Database" title="https://www.w3id.org/bop#Database">Database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasCollection" title="https://www.w3id.org/bop#hasCollection">has collection</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isComplexPropertyOf">
+      <h3>is complex property of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isComplexPropertyOf</p>
+      <div class="comment">
+         <span class="markdown">Linking a result with a feature of interest</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>This object property is used to directly link the current state of a property to a feature of interest. It is the shortest route to link a result to a feature of interest. 
+The object property could be extended by subclassing it with use-case-specific object properties.
+
+One could for example say: :CurrentWallLength --ex:isLengthOf-&gt; :Wall, where ex:hasLength is a subclass of bop:isComplexPropertyOf.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasComplexProperty" title="https://www.w3id.org/bop#hasComplexProperty">has complex property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isExecutedBy">
+      <h3>is executed by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isExecutedBy</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a property and the executor which executes on the property.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#isActuatedBy" title="https://www.w3id.org/bop#isActuatedBy">is actuated by</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#isObservedBy" title="https://www.w3id.org/bop#isObservedBy">is observed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#executesOn" title="https://www.w3id.org/bop#executesOn">executes on</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isExternalDatabaseOf">
+      <h3>is external database of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isExternalDatabaseOf</p>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>Linking a database with the executor which results are stored in this database.</pre>
+         </dd>
+         <dd>
+            <pre>This object property could be used to link a time-series database with a sensor.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Database" title="https://www.w3id.org/bop#Database">Database</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasExternalDatabase" title="https://www.w3id.org/bop#hasExternalDatabase">has external database</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isFeatureOfInterestOf">
+      <h3>is feature of interest of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isFeatureOfInterestOf</p>
+      <div class="comment">
+         <span class="markdown">Linking a feature of interest with an execution which executes on a property of this feature of interest.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasFeatureOfInterest" title="https://www.w3id.org/bop#hasFeatureOfInterest">has feature of interest</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isHostedBy">
+      <h3>is hosted by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isHostedBy</p>
+      <div class="comment">
+         <span class="markdown">Describing the relation between an executor and the platform hosting this executor.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>This object property could be used to describe the relationship between a sensor and a wall hosting this sensor.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Platform" title="https://www.w3id.org/bop#Platform">Platform</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hosts" title="https://www.w3id.org/bop#hosts">hosts</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isObservedBy">
+      <h3>is observed by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isObservedBy</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a property and the sensor which observes the property.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#isExecutedBy" title="https://www.w3id.org/bop#isExecutedBy">is executed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sensor" title="https://www.w3id.org/bop#Sensor">Sensor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#observes" title="https://www.w3id.org/bop#observes">observes</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isPartOfPropertySet">
+      <h3>is part of property set<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isPartOfPropertySet</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a property and the property set it is part of.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#PropertySet" title="https://www.w3id.org/bop#PropertySet">Property set</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#containsProperty" title="https://www.w3id.org/bop#containsProperty">contains property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isPropertyOf">
+      <h3>is property of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isPropertyOf</p>
+      <div class="comment">
+         <span class="markdown">Linking a property with its feature of interest. The property is intrinsic to this feature of interest, and cannot exist without a feature of interest.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasProperty" title="https://www.w3id.org/bop#hasProperty">has property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isPropertyStateOf">
+      <h3>is property state of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isPropertyStateOf</p>
+      <div class="comment">
+         <span class="markdown">Linking a result with a property</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>This object property is used to directly link the current state of a property to a property. It is the shortest route to link a result to a property. 
+
+Example: CurrentTemperatureState -- isPropertyStateOf --&gt; Temperature</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasPropertyState" title="https://www.w3id.org/bop#hasPropertyState">has property state</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isResultOf">
+      <h3>is result of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isResultOf</p>
+      <div class="comment">
+         <span class="markdown">Linking a result with an execution.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasResult" title="https://www.w3id.org/bop#hasResult">has result</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isSubActuatorOf">
+      <h3>is sub-actuator of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isSubActuatorOf</p>
+      <div class="comment">
+         <span class="markdown">Relation between an actuator and sub-actuators. The sub-actuators are of type actuator and could function as individual actuators.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>The object property could be used to model actuators which have multiple components with their own functions.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric, transitive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#isSubExecutorOf" title="https://www.w3id.org/bop#isSubExecutorOf">is sub-executor of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Actuator" title="https://www.w3id.org/bop#Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Actuator" title="https://www.w3id.org/bop#Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasSubActuator" title="https://www.w3id.org/bop#hasSubActuator">has sub-actuator</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isSubExecutorOf">
+      <h3>is sub-executor of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isSubExecutorOf</p>
+      <div class="comment">
+         <span class="markdown">Relation between an executor and sub-executors. The sub-executors are of type executor and could function as individual executors.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>The object property could be used to model devices which have multiple components with their own functions. A multisensor - for example - consists of multiple sub-sensors which individually perform a sensing function.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric, transitive</p>
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#isSubActuatorOf" title="https://www.w3id.org/bop#isSubActuatorOf">is sub-actuator of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#isSubSensorOf" title="https://www.w3id.org/bop#isSubSensorOf">is sub-sensor of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasSubExecutor" title="https://www.w3id.org/bop#hasSubExecutor">has sub-executor</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isSubPropertyOf">
+      <h3>is sub-property of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isSubPropertyOf</p>
+      <div class="comment">
+         <span class="markdown">Relation between a sub-property and its parent property.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>The object property describes a typical whole-part relationship between a property and its sub-properties. It is used in cases where properties are so complex that it is desirable to decompose them into separate properties. The separate properties might also be individually linked to their own results.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric, transitive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasSubProperty" title="https://www.w3id.org/bop#hasSubProperty">has sub-property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isSubSensorOf">
+      <h3>is sub-sensor of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isSubSensorOf</p>
+      <div class="comment">
+         <span class="markdown">Relation between a sensor and sub-sensors. The sub-sensors are of type sensor and could function as individual sensors.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>The object property could be used to model sensors which have multiple components with their own functions.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric, transitive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#isSubExecutorOf" title="https://www.w3id.org/bop#isSubExecutorOf">is sub-executor of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sensor" title="https://www.w3id.org/bop#Sensor">Sensor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sensor" title="https://www.w3id.org/bop#Sensor">Sensor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasSubSensor" title="https://www.w3id.org/bop#hasSubSensor">has sub-sensor</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isUnitOf">
+      <h3>is unit of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isUnitOf</p>
+      <div class="comment">
+         <span class="markdown">Linking a unit with a result.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> inverse functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Unit" title="https://www.w3id.org/bop#Unit">Unit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasUnit" title="https://www.w3id.org/bop#hasUnit">has unit</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isUsedFor">
+      <h3>is used for<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#isUsedFor</p>
+      <div class="comment">
+         <span class="markdown">The relationship between a procedure and an execution which used this procedure.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Procedure" title="https://www.w3id.org/bop#Procedure">Procedure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#usesProcedure" title="https://www.w3id.org/bop#usesProcedure">uses procedure</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="observedBy">
+      <h3>observed by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#observedBy</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an observation and the sensor which performed this observation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#executedBy" title="https://www.w3id.org/bop#executedBy">executed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Observation" title="https://www.w3id.org/bop#Observation">Observation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sensor" title="https://www.w3id.org/bop#Sensor">Sensor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#performsObservation" title="https://www.w3id.org/bop#performsObservation">performs observation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="observedProperty">
+      <h3>observed property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#observedProperty</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an observation and the observed property.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#executedProperty" title="https://www.w3id.org/bop#executedProperty">executed property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Observation" title="https://www.w3id.org/bop#Observation">Observation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasObservation" title="https://www.w3id.org/bop#hasObservation">has observation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="observes">
+      <h3>observes<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#observes</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a sensor and the property it observes.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#executesOn" title="https://www.w3id.org/bop#executesOn">executes on</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sensor" title="https://www.w3id.org/bop#Sensor">Sensor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isObservedBy" title="https://www.w3id.org/bop#isObservedBy">is observed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="performsActuation">
+      <h3>performs actuation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#performsActuation</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an actuator and the actuation it performs.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#performsExecution" title="https://www.w3id.org/bop#performsExecution">performs execution</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Actuator" title="https://www.w3id.org/bop#Actuator">Actuator</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Actuation" title="https://www.w3id.org/bop#Actuation">Actuation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#actuatedBy" title="https://www.w3id.org/bop#actuatedBy">actuated by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="performsExecution">
+      <h3>performs execution<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#performsExecution</p>
+      <div class="comment">
+         <span class="markdown">Relationship between an executor and the execution it performs.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#performsActuation" title="https://www.w3id.org/bop#performsActuation">performs actuation</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#performsObservation" title="https://www.w3id.org/bop#performsObservation">performs observation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Executor" title="https://www.w3id.org/bop#Executor">Executor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#executedBy" title="https://www.w3id.org/bop#executedBy">executed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="performsObservation">
+      <h3>performs observation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#performsObservation</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a sensor and the observation it performs.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#performsExecution" title="https://www.w3id.org/bop#performsExecution">performs execution</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sensor" title="https://www.w3id.org/bop#Sensor">Sensor</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Observation" title="https://www.w3id.org/bop#Observation">Observation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#observedBy" title="https://www.w3id.org/bop#observedBy">observed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="usesProcedure">
+      <h3>uses procedure<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#usesProcedure</p>
+      <div class="comment">
+         <span class="markdown">The relationship between an execution and the used procedure.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Procedure" title="https://www.w3id.org/bop#Procedure">Procedure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isUsedFor" title="https://www.w3id.org/bop#isUsedFor">is used for</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasSimpleProperty" title="https://www.w3id.org/bop#hasSimpleProperty">has simple property</a>
+      </li>
+      <li>
+         <a href="#hasSimplePropertyState" title="https://www.w3id.org/bop#hasSimplePropertyState">has simple property state</a>
+      </li>
+      <li>
+         <a href="#hasSimpleResult" title="https://www.w3id.org/bop#hasSimpleResult">has simple result</a>
+      </li>
+      <li>
+         <a href="#hasSimpleUnit" title="https://www.w3id.org/bop#hasSimpleUnit">has simple unit</a>
+      </li>
+      <li>
+         <a href="#hasValue" title="https://www.w3id.org/bop#hasValue">has value</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasSimpleProperty">
+      <h3>has simple property<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasSimpleProperty</p>
+      <div class="comment">
+         <span class="markdown">Linking a feature of interest with a simple property value described as a literal.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest">Feature of interest</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSimplePropertyState">
+      <h3>has simple property state<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasSimplePropertyState</p>
+      <div class="comment">
+         <span class="markdown">Linking a property with a simple property state value described as a literal.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Property" title="https://www.w3id.org/bop#Property">Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSimpleResult">
+      <h3>has simple result<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasSimpleResult</p>
+      <div class="comment">
+         <span class="markdown">Linking an execution with a simple result value described as a literal.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Execution" title="https://www.w3id.org/bop#Execution">Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSimpleUnit">
+      <h3>has simple unit<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasSimpleUnit</p>
+      <div class="comment">
+         <span class="markdown">Linking a result with a unit described by a literal.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasValue">
+      <h3>has value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3id.org/bop#hasValue</p>
+      <div class="comment">
+         <span class="markdown">The simple value of a result.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Result" title="https://www.w3id.org/bop#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://orcid.org/0000-0002-8809-3277" title="https://orcid.org/0000-0002-8809-3277">Alex Donkers</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://orcid.org/0000-0002-8809-3277">
+      <h3>Alex Donkers<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://orcid.org/0000-0002-8809-3277</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://xmlns.com/foaf/0.1/Person"
+               target="_blank"
+               title="http://xmlns.com/foaf/0.1/Person">person</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
