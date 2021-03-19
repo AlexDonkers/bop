@@ -76,6 +76,9 @@ h2 {
   margin-top: 40px;
   font-weight: bold;
   text-transform: none;
+  color: white;
+  background-image: url("https://raw.githubusercontent.com/AlexDonkers/bop/main/docs/resources/bop_header.png");
+  padding: 0.3em;
 }
 
 .dotted {
