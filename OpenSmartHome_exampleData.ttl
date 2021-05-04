@@ -12,7 +12,7 @@
 @prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 
-@prefix bop: <http://w3id.org/bop#> .
+@prefix bop: <http://www.github.com/AlexDonkers/bop#> .
 @prefix : <https://research.tue.nl/nl/persons/alex-ja-donkers#> .
 
 
@@ -1948,182 +1948,182 @@
 
 :Staircase_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Staircase_Temperature_Database.
+	bop:hasPropertyState :Staircase_Temperature_DataPoint.
 :Staircase_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Staircase_RelativeHumidity_Database .
+	bop:hasPropertyState :Staircase_RelativeHumidity_DataPoint .
 :Staircase_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Staircase_CO2_Database .
+	bop:hasPropertyState :Staircase_CO2_DataPoint .
 :Staircase_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Staircase_CO_Database .
+	bop:hasPropertyState :Staircase_CO_DataPoint .
 :Staircase_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Staircase_PM25_Database .
+	bop:hasPropertyState :Staircase_PM25_DataPoint .
 :Staircase_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Staircase_PM10_Database .							 
+	bop:hasPropertyState :Staircase_PM10_DataPoint .							 
 
 
 :Hall_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Hall_Temperature_Database .
+	bop:hasPropertyState :Hall_Temperature_DataPoint .
 :Hall_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Hall_RelativeHumidity_Database .
+	bop:hasPropertyState :Hall_RelativeHumidity_DataPoint .
 :Hall_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Hall_CO2_Database .
+	bop:hasPropertyState :Hall_CO2_DataPoint .
 :Hall_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Hall_CO_Database .
+	bop:hasPropertyState :Hall_CO_DataPoint .
 :Hall_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Hall_PM25_Database .
+	bop:hasPropertyState :Hall_PM25_DataPoint .
 :Hall_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Hall_PM10_Database .
+	bop:hasPropertyState :Hall_PM10_DataPoint .
 							 
 							 
 :Bathroom_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Bathroom_Temperature_Database .
+	bop:hasPropertyState :Bathroom_Temperature_DataPoint .
 :Bathroom_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Bathroom_RelativeHumidity_Database .
+	bop:hasPropertyState :Bathroom_RelativeHumidity_DataPoint .
 :Bathroom_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bathroom_CO2_Database .
+	bop:hasPropertyState :Bathroom_CO2_DataPoint .
 :Bathroom_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bathroom_CO_Database .
+	bop:hasPropertyState :Bathroom_CO_DataPoint .
 :Bathroom_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bathroom_PM25_Database .
+	bop:hasPropertyState :Bathroom_PM25_DataPoint .
 :Bathroom_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bathroom_PM10_Database .
+	bop:hasPropertyState :Bathroom_PM10_DataPoint .
 
 
 :Dining_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Dining_Temperature_Database .
+	bop:hasPropertyState :Dining_Temperature_DataPoint .
 :Dining_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Dining_RelativeHumidity_Database .
+	bop:hasPropertyState :Dining_RelativeHumidity_DataPoint .
 :Dining_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Dining_CO2_Database .
+	bop:hasPropertyState :Dining_CO2_DataPoint .
 :Dining_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Dining_CO_Database .
+	bop:hasPropertyState :Dining_CO_DataPoint .
 :Dining_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Dining_PM25_Database .
+	bop:hasPropertyState :Dining_PM25_DataPoint .
 :Dining_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Dining_PM10_Database .
+	bop:hasPropertyState :Dining_PM10_DataPoint .
 
 
 :Bedroom_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Bedroom_Temperature_Database .
+	bop:hasPropertyState :Bedroom_Temperature_DataPoint .
 :Bedroom_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Bedroom_RelativeHumidity_Database .
+	bop:hasPropertyState :Bedroom_RelativeHumidity_DataPoint .
 :Bedroom_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bedroom_CO2_Database .
+	bop:hasPropertyState :Bedroom_CO2_DataPoint .
 :Bedroom_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bedroom_CO_Database .
+	bop:hasPropertyState :Bedroom_CO_DataPoint .
 :Bedroom_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bedroom_PM25_Database .
+	bop:hasPropertyState :Bedroom_PM25_DataPoint .
 :Bedroom_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bedroom_PM10_Database .
+	bop:hasPropertyState :Bedroom_PM10_DataPoint .
 
 
 :Kitchen_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Kitchen_Temperature_Database .
+	bop:hasPropertyState :Kitchen_Temperature_DataPoint .
 :Kitchen_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Kitchen_RelativeHumidity_Database .
+	bop:hasPropertyState :Kitchen_RelativeHumidity_DataPoint .
 :Kitchen_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Kitchen_CO2_Database .
+	bop:hasPropertyState :Kitchen_CO2_DataPoint .
 :Kitchen_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Kitchen_CO_Database .
+	bop:hasPropertyState :Kitchen_CO_DataPoint .
 :Kitchen_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Kitchen_PM25_Database .
+	bop:hasPropertyState :Kitchen_PM25_DataPoint .
 :Kitchen_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Kitchen_PM10_Database .
+	bop:hasPropertyState :Kitchen_PM10_DataPoint .
 
 
 :Living_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Living_Temperature_Database .
+	bop:hasPropertyState :Living_Temperature_DataPoint .
 :Living_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Living_RelativeHumidity_Database .
+	bop:hasPropertyState :Living_RelativeHumidity_DataPoint .
 :Living_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Living_CO2_Database .
+	bop:hasPropertyState :Living_CO2_DataPoint .
 :Living_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Living_CO_Database .
+	bop:hasPropertyState :Living_CO_DataPoint .
 :Living_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Living_PM25_Database .
+	bop:hasPropertyState :Living_PM25_DataPoint .
 :Living_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Living_PM10_Database .
+	bop:hasPropertyState :Living_PM10_DataPoint .
 
 
 :Room_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Room_Temperature_Database .
+	bop:hasPropertyState :Room_Temperature_DataPoint .
 :Room_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Room_RelativeHumidity_Database .
+	bop:hasPropertyState :Room_RelativeHumidity_DataPoint .
 :Room_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Room_CO2_Database .
+	bop:hasPropertyState :Room_CO2_DataPoint .
 :Room_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Room_CO_Database .
+	bop:hasPropertyState :Room_CO_DataPoint .
 :Room_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Room_PM25_Database .
+	bop:hasPropertyState :Room_PM25_DataPoint .
 :Room_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Room_PM10_Database .
+	bop:hasPropertyState :Room_PM10_DataPoint .
 
 
 :Toilet_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Toilet_Temperature_Database .
+	bop:hasPropertyState :Toilet_Temperature_DataPoint .
 :Toilet_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Toilet_RelativeHumidity_Database .
+	bop:hasPropertyState :Toilet_RelativeHumidity_DataPoint .
 :Toilet_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Toilet_CO2_Database .
+	bop:hasPropertyState :Toilet_CO2_DataPoint .
 :Toilet_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Toilet_CO_Database .
+	bop:hasPropertyState :Toilet_CO_DataPoint .
 :Toilet_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Toilet_PM25_Database .
+	bop:hasPropertyState :Toilet_PM25_DataPoint .
 :Toilet_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Toilet_PM10_Database .
+	bop:hasPropertyState :Toilet_PM10_DataPoint .
 
 
 
@@ -2133,66 +2133,120 @@
 ################################################################################################################################################################################################################################
 ################################################################################################################################################################################################################################
 
-:Staircase_Temperature_Database rdf:type bop:Database .
-:Staircase_RelativeHumidity_Database rdf:type bop:Database .
-:Staircase_CO2_Database rdf:type bop:Database .
-:Staircase_CO_Database rdf:type bop:Database .
-:Staircase_PM25_Database rdf:type bop:Database .
-:Staircase_PM10_Database rdf:type bop:Database .							 
+:Staircase_Temperature_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .
+:Staircase_RelativeHumidity_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .
+:Staircase_CO2_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .
+:Staircase_CO_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .
+:Staircase_PM25_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .
+:Staircase_PM10_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .							 
 
-:Hall_Temperature_Database rdf:type bop:Database .
-:Hall_RelativeHumidity_Database rdf:type bop:Database .
-:Hall_CO2_Database rdf:type bop:Database .
-:Hall_CO_Database rdf:type bop:Database .
-:Hall_PM25_Database rdf:type bop:Database .
-:Hall_PM10_Database rdf:type bop:Database .
+:Hall_Temperature_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Hall_RelativeHumidity_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Hall_CO2_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Hall_CO_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Hall_PM25_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Hall_PM10_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
 							 
-:Bathroom_Temperature_Database rdf:type bop:Database .
-:Bathroom_RelativeHumidity_Database rdf:type bop:Database .
-:Bathroom_CO2_Database rdf:type bop:Database .
-:Bathroom_CO_Database rdf:type bop:Database .
-:Bathroom_PM25_Database rdf:type bop:Database .
-:Bathroom_PM10_Database rdf:type bop:Database .
+:Bathroom_Temperature_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Bathroom_RelativeHumidity_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Bathroom_CO2_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Bathroom_CO_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Bathroom_PM25_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Bathroom_PM10_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
 
-:Dining_Temperature_Database rdf:type bop:Database .
-:Dining_RelativeHumidity_Database rdf:type bop:Database .
-:Dining_CO2_Database rdf:type bop:Database .
-:Dining_CO_Database rdf:type bop:Database .
-:Dining_PM25_Database rdf:type bop:Database .
-:Dining_PM10_Database rdf:type bop:Database .
+:Dining_Temperature_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Dining_RelativeHumidity_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Dining_CO2_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Dining_CO_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Dining_PM25_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Dining_PM10_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
 
-:Bedroom_Temperature_Database rdf:type bop:Database .
-:Bedroom_RelativeHumidity_Database rdf:type bop:Database .
-:Bedroom_CO2_Database rdf:type bop:Database .
-:Bedroom_CO_Database rdf:type bop:Database .
-:Bedroom_PM25_Database rdf:type bop:Database .
-:Bedroom_PM10_Database rdf:type bop:Database .
+:Bedroom_Temperature_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Bedroom_RelativeHumidity_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Bedroom_CO2_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Bedroom_CO_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Bedroom_PM25_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Bedroom_PM10_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
 
-:Kitchen_Temperature_Database rdf:type bop:Database .
-:Kitchen_RelativeHumidity_Database rdf:type bop:Database .
-:Kitchen_CO2_Database rdf:type bop:Database .
-:Kitchen_CO_Database rdf:type bop:Database .
-:Kitchen_PM25_Database rdf:type bop:Database .
-:Kitchen_PM10_Database rdf:type bop:Database .
+:Kitchen_Temperature_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Kitchen_RelativeHumidity_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Kitchen_CO2_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Kitchen_CO_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Kitchen_PM25_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Kitchen_PM10_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
 
-:Living_Temperature_Database rdf:type bop:Database .
-:Living_RelativeHumidity_Database rdf:type bop:Database .
-:Living_CO2_Database rdf:type bop:Database .
-:Living_CO_Database rdf:type bop:Database .
-:Living_PM25_Database rdf:type bop:Database .
-:Living_PM10_Database rdf:type bop:Database .
+:Living_Temperature_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Living_RelativeHumidity_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Living_CO2_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Living_CO_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Living_PM25_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Living_PM10_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
 
-:Room_Temperature_Database rdf:type bop:Database .
-:Room_RelativeHumidity_Database rdf:type bop:Database .
-:Room_CO2_Database rdf:type bop:Database .
-:Room_CO_Database rdf:type bop:Database .
-:Room_PM25_Database rdf:type bop:Database .
-:Room_PM10_Database rdf:type bop:Database .
+:Room_Temperature_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Room_RelativeHumidity_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Room_CO2_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Room_CO_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Room_PM25_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Room_PM10_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
 
-:Toilet_Temperature_Database rdf:type bop:Database .
-:Toilet_RelativeHumidity_Database rdf:type bop:Database .
-:Toilet_CO2_Database rdf:type bop:Database .
-:Toilet_CO_Database rdf:type bop:Database .
-:Toilet_PM25_Database rdf:type bop:Database .
-:Toilet_PM10_Database rdf:type bop:Database .
+:Toilet_Temperature_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Toilet_RelativeHumidity_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Toilet_CO2_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Toilet_CO_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Toilet_PM25_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
+:Toilet_PM10_DataPoint rdf:type bop:DataPoint ,
+									bop:isDataPointOf :OSH_DB .		
 
