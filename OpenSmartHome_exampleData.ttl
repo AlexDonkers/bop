@@ -1,6 +1,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <https://www.w3.org/2001/XMLSchema#>.
 
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix bot:	<https://w3id.org/bot#> .
@@ -11,7 +12,7 @@
 @prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 
-@prefix bop: <http://www.github.com/AlexDonkers/bop#> .
+@prefix bop: <http://w3id.org/bop#> .
 @prefix : <https://research.tue.nl/nl/persons/alex-ja-donkers#> .
 
 
@@ -1947,182 +1948,182 @@
 
 :Staircase_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Staircase_Temperature_Collection.
+	bop:hasPropertyState :Staircase_Temperature_Database.
 :Staircase_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState:Staircase_RelativeHumidity_Collection .
+	bop:hasPropertyState :Staircase_RelativeHumidity_Database .
 :Staircase_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Staircase_CO2_Collection .
+	bop:hasPropertyState :Staircase_CO2_Database .
 :Staircase_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Staircase_CO_Collection .
+	bop:hasPropertyState :Staircase_CO_Database .
 :Staircase_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Staircase_PM25_Collection .
+	bop:hasPropertyState :Staircase_PM25_Database .
 :Staircase_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Staircase_PM10_Collection .							 
+	bop:hasPropertyState :Staircase_PM10_Database .							 
 
 
 :Hall_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Hall_Temperature_Collection .
+	bop:hasPropertyState :Hall_Temperature_Database .
 :Hall_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Hall_RelativeHumidity_Collection .
+	bop:hasPropertyState :Hall_RelativeHumidity_Database .
 :Hall_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Hall_CO2_Collection .
+	bop:hasPropertyState :Hall_CO2_Database .
 :Hall_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Hall_CO_Collection .
+	bop:hasPropertyState :Hall_CO_Database .
 :Hall_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Hall_PM25_Collection .
+	bop:hasPropertyState :Hall_PM25_Database .
 :Hall_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Hall_PM10_Collection .
+	bop:hasPropertyState :Hall_PM10_Database .
 							 
 							 
 :Bathroom_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Bathroom_Temperature_Collection .
+	bop:hasPropertyState :Bathroom_Temperature_Database .
 :Bathroom_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Bathroom_RelativeHumidity_Collection .
+	bop:hasPropertyState :Bathroom_RelativeHumidity_Database .
 :Bathroom_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bathroom_CO2_Collection .
+	bop:hasPropertyState :Bathroom_CO2_Database .
 :Bathroom_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bathroom_CO_Collection .
+	bop:hasPropertyState :Bathroom_CO_Database .
 :Bathroom_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bathroom_PM25_Collection .
+	bop:hasPropertyState :Bathroom_PM25_Database .
 :Bathroom_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bathroom_PM10_Collection .
+	bop:hasPropertyState :Bathroom_PM10_Database .
 
 
 :Dining_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Dining_Temperature_Collection .
+	bop:hasPropertyState :Dining_Temperature_Database .
 :Dining_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Dining_RelativeHumidity_Collection .
+	bop:hasPropertyState :Dining_RelativeHumidity_Database .
 :Dining_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Dining_CO2_Collection .
+	bop:hasPropertyState :Dining_CO2_Database .
 :Dining_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Dining_CO_Collection .
+	bop:hasPropertyState :Dining_CO_Database .
 :Dining_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Dining_PM25_Collection .
+	bop:hasPropertyState :Dining_PM25_Database .
 :Dining_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Dining_PM10_Collection .
+	bop:hasPropertyState :Dining_PM10_Database .
 
 
 :Bedroom_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Bedroom_Temperature_Collection .
+	bop:hasPropertyState :Bedroom_Temperature_Database .
 :Bedroom_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Bedroom_RelativeHumidity_Collection .
+	bop:hasPropertyState :Bedroom_RelativeHumidity_Database .
 :Bedroom_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bedroom_CO2_Collection .
+	bop:hasPropertyState :Bedroom_CO2_Database .
 :Bedroom_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bedroom_CO_Collection .
+	bop:hasPropertyState :Bedroom_CO_Database .
 :Bedroom_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bedroom_PM25_Collection .
+	bop:hasPropertyState :Bedroom_PM25_Database .
 :Bedroom_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Bedroom_PM10_Collection .
+	bop:hasPropertyState :Bedroom_PM10_Database .
 
 
 :Kitchen_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Kitchen_Temperature_Collection .
+	bop:hasPropertyState :Kitchen_Temperature_Database .
 :Kitchen_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Kitchen_RelativeHumidity_Collection .
+	bop:hasPropertyState :Kitchen_RelativeHumidity_Database .
 :Kitchen_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Kitchen_CO2_Collection .
+	bop:hasPropertyState :Kitchen_CO2_Database .
 :Kitchen_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Kitchen_CO_Collection .
+	bop:hasPropertyState :Kitchen_CO_Database .
 :Kitchen_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Kitchen_PM25_Collection .
+	bop:hasPropertyState :Kitchen_PM25_Database .
 :Kitchen_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Kitchen_PM10_Collection .
+	bop:hasPropertyState :Kitchen_PM10_Database .
 
 
 :Living_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Living_Temperature_Collection .
+	bop:hasPropertyState :Living_Temperature_Database .
 :Living_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Living_RelativeHumidity_Collection .
+	bop:hasPropertyState :Living_RelativeHumidity_Database .
 :Living_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Living_CO2_Collection .
+	bop:hasPropertyState :Living_CO2_Database .
 :Living_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Living_CO_Collection .
+	bop:hasPropertyState :Living_CO_Database .
 :Living_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Living_PM25_Collection .
+	bop:hasPropertyState :Living_PM25_Database .
 :Living_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Living_PM10_Collection .
+	bop:hasPropertyState :Living_PM10_Database .
 
 
 :Room_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Room_Temperature_Collection .
+	bop:hasPropertyState :Room_Temperature_Database .
 :Room_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Room_RelativeHumidity_Collection .
+	bop:hasPropertyState :Room_RelativeHumidity_Database .
 :Room_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Room_CO2_Collection .
+	bop:hasPropertyState :Room_CO2_Database .
 :Room_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Room_CO_Collection .
+	bop:hasPropertyState :Room_CO_Database .
 :Room_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Room_PM25_Collection .
+	bop:hasPropertyState :Room_PM25_Database .
 :Room_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Room_PM10_Collection .
+	bop:hasPropertyState :Room_PM10_Database .
 
 
 :Toilet_Temperature rdf:type bop:Property ,
 							 quantitykind:Temperature ;
-	bop:hasPropertyState :Toilet_Temperature_Collection .
+	bop:hasPropertyState :Toilet_Temperature_Database .
 :Toilet_RelativeHumidity rdf:type bop:Property ,
 							 quantitykind:RelativeHumidity ;
-	bop:hasPropertyState :Toilet_RelativeHumidity_Collection .
+	bop:hasPropertyState :Toilet_RelativeHumidity_Database .
 :Toilet_CO2 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Toilet_CO2_Collection .
+	bop:hasPropertyState :Toilet_CO2_Database .
 :Toilet_CO rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Toilet_CO_Collection .
+	bop:hasPropertyState :Toilet_CO_Database .
 :Toilet_PM25 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Toilet_PM25_Collection .
+	bop:hasPropertyState :Toilet_PM25_Database .
 :Toilet_PM10 rdf:type bop:Property ,
 							 quantitykind:Concentration ;
-	bop:hasPropertyState :Toilet_PM10_Collection .
+	bop:hasPropertyState :Toilet_PM10_Database .
 
 
 
@@ -2132,66 +2133,66 @@
 ################################################################################################################################################################################################################################
 ################################################################################################################################################################################################################################
 
-:Staircase_Temperature_Collection rdf:type bop:Collection .
-:Staircase_RelativeHumidity_Collection rdf:type bop:Collection .
-:Staircase_CO2_Collection rdf:type bop:Collection .
-:Staircase_CO_Collection rdf:type bop:Collection .
-:Staircase_PM25_Collection rdf:type bop:Collection .
-:Staircase_PM10_Collection rdf:type bop:Collection .							 
+:Staircase_Temperature_Database rdf:type bop:Database .
+:Staircase_RelativeHumidity_Database rdf:type bop:Database .
+:Staircase_CO2_Database rdf:type bop:Database .
+:Staircase_CO_Database rdf:type bop:Database .
+:Staircase_PM25_Database rdf:type bop:Database .
+:Staircase_PM10_Database rdf:type bop:Database .							 
 
-:Hall_Temperature_Collection rdf:type bop:Collection .
-:Hall_RelativeHumidity_Collection rdf:type bop:Collection .
-:Hall_CO2_Collection rdf:type bop:Collection .
-:Hall_CO_Collection rdf:type bop:Collection .
-:Hall_PM25_Collection rdf:type bop:Collection .
-:Hall_PM10_Collection rdf:type bop:Collection .
+:Hall_Temperature_Database rdf:type bop:Database .
+:Hall_RelativeHumidity_Database rdf:type bop:Database .
+:Hall_CO2_Database rdf:type bop:Database .
+:Hall_CO_Database rdf:type bop:Database .
+:Hall_PM25_Database rdf:type bop:Database .
+:Hall_PM10_Database rdf:type bop:Database .
 							 
-:Bathroom_Temperature_Collection rdf:type bop:Collection .
-:Bathroom_RelativeHumidity_Collection rdf:type bop:Collection .
-:Bathroom_CO2_Collection rdf:type bop:Collection .
-:Bathroom_CO_Collection rdf:type bop:Collection .
-:Bathroom_PM25_Collection rdf:type bop:Collection .
-:Bathroom_PM10_Collection rdf:type bop:Collection .
+:Bathroom_Temperature_Database rdf:type bop:Database .
+:Bathroom_RelativeHumidity_Database rdf:type bop:Database .
+:Bathroom_CO2_Database rdf:type bop:Database .
+:Bathroom_CO_Database rdf:type bop:Database .
+:Bathroom_PM25_Database rdf:type bop:Database .
+:Bathroom_PM10_Database rdf:type bop:Database .
 
-:Dining_Temperature_Collection rdf:type bop:Collection .
-:Dining_RelativeHumidity_Collection rdf:type bop:Collection .
-:Dining_CO2_Collection rdf:type bop:Collection .
-:Dining_CO_Collection rdf:type bop:Collection .
-:Dining_PM25_Collection rdf:type bop:Collection .
-:Dining_PM10_Collection rdf:type bop:Collection .
+:Dining_Temperature_Database rdf:type bop:Database .
+:Dining_RelativeHumidity_Database rdf:type bop:Database .
+:Dining_CO2_Database rdf:type bop:Database .
+:Dining_CO_Database rdf:type bop:Database .
+:Dining_PM25_Database rdf:type bop:Database .
+:Dining_PM10_Database rdf:type bop:Database .
 
-:Bedroom_Temperature_Collection rdf:type bop:Collection .
-:Bedroom_RelativeHumidity_Collection rdf:type bop:Collection .
-:Bedroom_CO2_Collection rdf:type bop:Collection .
-:Bedroom_CO_Collection rdf:type bop:Collection .
-:Bedroom_PM25_Collection rdf:type bop:Collection .
-:Bedroom_PM10_Collection rdf:type bop:Collection .
+:Bedroom_Temperature_Database rdf:type bop:Database .
+:Bedroom_RelativeHumidity_Database rdf:type bop:Database .
+:Bedroom_CO2_Database rdf:type bop:Database .
+:Bedroom_CO_Database rdf:type bop:Database .
+:Bedroom_PM25_Database rdf:type bop:Database .
+:Bedroom_PM10_Database rdf:type bop:Database .
 
-:Kitchen_Temperature_Collection rdf:type bop:Collection .
-:Kitchen_RelativeHumidity_Collection rdf:type bop:Collection .
-:Kitchen_CO2_Collection rdf:type bop:Collection .
-:Kitchen_CO_Collection rdf:type bop:Collection .
-:Kitchen_PM25_Collection rdf:type bop:Collection .
-:Kitchen_PM10_Collection rdf:type bop:Collection .
+:Kitchen_Temperature_Database rdf:type bop:Database .
+:Kitchen_RelativeHumidity_Database rdf:type bop:Database .
+:Kitchen_CO2_Database rdf:type bop:Database .
+:Kitchen_CO_Database rdf:type bop:Database .
+:Kitchen_PM25_Database rdf:type bop:Database .
+:Kitchen_PM10_Database rdf:type bop:Database .
 
-:Living_Temperature_Collection rdf:type bop:Collection .
-:Living_RelativeHumidity_Collection rdf:type bop:Collection .
-:Living_CO2_Collection rdf:type bop:Collection .
-:Living_CO_Collection rdf:type bop:Collection .
-:Living_PM25_Collection rdf:type bop:Collection .
-:Living_PM10_Collection rdf:type bop:Collection .
+:Living_Temperature_Database rdf:type bop:Database .
+:Living_RelativeHumidity_Database rdf:type bop:Database .
+:Living_CO2_Database rdf:type bop:Database .
+:Living_CO_Database rdf:type bop:Database .
+:Living_PM25_Database rdf:type bop:Database .
+:Living_PM10_Database rdf:type bop:Database .
 
-:Room_Temperature_Collection rdf:type bop:Collection .
-:Room_RelativeHumidity_Collection rdf:type bop:Collection .
-:Room_CO2_Collection rdf:type bop:Collection .
-:Room_CO_Collection rdf:type bop:Collection .
-:Room_PM25_Collection rdf:type bop:Collection .
-:Room_PM10_Collection rdf:type bop:Collection .
+:Room_Temperature_Database rdf:type bop:Database .
+:Room_RelativeHumidity_Database rdf:type bop:Database .
+:Room_CO2_Database rdf:type bop:Database .
+:Room_CO_Database rdf:type bop:Database .
+:Room_PM25_Database rdf:type bop:Database .
+:Room_PM10_Database rdf:type bop:Database .
 
-:Toilet_Temperature_Collection rdf:type bop:Collection .
-:Toilet_RelativeHumidity_Collection rdf:type bop:Collection .
-:Toilet_CO2_Collection rdf:type bop:Collection .
-:Toilet_CO_Collection rdf:type bop:Collection .
-:Toilet_PM25_Collection rdf:type bop:Collection .
-:Toilet_PM10_Collection rdf:type bop:Collection .
+:Toilet_Temperature_Database rdf:type bop:Database .
+:Toilet_RelativeHumidity_Database rdf:type bop:Database .
+:Toilet_CO2_Database rdf:type bop:Database .
+:Toilet_CO_Database rdf:type bop:Database .
+:Toilet_PM25_Database rdf:type bop:Database .
+:Toilet_PM10_Database rdf:type bop:Database .
 
