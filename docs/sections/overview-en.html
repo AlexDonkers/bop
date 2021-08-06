@@ -10,13 +10,10 @@
 		  <a href="#Actuator" title="https://www.w3id.org/bop#Actuator" style="color: #ffc000">Actuator</a>
 	   </li>
 	   <li>
-		  <a href="#Collection" title="https://www.w3id.org/bop#Collection" style="color: #5b9bd5">Collection</a>
+		  <a href="#DataPoint" title="https://www.w3id.org/bop#DataPoint" style="color: #5b9bd5">Data point</a>
 	   </li>
 	   <li>
-		  <a href="#CurrentState" title="https://www.w3id.org/bop#CurrentState" style="color: #5b9bd5">Current state</a>
-	   </li>
-	   <li>
-		  <a href="#Database" title="https://www.w3id.org/bop#Database" style="color: #5b9bd5">Database</a>
+		  <a href="#Database" title="https://www.w3id.org/bop#Database" style="color: #00B050">Database</a>
 	   </li>
 	   <li>
 		  <a href="#Execution" title="https://www.w3id.org/bop#Execution" style="color: #d668c1">Execution</a>
@@ -28,10 +25,13 @@
 		  <a href="#FeatureOfInterest" title="https://www.w3id.org/bop#FeatureOfInterest" style="color: #ed7d31">Feature of interest</a>
 	   </li>
 	   <li>
-		  <a href="#Function" title="https://www.w3id.org/bop#Function" style="color: #70ad47">Function</a>
+		<a href="#Input" title="https://www.w3id.org/bop#Input" style="color: #5b9bd5">Input</a>
 	   </li>
 	   <li>
 		  <a href="#Observation" title="https://www.w3id.org/bop#Observation" style="color: #d668c1">Observation</a>
+	   </li>
+	   <li>
+		<a href="#Output" title="https://www.w3id.org/bop#Output" style="color: #5b9bd5">Output</a>
 	   </li>
 	   <li>
 		  <a href="#Platform" title="https://www.w3id.org/bop#Platform" style="color: #ffc000">Platform</a>
@@ -54,6 +54,9 @@
 	   <li>
 		  <a href="#Unit" title="https://www.w3id.org/bop#Unit" style="color: #7030a0">Unit</a>
 	   </li>
+	   <li>
+		<a href="#UserDefined" title="https://www.w3id.org/bop#UserDefined" style="color: #5b9bd5">User defined</a>
+	   </li>
 	</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
 	   <li>
 		  <a href="#actsOn" title="https://www.w3id.org/bop#actsOn">acts on</a>
@@ -62,28 +65,28 @@
 		  <a href="#actuatedBy" title="https://www.w3id.org/bop#actuatedBy">actuated by</a>
 	   </li>
 	   <li>
-		  <a href="#actuatedProperty" title="https://www.w3id.org/bop#actuatedProperty">actuated property</a>
-	   </li>
-	   <li>
 		  <a href="#containsProperty" title="https://www.w3id.org/bop#containsProperty">contains property</a>
 	   </li>
 	   <li>
 		  <a href="#executedBy" title="https://www.w3id.org/bop#executedBy">executed by</a>
 	   </li>
 	   <li>
-		  <a href="#executedProperty" title="https://www.w3id.org/bop#executedProperty">executed property</a>
+		  <a href="#executesOn" title="https://www.w3id.org/bop#executesOn">executes on</a>
 	   </li>
 	   <li>
-		  <a href="#executesOn" title="https://www.w3id.org/bop#executesOn">executes on</a>
+		<a href="#hasActuatedProperty" title="https://www.w3id.org/bop#hasActuatedProperty">has actuated property</a>
 	   </li>
 	   <li>
 		  <a href="#hasActuation" title="https://www.w3id.org/bop#hasActuation">has actuation</a>
 	   </li>
 	   <li>
-		  <a href="#hasCollection" title="https://www.w3id.org/bop#hasCollection">has collection</a>
+		  <a href="#hasComplexProperty" title="https://www.w3id.org/bop#hasComplexProperty">has complex property</a>
 	   </li>
 	   <li>
-		  <a href="#hasComplexProperty" title="https://www.w3id.org/bop#hasComplexProperty">has complex property</a>
+		<a href="#hasDataPoint" title="https://www.w3id.org/bop#hasDataPoint">has data point</a>
+	   </li>
+	   <li>
+		<a href="#hasExecutedProperty" title="https://www.w3id.org/bop#hasExecutedProperty">has executed property</a>
 	   </li>
 	   <li>
 		  <a href="#hasExecution" title="https://www.w3id.org/bop#hasExecution">has execution</a>
@@ -97,6 +100,9 @@
 	   <li>
 		  <a href="#hasObservation" title="https://www.w3id.org/bop#hasObservation">has observation</a>
 	   </li>
+	   <li>
+		<a href="#hasObservedProperty" title="https://www.w3id.org/bop#hasObservedProperty">has observed property</a>
+	 </li>
 	   <li>
 		  <a href="#hasProperty" title="https://www.w3id.org/bop#hasProperty">has property</a>
 	   </li>
@@ -134,10 +140,10 @@
 		  <a href="#isActuatedBy" title="https://www.w3id.org/bop#isActuatedBy">is actuated by</a>
 	   </li>
 	   <li>
-		  <a href="#isCollectionOf" title="https://www.w3id.org/bop#isCollectionOf">is collection of</a>
+		  <a href="#isComplexPropertyOf" title="https://www.w3id.org/bop#isComplexPropertyOf">is complex property of</a>
 	   </li>
 	   <li>
-		  <a href="#isComplexPropertyOf" title="https://www.w3id.org/bop#isComplexPropertyOf">is complex property of</a>
+		<a href="#isDataPointOf" title="https://www.w3id.org/bop#isDataPointOf">is data point of</a>
 	   </li>
 	   <li>
 		  <a href="#isExecutedBy" title="https://www.w3id.org/bop#isExecutedBy">is executed by</a>
@@ -188,9 +194,6 @@
 		  <a href="#observedBy" title="https://www.w3id.org/bop#observedBy">observed by</a>
 	   </li>
 	   <li>
-		  <a href="#observedProperty" title="https://www.w3id.org/bop#observedProperty">observed property</a>
-	   </li>
-	   <li>
 		  <a href="#observes" title="https://www.w3id.org/bop#observes">observes</a>
 	   </li>
 	   <li>
@@ -206,7 +209,10 @@
 		  <a href="#usesProcedure" title="https://www.w3id.org/bop#usesProcedure">uses procedure</a>
 	   </li>
 	</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
-	   <li>
+		<li>
+			<a href="#hasID" title="https://www.w3id.org/bop#hasID">has ID</a>
+		 </li>
+		<li>
 		  <a href="#hasSimpleProperty" title="https://www.w3id.org/bop#hasSimpleProperty">has simple property</a>
 	   </li>
 	   <li>
