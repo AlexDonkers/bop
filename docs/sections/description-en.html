@@ -78,8 +78,8 @@
     <h4 id="SPARQLproperties" class="list">Querying static and dynamic properties</h4>
 
     <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
-        <span style="font-weight:bold">PREFIX</span> bop: <https://w3id.org/bop#>
-        <span style="font-weight:bold">PREFIX</span> bot: <https://w3id.org/bot#>
+        <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;
+        <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;
         <span style="font-weight:bold">SELECT</span> ?room ?property ?result
         <span style="font-weight:bold">WHERE</span> { 
             ?room a bop:FeatureOfInterest, bot:Space .
@@ -91,9 +91,9 @@
     <h4 id="SPARQLspatiotemporal" class="list">Querying the spatiotemporal resolution of a temperature measurement</h4>
 
     <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
-        <span style="font-weight:bold">PREFIX</span> bop: <https://w3id.org/bop#>
-        <span style="font-weight:bold">PREFIX</span> bot: <https://w3id.org/bot#>
-        <span style="font-weight:bold">PREFIX</span> quantitykind: <http://qudt.org/2.1/vocab/quantitykind>
+        <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;
+        <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;
+        <span style="font-weight:bold">PREFIX</span> quantitykind: &lt;http://qudt.org/2.1/vocab/quantitykind&gt;
         <span style="font-weight:bold">SELECT</span> ?host ?sensor ?viewpoint ?relationship ?currentState
         
         <span style="font-weight:bold">WHERE</span> { 
@@ -110,8 +110,8 @@
     <h4 id="SPARQLexecutors" class="list">Querying a property and its related executors</h4>
 
     <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
-        <span style="font-weight:bold">PREFIX</span> bop: <https://w3id.org/bop#>
-        <span style="font-weight:bold">PREFIX</span> bot: <https://w3id.org/bot#>
+        <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;
+        <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;
         <span style="font-weight:bold">SELECT</span> ?room ?property ?executor
 
         <span style="font-weight:bold">WHERE</span> { 
@@ -124,9 +124,11 @@
     <h4 id="SPARQLdatapoint" class="list">Querying a property and it’s external storage location & Querying time-series data in InfluxDB based on the SPARQL results</h4>
 
     <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
-        <span style="font-weight:bold">PREFIX</span> bop: <https://w3id.org/bop#>
-        <span style="font-weight:bold">PREFIX</span> bot: <https://w3id.org/bot#>
-        <span style="font-weight:bold">PREFIX</span> quantitykind: <http://qudt.org/2.1/vocab/quantitykind>
+        <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;
+
+        <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;
+
+        <span style="font-weight:bold">PREFIX</span> quantitykind: &lt;http://qudt.org/2.1/vocab/quantitykind&gt;
         <span style="font-weight:bold">SELECT</span> ?property ?datapoint ?database
         
         <span style="font-weight:bold">WHERE</span> { 
