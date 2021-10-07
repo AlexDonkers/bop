@@ -446,8 +446,87 @@ function loadTOC(){
         </a>
         <caption> <a href="#fig5"> Figure 5</a>: Use of BOP in practice </caption>
     </div>
-   
-   </div>
+
+    <h4 id="sensor+actuator" class="list">Linking sensors and HVAC actuators</h4>
+    
+    <div id="fig6" align="center">
+        <a href="https://raw.githubusercontent.com/AlexDonkers/bop/main/docs/resources/Sensors+actuators.png" target="_blank">
+            <img  src="https://raw.githubusercontent.com/AlexDonkers/bop/main/docs/resources/Sensors+actuators.png" style="max-width: 100%; display: block; margin: auto">
+        </a>
+        <caption> <a href="#fig6"> Figure 6</a>: Linking sensors and HVAC actuators using BOP </caption>
+    </div>
+
+
+    <!-- SPARQL -->
+
+    <h3 id="sparql" class="list">SPARQL</h3>
+
+    <h4 id="SPARQLproperties" class="list">Querying static and dynamic properties</h4>
+
+    <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
+        <span style="font-weight:bold">PREFIX</span> bop: <https://w3id.org/bop#>
+        <span style="font-weight:bold">PREFIX</span> bot: <https://w3id.org/bot#>
+        <span style="font-weight:bold">SELECT</span> ?room ?property ?result
+        <span style="font-weight:bold">WHERE</span> { 
+            ?room a bop:FeatureOfInterest, bot:Space .
+            ?room bop:hasProperty ?property .
+            ?property bop:hasPropertyState ?result .
+        }      
+    </div>
+
+    <h4 id="SPARQLspatiotemporal" class="list">Querying the spatiotemporal resolution of a temperature measurement</h4>
+
+    <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
+        <span style="font-weight:bold">PREFIX</span> bop: <https://w3id.org/bop#>
+        <span style="font-weight:bold">PREFIX</span> bot: <https://w3id.org/bot#>
+        <span style="font-weight:bold">PREFIX</span> quantitykind: <http://qudt.org/2.1/vocab/quantitykind>
+        <span style="font-weight:bold">SELECT</span> ?host ?sensor ?viewpoint ?relationship ?currentState
+        
+        <span style="font-weight:bold">WHERE</span> { 
+            ?sensor a bop:Sensor .
+            ?sensor bop:observes ?temperature .
+            ?temperature a quantitykind:Temperature .
+            ?temperature bop:hasPropertyState ?currentState .
+            ?sensor bop:isHostedBy ?host .
+            ?temperature bop:isPropertyOf ?viewpoint .
+            ?host ?relationship ?viewpoint .
+        }         
+    </div>
+
+    <h4 id="SPARQLexecutors" class="list">Querying a property and its related executors</h4>
+
+    <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
+        <span style="font-weight:bold">PREFIX</span> bop: <https://w3id.org/bop#>
+        <span style="font-weight:bold">PREFIX</span> bot: <https://w3id.org/bot#>
+        <span style="font-weight:bold">SELECT</span> ?room ?property ?executor
+
+        <span style="font-weight:bold">WHERE</span> { 
+            ?room a bop:FeatureOfInterest, bot:Space .
+           ?room bop:hasProperty ?property .
+           ?executor bop:executesOn ?property .
+        }
+    </div>
+
+    <h4 id="SPARQLdatapoint" class="list">Querying a property and it’s external storage location & Querying time-series data in InfluxDB based on the SPARQL results</h4>
+
+    <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
+        <span style="font-weight:bold">PREFIX</span> bop: <https://w3id.org/bop#>
+        <span style="font-weight:bold">PREFIX</span> bot: <https://w3id.org/bot#>
+        <span style="font-weight:bold">PREFIX</span> quantitykind: <http://qudt.org/2.1/vocab/quantitykind>
+        <span style="font-weight:bold">SELECT</span> ?property ?datapoint ?database
+        
+        <span style="font-weight:bold">WHERE</span> { 
+            ?room a bop:FeatureOfInterest, bot:Space .
+            ?room bop:hasProperty ?property .
+            ?property bop:hasPropertyState ?datapoint .
+            ?property a quantitykind:Temperature .
+            ?datapoint bop:isDataPointOf ?database .
+        }    
+    </div>
+    <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
+        <span style="font-weight:bold">USE</span> ?database
+        <span style="font-weight:bold">SELECT</span> ?property <span style="font-weight:bold">FROM</span> ?datapoint <span style="font-weight:bold">WHERE</span> ?property < 18
+    </div>
    
   	 <!-- Crossref -->
 
