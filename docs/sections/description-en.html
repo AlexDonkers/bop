@@ -78,65 +78,64 @@
     <h4 id="SPARQLproperties" class="list">Querying static and dynamic properties</h4>
 
     <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
-        <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;
-        <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;
-        <span style="font-weight:bold">SELECT</span> ?room ?property ?result
-        <span style="font-weight:bold">WHERE</span> { 
-            ?room a bop:FeatureOfInterest, bot:Space .
-            ?room bop:hasProperty ?property .
-            ?property bop:hasPropertyState ?result .
+        <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;<br>
+        <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;<br>
+        <span style="font-weight:bold">SELECT</span> ?room ?property ?result<br>
+        <br>
+        <span style="font-weight:bold">WHERE</span> { <br>
+            ?room a bop:FeatureOfInterest, bot:Space .<br>
+            ?room bop:hasProperty ?property .<br>
+            ?property bop:hasPropertyState ?result .<br>
         }      
     </div>
 
     <h4 id="SPARQLspatiotemporal" class="list">Querying the spatiotemporal resolution of a temperature measurement</h4>
 
     <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
-        <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;
-        <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;
-        <span style="font-weight:bold">PREFIX</span> quantitykind: &lt;http://qudt.org/2.1/vocab/quantitykind&gt;
-        <span style="font-weight:bold">SELECT</span> ?host ?sensor ?viewpoint ?relationship ?currentState
-        
-        <span style="font-weight:bold">WHERE</span> { 
-            ?sensor a bop:Sensor .
-            ?sensor bop:observes ?temperature .
-            ?temperature a quantitykind:Temperature .
-            ?temperature bop:hasPropertyState ?currentState .
-            ?sensor bop:isHostedBy ?host .
-            ?temperature bop:isPropertyOf ?viewpoint .
-            ?host ?relationship ?viewpoint .
+        <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;<br>
+        <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;<br>
+        <span style="font-weight:bold">PREFIX</span> quantitykind: &lt;http://qudt.org/2.1/vocab/quantitykind&gt;<br>
+        <span style="font-weight:bold">SELECT</span> ?host ?sensor ?viewpoint ?relationship ?currentState<br>
+        <br>
+        <span style="font-weight:bold">WHERE</span> { <br>
+            ?sensor a bop:Sensor .<br>
+            ?sensor bop:observes ?temperature .<br>
+            ?temperature a quantitykind:Temperature .<br>
+            ?temperature bop:hasPropertyState ?currentState .<br>
+            ?sensor bop:isHostedBy ?host .<br>
+            ?temperature bop:isPropertyOf ?viewpoint .<br>
+            ?host ?relationship ?viewpoint .<br>
         }         
     </div>
 
     <h4 id="SPARQLexecutors" class="list">Querying a property and its related executors</h4>
 
     <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
-        <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;
-        <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;
-        <span style="font-weight:bold">SELECT</span> ?room ?property ?executor
-
-        <span style="font-weight:bold">WHERE</span> { 
-            ?room a bop:FeatureOfInterest, bot:Space .
-           ?room bop:hasProperty ?property .
-           ?executor bop:executesOn ?property .
+        <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;<br>
+        <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;<br>
+        <span style="font-weight:bold">SELECT</span> ?room ?property ?executor<br>
+        <br>
+        <span style="font-weight:bold">WHERE</span> { <br>
+            ?room a bop:FeatureOfInterest, bot:Space .<br>
+           ?room bop:hasProperty ?property .<br>
+           ?executor bop:executesOn ?property .<br>
         }
     </div>
 
     <h4 id="SPARQLdatapoint" class="list">Querying a property and it’s external storage location & Querying time-series data in InfluxDB based on the SPARQL results</h4>
 
-    <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
-        <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;
-
-        <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;
-
-        <span style="font-weight:bold">PREFIX</span> quantitykind: &lt;http://qudt.org/2.1/vocab/quantitykind&gt;
-        <span style="font-weight:bold">SELECT</span> ?property ?datapoint ?database
-        
-        <span style="font-weight:bold">WHERE</span> { 
-            ?room a bop:FeatureOfInterest, bot:Space .
-            ?room bop:hasProperty ?property .
-            ?property bop:hasPropertyState ?datapoint .
-            ?property a quantitykind:Temperature .
-            ?datapoint bop:isDataPointOf ?database .
+    <div style="background-color:#f2f2f2">
+        <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;<br>
+        <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;<br>
+        <span style="font-weight:bold">PREFIX</span> quantitykind: &lt;http://qudt.org/2.1/vocab/quantitykind&gt;<br>
+        <span style="font-weight:bold">SELECT</span> ?property ?datapoint ?database<br>
+        <br>
+        <span style="font-weight:bold">WHERE</span> { <br>
+            ?room a bop:FeatureOfInterest, bot:Space .<br>
+            ?room bop:hasProperty ?property .<br>
+            ?property bop:hasPropertyState ?datapoint .<br>
+            ?property a quantitykind:Temperature .<br>
+            ?datapoint bop:isDataPointOf ?database .<br>
         }    
     </div>
     <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
