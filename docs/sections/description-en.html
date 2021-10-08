@@ -77,7 +77,7 @@
 
     <h4 id="SPARQLproperties" class="list">Querying static and dynamic properties</h4>
 
-    <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
+    <div class="code">
         <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;<br>
         <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;<br>
         <br>
@@ -92,7 +92,7 @@
 
     <h4 id="SPARQLspatiotemporal" class="list">Querying the spatiotemporal resolution of a temperature measurement</h4>
 
-    <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
+    <div class="code">
         <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;<br>
         <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;<br>
         <span style="font-weight:bold">PREFIX</span> quantitykind: &lt;http://qudt.org/2.1/vocab/quantitykind&gt;<br>
@@ -112,7 +112,7 @@
 
     <h4 id="SPARQLexecutors" class="list">Querying a property and its related executors</h4>
 
-    <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
+    <div class="code">
         <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;<br>
         <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;<br>
         <br>
@@ -127,7 +127,7 @@
 
     <h4 id="SPARQLdatapoint" class="list">Querying a property and it’s external storage location & Querying time-series data in InfluxDB based on the SPARQL results</h4>
 
-    <div style="background-color:#f2f2f2;font-family: Consolas,monaco,monospace;">
+    <div class="code">
         <span style="font-weight:bold">PREFIX</span> bop: &lt;https://w3id.org/bop#&gt;<br>
         <span style="font-weight:bold">PREFIX</span> bot: &lt;https://w3id.org/bot#&gt;<br>
         <span style="font-weight:bold">PREFIX</span> quantitykind: &lt;http://qudt.org/2.1/vocab/quantitykind&gt;<br>
@@ -143,7 +143,7 @@
         }    
     </div>
     <br>
-    <div style="background-color:#f2f2f2;font-family:'Courier New', Courier, monospace">
+    <div class="code">
         <span style="font-weight:bold">USE</span> ?database
         <span style="font-weight:bold">SELECT</span> ?property <span style="font-weight:bold">FROM</span> ?datapoint <span style="font-weight:bold">WHERE</span> ?property < 18
     </div>
