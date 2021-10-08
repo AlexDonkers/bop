@@ -181,3 +181,19 @@ dt {
   font-family: Consolas,monaco,monospace;
   background-color: #f2f2f2;
 }
+
+.opendigitaltwin {
+  background-color: 7030a0;
+  color: white
+}
+
+.opendigitaltwin:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
