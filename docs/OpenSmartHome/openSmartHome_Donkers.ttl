@@ -1,0 +1,2252 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <https://www.w3.org/2001/XMLSchema#>.
+
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix bot:	<https://w3id.org/bot#> .
+@prefix rvt:	<https://example.org/rvt#> .
+@prefix props:	<https://w3id.org/props#> .
+@prefix mep:   <http://pi.pauwel.be/voc/distributionelement#> .
+@prefix beo:   <http://pi.pauwel.be/voc/buildingelement#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+
+@prefix bop: <https://w3id.org/bop#> .
+@prefix : <https://research.tue.nl/nl/persons/alex-ja-donkers#> .
+
+
+# This file has been created by Alex Donkers
+# Please also refer to the original OSH dataset, created by Georg Ferdinand Schneider and copyrighted by Fraunhofer Institute of Building Physics (https://doi.org/10.5281/zenodo.1244601).
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# Site
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+:Site1
+        a                bot:Site ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "49b7f442-e062-45ee-b1c4-51cc341d85a1" ;
+        bot:hasBuilding  :OpenSmartHome ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "19j$H2u695xh74KSmq7OMX" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "Default" ;
+        <https://w3id.org/props#refElevationIfcSite_attribute_simple>
+                "0."^^xsd:double .
+				
+				
+				
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# Building
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+:OpenSmartHome
+        a              bot:Building ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "49b7f442-e062-45ee-b1c4-51cc341d85a2" ;
+		rdfs:label "OpenSmartHome"@en ;
+		
+        bot:hasStorey  :Level1 , :Level2 ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "19j$H2u695xh74KSmq7OMY" .
+
+
+
+################################################################################################################################################################################################################################				
+################################################################################################################################################################################################################################
+# Levels
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+:Level1
+        a                    bot:Storey ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "49b7f442-e062-45ee-b1c4-51cccbe27b64" ;
+        rdfs:label "Level 1"@en ;
+		
+		bot:containsElement  :door_05b047f8-dd03-4cd9-a50c-d5d18c6b98c6 , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6b9a90 , :window_52a273d7-fd5d-4d87-b824-a5c3f59deac1 , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba1a7 , :door_05b047f8-dd03-4cd9-a50c-d5d18c6b9b63 , :window_52a273d7-fd5d-4d87-b824-a5c3f59de81f , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba1d3 , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5 , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba489 , :slab_05b047f8-dd03-4cd9-a50c-d5d18c6badf5 , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8 , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba056 , :door_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 , :window_52a273d7-fd5d-4d87-b824-a5c3f59debc1 , :door_05b047f8-dd03-4cd9-a50c-d5d18c6b9d03 , :window_52a273d7-fd5d-4d87-b824-a5c3f59dea14 , :window_52a273d7-fd5d-4d87-b824-a5c3f59deb78 , :door_05b047f8-dd03-4cd9-a50c-d5d18c6b99f2 , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1 , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba6a2 , :window_52a273d7-fd5d-4d87-b824-a5c3f59de8ae , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba173 , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba317 , :door_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 , :door_05b047f8-dd03-4cd9-a50c-d5d18c6b92fa , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba09f , :window_52a273d7-fd5d-4d87-b824-a5c3f59dea52 , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba674 ;
+        bot:hasSpace         :Living , :Bedroom , :Hall , :Staircase , :Toilet , :Bathroom , :Dining , :Kitchen , :Room ;
+        
+		<https://w3id.org/props#elevationIfcBuildingStorey_attribute_simple>
+                "0."^^xsd:double ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "19j$H2u695xh74KSpBudja" .
+	
+:Level2
+        a                    bot:Storey ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "49b7f442-e062-45ee-b1c4-51cccbe278e5" ;
+		rdfs:label "Level 2"@en ;
+		
+        bot:containsElement  :slab_05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4 ;
+        <https://w3id.org/props#elevationIfcBuildingStorey_attribute_simple>
+                "2520."^^xsd:double ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "19j$H2u695xh74KSpBudZb" .
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# Spaces
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+:Bathroom
+        a                    bot:Space ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9ae2" ;
+        bot:containsElement  :MultiSensor003 ;
+		bot:adjacentElement :slab_05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4 , 
+			:slab_05b047f8-dd03-4cd9-a50c-d5d18c6badf5 , 
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba056 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba1a7 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5 ;
+		bop:hasProperty :Bathroom_Area ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvhY" ;
+        <https://w3id.org/props#longNameIfcSpatialStructureElement_attribute_simple>
+                "Bathroom" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "3" .
+:Bathroom_Area bop:hasPropertyState [ bop:hasValue "4.8" ; bop:hasUnit unit:M2 ] .
+
+		
+:Hall
+        a                    bot:Space ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9b70" ;
+        bot:containsElement  :MultiSensor002 ;
+        bot:adjacentElement :slab_05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4 , 
+			:slab_05b047f8-dd03-4cd9-a50c-d5d18c6badf5 , 
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba09f ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba6a2 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba489 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba1a7 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5 ;
+		bop:hasProperty :Hall_Area ;
+		<https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvjm" ;
+        <https://w3id.org/props#longNameIfcSpatialStructureElement_attribute_simple>
+                "Hall" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "9" .
+:Hall_Area bop:hasPropertyState [ bop:hasValue "9.484" ; bop:hasUnit unit:M2 ] .
+
+
+:Toilet
+        a                    bot:Space ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9ad3" ;
+        bot:containsElement  :ToiletRadiator001 , :MultiSensor009 ;
+        bot:adjacentElement :slab_05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4 , 
+			:slab_05b047f8-dd03-4cd9-a50c-d5d18c6badf5 , 
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba317 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6b9a90 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba674 ;
+		bop:hasProperty :Toilet_Area ;
+		<https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvhJ" ;
+        <https://w3id.org/props#longNameIfcSpatialStructureElement_attribute_simple>
+                "Toilet" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "7" .
+:Toilet_Area bop:hasPropertyState [ bop:hasValue "2.04" ; bop:hasUnit unit:M2 ] .
+				
+:Living
+        a                    bot:Space ;
+		a bop:FeatureOfInterest ;
+        bot:containsElement  :LivingRadiator001 , :MultiSensor007 ;
+		bot:adjacentElement :slab_05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4 , 
+			:slab_05b047f8-dd03-4cd9-a50c-d5d18c6badf5 , 
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba1d3 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba489 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba056 ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9ae5" ;
+		bop:hasProperty :Living_Area ;
+		<https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvhb" ;
+        <https://w3id.org/props#longNameIfcSpatialStructureElement_attribute_simple>
+                "Living" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "2" .	
+:Living_Area bop:hasPropertyState [ bop:hasValue "20.25" ; bop:hasUnit unit:M2 ] .
+
+:Bedroom
+        a                    bot:Space ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9af8" ;
+        bot:containsElement  :BedroomRadiator001 , :MultiSensor005 ;
+        bot:adjacentElement :slab_05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4 , 
+			:slab_05b047f8-dd03-4cd9-a50c-d5d18c6badf5 , 
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba09f ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5 ;
+		bop:hasProperty :Bedroom_Area ;
+		<https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvhu" ;
+        <https://w3id.org/props#longNameIfcSpatialStructureElement_attribute_simple>
+                "Bedroom" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "1" .
+:Bedroom_Area bop:hasPropertyState [ bop:hasValue "18.603" ; bop:hasUnit unit:M2 ] .
+				
+:Room
+        a                    bot:Space ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9ad6" ;
+        bot:containsElement  :MultiSensor008 ;
+        bot:adjacentElement :slab_05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4 , 
+			:slab_05b047f8-dd03-4cd9-a50c-d5d18c6badf5 , 
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6b9a90 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba6a2 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba674 ;
+		bop:hasProperty :Room_Area ;
+		<https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvhM" ;
+        <https://w3id.org/props#longNameIfcSpatialStructureElement_attribute_simple>
+                "Room" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "6" .
+:Room_Area bop:hasPropertyState [ bop:hasValue "2.958" ; bop:hasUnit unit:M2 ] .
+				
+:Kitchen
+        a                    bot:Space ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9ae9" ;
+        bot:containsElement  :KitchenRadiator001 , :MultiSensor006 ;
+        bot:adjacentElement :slab_05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4 , 
+			:slab_05b047f8-dd03-4cd9-a50c-d5d18c6badf5 , 
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba317 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba6a2 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba674 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba173 ;
+		bop:hasProperty :Kitchen_Area ;
+		<https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvhf" ;
+        <https://w3id.org/props#longNameIfcSpatialStructureElement_attribute_simple>
+                "Kitchen" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "5" .
+:Kitchen_Area bop:hasPropertyState [ bop:hasValue "9.3" ; bop:hasUnit unit:M2 ] .
+
+
+:Staircase
+        a                    bot:Space ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9aef" ;
+        bot:containsElement  :MultiSensor001 ;
+        bot:adjacentElement :slab_05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4 , 
+			:slab_05b047f8-dd03-4cd9-a50c-d5d18c6badf5 , 
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba317 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba09f ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1 ;
+		bop:hasProperty :Staircase_Area ;
+		<https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvhl" ;
+        <https://w3id.org/props#longNameIfcSpatialStructureElement_attribute_simple>
+                "Staircase" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "4" .		
+:Staircase_Area bop:hasPropertyState [ bop:hasValue "13.052" ; bop:hasUnit unit:M2 ] .		
+
+:Dining
+        a                    bot:Space ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9bc2" ;
+        bot:containsElement  :DiningRadiator001 , :DiningRadiator002 , :MultiSensor004 ;
+        bot:adjacentElement :slab_05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4 , 
+			:slab_05b047f8-dd03-4cd9-a50c-d5d18c6badf5 , 
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba317 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba173 ,
+			:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba1d3 ;
+		bop:hasProperty :Dining_Area ;
+		<https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvl2" ;
+        <https://w3id.org/props#longNameIfcSpatialStructureElement_attribute_simple>
+                "Dining" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "8" .
+:Dining_Area bop:hasPropertyState [ bop:hasValue "16.1" ; bop:hasUnit unit:M2 ] .
+
+
+	
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# Walls
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba1d3
+        a       beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba1d3" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "318308" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQw7J" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6ba1d3 , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba1d3 ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba1d3 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba1d3 .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6ba1d3 
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "4460" ; bop:hasUnit unit:MilliM ] .
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba1d3 
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba1d3 
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "260" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba1d3
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.1" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################		
+
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba674
+        a       beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba674" ;
+		bop:hosts :MultiSensor006 ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "318659" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQwPq" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6ba674 , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba674 ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba674 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba674 .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6ba674 
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "3310" ; bop:hasUnit unit:MilliM ] .
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba674 
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba674
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "160" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba674
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.1" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################	
+				
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8
+        a                  beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8" ;
+        bot:hasSubElement  :window_52a273d7-fd5d-4d87-b824-a5c3f59deb78 ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "317807" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQwFO" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "Basic Wall:Generic - 260mm - External:317807" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "Basic Wall:Generic - 260mm - External" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8 , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8 ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8 ,
+			:solarAzimuth_05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8.
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "9620" ; bop:hasUnit unit:MilliM ] .
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8 
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "260" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "5.0" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+:solarAzimuth_05b047f8-dd03-4cd9-a50c-d5d18c6ba3d8
+		a quantitykind:Angle , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "90" ; bop:hasUnit unit:DEG ] .
+
+
+################################################################################################################				
+				
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1
+        a                  beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1" ;
+        bot:hasSubElement  :door_05b047f8-dd03-4cd9-a50c-d5d18c6b9b63 ;
+		bop:hosts :MultiSensor009 ,
+			:MultiSensor008 ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "318566" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQwRH" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "Basic Wall:Generic - 160mm:318566" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "Basic Wall:Generic - 160mm" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1 , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1 ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1 .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "5460" ; bop:hasUnit unit:MilliM ] .
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1 
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "160" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba6d1
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.1" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################				
+				
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6b9a90
+        a                  beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9a90" ;
+        bot:hasSubElement  :door_05b047f8-dd03-4cd9-a50c-d5d18c6b92fa ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "319527" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvgG" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "Basic Wall:Generic - 160mm:319527" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "Basic Wall:Generic - 160mm" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6b9a90 , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6b9a90 ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6b9a90 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9a90 .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9a90
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1860" ; bop:hasUnit unit:MilliM ] .
+		
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b9a90 
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6b9a90
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "160" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9a90
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.1" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################				
+			
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5
+        a                  beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5" ;
+        bot:hasSubElement  :door_05b047f8-dd03-4cd9-a50c-d5d18c6b98c6 ;
+		bop:hosts :MultiSensor005 ,
+		:MultiSensor003 ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "318034" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQw3b" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "Basic Wall:Generic - 160mm:318034" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "Basic Wall:Generic - 160mm" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5 , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5 ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5 .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "4160" ; bop:hasUnit unit:MilliM ] .
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5 
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "160" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.1" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################				
+
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba317
+        a                  beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba317" ;
+        bot:hasSubElement  :window_52a273d7-fd5d-4d87-b824-a5c3f59dea14 , :window_52a273d7-fd5d-4d87-b824-a5c3f59dea52 , :window_52a273d7-fd5d-4d87-b824-a5c3f59deac1 ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "317856" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQwCN" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "Basic Wall:Generic - 260mm - External:317856" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "Basic Wall:Generic - 260mm - External" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6ba317 , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba317 ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba317 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba317 ,
+			:solarAzimuth_05b047f8-dd03-4cd9-a50c-d5d18c6ba317 .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6ba317
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "11450" ; bop:hasUnit unit:MilliM ] .
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba317
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba317
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "260" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba317
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "5.0" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+:solarAzimuth_05b047f8-dd03-4cd9-a50c-d5d18c6ba317
+		a quantitykind:Angle , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "180" ; bop:hasUnit unit:DEG ] .
+		
+		
+################################################################################################################				
+
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba6a2
+        a                  beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba6a2" ;
+        bot:hasSubElement  :door_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 , :door_05b047f8-dd03-4cd9-a50c-d5d18c6b9d03 ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "318485" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQwQY" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "Basic Wall:Generic - 160mm:318485" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "Basic Wall:Generic - 160mm" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6ba6a2 , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba6a2 ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba6a2 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba6a2 .				
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6ba6a2
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "5020" ; bop:hasUnit unit:MilliM ] .
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba6a2
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba6a2
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "160" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba6a2
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.1" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################				
+
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba173
+        a                  beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba173" ;
+        bot:hasSubElement  :door_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 ;
+		bop:hosts :MultiSensor004 ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "318404" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQw5p" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "Basic Wall:Generic - 160mm:318404" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "Basic Wall:Generic - 160mm" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6ba173 , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba173 ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba173 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba173 .	
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6ba173
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "3310" ; bop:hasUnit unit:MilliM ] .
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba173
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba173
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "160" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba173
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.1" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################				
+
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba09f
+        a       beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba09f" ;
+		bop:hosts :MultiSensor002 ,
+		:MultiSensor001 ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "317992" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQw2V" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "Basic Wall:Generic - 260mm:317992" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "Basic Wall:Generic - 260mm" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6ba09f , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba09f ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba09f ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba09f .	
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6ba09f
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "4980" ; bop:hasUnit unit:MilliM ] .
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba09f
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba09f
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "260" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba09f
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.1" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################				
+
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba1a7
+        a    beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba1a7" ;
+        bot:hasSubElement  :door_05b047f8-dd03-4cd9-a50c-d5d18c6b99f2 ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "318224" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQw6d" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "Basic Wall:Generic - 100mm:318224" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "Basic Wall:Generic - 100mm" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6ba1a7 , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba1a7 ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba1a7 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba1a7 .	
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6ba1a7
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1810" ; bop:hasUnit unit:MilliM ] .
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba1a7
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba1a7
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "100" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba1a7
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.1" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################				
+
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba489
+        a       beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba489" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "319038" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQwI9" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "Basic Wall:Generic - 60mm:319038" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "Basic Wall:Generic - 60mm" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6ba489 , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba489 ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba489 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba489 .	
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6ba489
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1580" ; bop:hasUnit unit:MilliM ] .
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba489
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba489
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "60" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba489
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.1" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################				
+
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a
+        a                  beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba38a" ;
+        bot:hasSubElement  :window_52a273d7-fd5d-4d87-b824-a5c3f59de8ae , :window_52a273d7-fd5d-4d87-b824-a5c3f59debc1 , :window_52a273d7-fd5d-4d87-b824-a5c3f59de81f ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "317757" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQwEA" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "Basic Wall:Generic - 260mm - External:317757" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "Basic Wall:Generic - 260mm - External" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a ,
+			:solarAzimuth_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a .	
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "11450" ; bop:hasUnit unit:MilliM ] .
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "260" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "5.0" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+:solarAzimuth_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a
+		a quantitykind:Angle , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0" ; bop:hasUnit unit:DEG ] .
+
+################################################################################################################				
+
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba056
+        a       beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba056" ;
+		bop:hosts :MultiSensor007 ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "318177" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQw1M" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "Basic Wall:Generic - 160mm:318177" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "Basic Wall:Generic - 160mm" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6ba056 , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba056 ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba056 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba056 .	
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6ba056
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "3180" ; bop:hasUnit unit:MilliM ] .
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba056
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba056
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "160" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba056
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.1" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################				
+
+:wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c
+        a       beo:Wall , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba25c" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "317675" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQw9S" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "Basic Wall:Generic - 260mm - External:317675" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "Basic Wall:Generic - 260mm - External" ;
+		bop:hasProperty :width_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c , 
+			:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c ,
+			:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c ,
+			:solarAzimuth_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c .	
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "9620" ; bop:hasUnit unit:MilliM ] .
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:thickness_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c
+		a quantitykind:Thickness , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "260" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "5.0" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+:solarAzimuth_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c
+		a quantitykind:Angle , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "270" ; bop:hasUnit unit:DEG ] .
+		
+		
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# Doors & Windows
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b98c6
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b98c6" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "320113" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvZ6" ;
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b98c6 ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b98c6 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b98c6 .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b98c6
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b98c6
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b98c6
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b9d03
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9d03" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "321460" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvq3" ;
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b9d03 ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9d03 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9d03 .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b9d03
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9d03
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9d03
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b92fa
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b92fa" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "321613" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvBw" ;
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b92fa ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b92fa ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b92fa .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b92fa
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b92fa
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b92fa
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b99f2
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b99f2" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "320325" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvdo" ;
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b99f2 ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b99f2 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b99f2 .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b99f2
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b99f2
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b99f2
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b9b63
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9b63" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "319956" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvjZ" ;
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b9b63 ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9b63 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9b63 .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b9b63
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2134" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9b63
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "915" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9b63
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9220" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "321687" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQv8W" ;
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9294" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "321571" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvAK" ;
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9220" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "321687" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQv8W" ;
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+				
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9294" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "321571" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvAK" ;
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9220" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "321687" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQv8W" ;
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9294" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "321571" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvAK" ;		
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9220" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "321687" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQv8W" ;
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9294" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "321571" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvAK" ;
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9220" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "321687" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQv8W" ;
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9220 .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9220
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+
+:door_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+        a       beo:Door , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6b9294" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "321571" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQvAK" ;
+		bop:hasProperty :height_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 ,
+			:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 ,
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9294 .	
+
+:height_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+
+:width_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6b9294
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "0.2" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+				
+:window_52a273d7-fd5d-4d87-b824-a5c3f59debc1
+        a       beo:Window , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "52a273d7-fd5d-4d87-b824-a5c3f59debc1" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "322061" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "1IedFN$LrDXxWafSFrdUl1" ;
+		bop:hasProperty :height_52a273d7-fd5d-4d87-b824-a5c3f59debc1 ,
+			:width_52a273d7-fd5d-4d87-b824-a5c3f59debc1 ,
+			:thermalResistance_52a273d7-fd5d-4d87-b824-a5c3f59debc1 .	
+
+:height_52a273d7-fd5d-4d87-b824-a5c3f59debc1
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1100" ; bop:hasUnit unit:MilliM ] .
+
+:width_52a273d7-fd5d-4d87-b824-a5c3f59debc1
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1900" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_52a273d7-fd5d-4d87-b824-a5c3f59debc1
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "4.5" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+	
+:window_52a273d7-fd5d-4d87-b824-a5c3f59deac1
+        a       beo:Window , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "52a273d7-fd5d-4d87-b824-a5c3f59deac1" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "322317" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "1IedFN$LrDXxWafSFrdUh1" ;
+		bop:hasProperty :height_52a273d7-fd5d-4d87-b824-a5c3f59deac1 ,
+			:width_52a273d7-fd5d-4d87-b824-a5c3f59deac1 ,
+			:thermalResistance_52a273d7-fd5d-4d87-b824-a5c3f59deac1 .	
+
+:height_52a273d7-fd5d-4d87-b824-a5c3f59deac1
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1100" ; bop:hasUnit unit:MilliM ] .
+
+:width_52a273d7-fd5d-4d87-b824-a5c3f59deac1
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1600" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_52a273d7-fd5d-4d87-b824-a5c3f59deac1
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "4.5" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+	
+:window_52a273d7-fd5d-4d87-b824-a5c3f59dea14
+        a       beo:Window , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "52a273d7-fd5d-4d87-b824-a5c3f59dea14" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "322520" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "1IedFN$LrDXxWafSFrdUeK" ;
+		bop:hasProperty :height_52a273d7-fd5d-4d87-b824-a5c3f59dea14 ,
+			:width_52a273d7-fd5d-4d87-b824-a5c3f59dea14 ,
+			:thermalResistance_52a273d7-fd5d-4d87-b824-a5c3f59dea14 .	
+
+:height_52a273d7-fd5d-4d87-b824-a5c3f59dea14
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1100" ; bop:hasUnit unit:MilliM ] .
+
+:width_52a273d7-fd5d-4d87-b824-a5c3f59dea14
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "700" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_52a273d7-fd5d-4d87-b824-a5c3f59dea14
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "4.5" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+	
+:window_52a273d7-fd5d-4d87-b824-a5c3f59de8ae
+        a       beo:Window , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "52a273d7-fd5d-4d87-b824-a5c3f59de8ae" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "321890" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "1IedFN$LrDXxWafSFrdUYk" ;
+		bop:hasProperty :height_52a273d7-fd5d-4d87-b824-a5c3f59de8ae ,
+			:width_52a273d7-fd5d-4d87-b824-a5c3f59de8ae ,
+			:thermalResistance_52a273d7-fd5d-4d87-b824-a5c3f59de8ae .	
+
+:height_52a273d7-fd5d-4d87-b824-a5c3f59de8ae
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1100" ; bop:hasUnit unit:MilliM ] .
+
+:width_52a273d7-fd5d-4d87-b824-a5c3f59de8ae
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1600" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_52a273d7-fd5d-4d87-b824-a5c3f59de8ae
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "4.5" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+	
+:window_52a273d7-fd5d-4d87-b824-a5c3f59dea52
+        a       beo:Window , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "52a273d7-fd5d-4d87-b824-a5c3f59dea52" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "322462" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "1IedFN$LrDXxWafSFrdUfI" ;
+		bop:hasProperty :height_52a273d7-fd5d-4d87-b824-a5c3f59dea52 ,
+			:width_52a273d7-fd5d-4d87-b824-a5c3f59dea52 ,
+			:thermalResistance_52a273d7-fd5d-4d87-b824-a5c3f59dea52 .	
+
+:height_52a273d7-fd5d-4d87-b824-a5c3f59dea52
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1100" ; bop:hasUnit unit:MilliM ] .
+
+:width_52a273d7-fd5d-4d87-b824-a5c3f59dea52
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1600" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_52a273d7-fd5d-4d87-b824-a5c3f59dea52
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "4.5" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+	
+:window_52a273d7-fd5d-4d87-b824-a5c3f59deb78
+        a       beo:Window , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "52a273d7-fd5d-4d87-b824-a5c3f59deb78" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "322228" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "1IedFN$LrDXxWafSFrdUju" ;
+		bop:hasProperty :height_52a273d7-fd5d-4d87-b824-a5c3f59deb78 ,
+			:width_52a273d7-fd5d-4d87-b824-a5c3f59deb78 ,
+			:thermalResistance_52a273d7-fd5d-4d87-b824-a5c3f59deb78 .	
+
+:height_52a273d7-fd5d-4d87-b824-a5c3f59deb78
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1100" ; bop:hasUnit unit:MilliM ] .
+
+:width_52a273d7-fd5d-4d87-b824-a5c3f59deb78
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1600" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_52a273d7-fd5d-4d87-b824-a5c3f59deb78
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "4.5" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+	
+:window_52a273d7-fd5d-4d87-b824-a5c3f59de81f
+        a       beo:Window , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "52a273d7-fd5d-4d87-b824-a5c3f59de81f" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "322003" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "1IedFN$LrDXxWafSFrdUWV" ;
+		bop:hasProperty :height_52a273d7-fd5d-4d87-b824-a5c3f59de81f ,
+			:width_52a273d7-fd5d-4d87-b824-a5c3f59de81f ,
+			:thermalResistance_52a273d7-fd5d-4d87-b824-a5c3f59de81f .	
+
+:height_52a273d7-fd5d-4d87-b824-a5c3f59de81f
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1100" ; bop:hasUnit unit:MilliM ] .
+
+:width_52a273d7-fd5d-4d87-b824-a5c3f59de81f
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "700" ; bop:hasUnit unit:MilliM ] .
+		
+:thermalResistance_52a273d7-fd5d-4d87-b824-a5c3f59de81f
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "4.5" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# Floor slabs
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+:slab_05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4
+        a       beo:Slab-FLOOR , bot:Element ;
+        a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4" ;
+		<https://w3id.org/props#batid_attribute_simple>
+                "317443" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQwAq" ;
+		bop:hasProperty 
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4 .	
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "6.0" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+################################################################################################################
+
+:slab_05b047f8-dd03-4cd9-a50c-d5d18c6badf5
+        a       beo:Slab-FLOOR , bot:Element ;
+        a bop:FeatureOfInterest ;
+		bot:hasGuid "05b047f8-dd03-4cd9-a50c-d5d18c6badf5" ;
+		<https://w3id.org/props#batid_attribute_simple>
+                "317250" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "05i4VutGDCsQKCrT6CQwtr" ;
+		bop:hasProperty 
+			:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6badf5 .	
+		
+:thermalResistance_05b047f8-dd03-4cd9-a50c-d5d18c6badf5
+		a quantitykind:ThermalInsulance , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "6.0" ; bop:hasUnit unit:M2-K-PER-W ] .
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# Bedroom interfaces
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+:interface1
+	bot:interfaceOf :Bedroom , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba09f ;
+	bop:hasProperty :width_interface1 , :height_interface1 .	
+:width_interface1
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "4770" ; bop:hasUnit unit:MilliM ] .
+:height_interface1
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:interface2
+	bot:interfaceOf :Bedroom , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba25c ;
+	bop:hasProperty :width_interface2 , :height_interface2 .	
+:width_interface2
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "3900" ; bop:hasUnit unit:MilliM ] .
+:height_interface2
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+		
+:interface3
+	bot:interfaceOf :Bedroom , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5 ;
+	bop:hasProperty :width_interface3 , :height_interface3 .	
+:width_interface3
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "3900" ; bop:hasUnit unit:MilliM ] .
+:height_interface3
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:interface4
+	bot:interfaceOf :Bedroom , :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a ;
+	bop:hasProperty :width_interface4 , :height_interface4 .
+:width_interface4
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "4770" ; bop:hasUnit unit:MilliM ] .
+:height_interface4
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2520" ; bop:hasUnit unit:MilliM ] .
+
+:interface5
+	bot:interfaceOf :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba38a , :window_52a273d7-fd5d-4d87-b824-a5c3f59de8ae ;
+	bop:hasProperty :height_interface5 , :width_interface5 .
+:height_interface5
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1100" ; bop:hasUnit unit:MilliM ] .
+:width_interface5
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "1600" ; bop:hasUnit unit:MilliM ] .
+
+:interface6
+	bot:interfaceOf :wall_05b047f8-dd03-4cd9-a50c-d5d18c6ba0e5 , :door_05b047f8-dd03-4cd9-a50c-d5d18c6b98c6 ;
+	bop:hasProperty :height_interface6 , :width_interface6 .	
+:height_interface6
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "2032" ; bop:hasUnit unit:MilliM ] .
+:width_interface6
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "762" ; bop:hasUnit unit:MilliM ] .
+
+:interface7
+	bot:interfaceOf :Bedroom , :slab_05b047f8-dd03-4cd9-a50c-d5d18c6ba2b4 ;
+	bop:hasProperty :area_interface7 .	
+:area_interface7
+		a quantitykind:Width , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "18.603" ; bop:hasUnit unit:M2 ] .
+
+:interface8
+	bot:interfaceOf :Bedroom , :slab_05b047f8-dd03-4cd9-a50c-d5d18c6badf5 ;
+	bop:hasProperty :area_interface8 .	
+:area_interface8
+		a quantitykind:Height , bop:Property ;
+		bop:hasPropertyState [ bop:hasValue "18.603" ; bop:hasUnit unit:M2 ] .
+
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# Actuators
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+:ToiletRadiator001
+        a       mep:SpaceHeater-RADIATOR , bot:Element ;
+		a bop:Actuator ;
+		bot:hasGuid "52a273d7-fd5d-4d87-b824-a5c3f59df54d" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "324737" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "1IedFN$LrDXxWafSFrdVLD" ;
+		bop:actsOn :Toilet_Temperature .
+
+:LivingRadiator001
+        a       mep:SpaceHeater-RADIATOR , bot:Element ;
+		a bop:Actuator ;
+		bot:hasGuid "52a273d7-fd5d-4d87-b824-a5c3f59df38d" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "324161" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "1IedFN$LrDXxWafSFrdVED" ;
+		bop:actsOn :Living_Temperature .
+
+:BedroomRadiator001
+        a       mep:SpaceHeater-RADIATOR , bot:Element ;
+		a bop:Actuator ;
+		bot:hasGuid "52a273d7-fd5d-4d87-b824-a5c3f59df018" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "324052" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "1IedFN$LrDXxWafSFrdV0O" ;
+		bop:actsOn :Bedroom_Temperature .
+		
+:KitchenRadiator001
+        a       mep:SpaceHeater-RADIATOR , bot:Element ;
+		a bop:Actuator ;
+		bot:hasGuid "52a273d7-fd5d-4d87-b824-a5c3f59df580" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "324684" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "1IedFN$LrDXxWafSFrdVM0" ;
+		bop:actsOn :Kitchen_Temperature .
+
+:DiningRadiator001
+        a       mep:SpaceHeater-RADIATOR , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "52a273d7-fd5d-4d87-b824-a5c3f59df292" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "324446" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "1IedFN$LrDXxWafSFrdVAI" ;
+        bop:actsOn :Dining_Temperature .
+
+:DiningRadiator002
+        a       mep:SpaceHeater-RADIATOR , bot:Element ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "52a273d7-fd5d-4d87-b824-a5c3f59df5db" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "324631" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "1IedFN$LrDXxWafSFrdVNR" ;
+        bop:actsOn :Dining_Temperature .
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# Sensors
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+:MultiSensor001
+        a       mep:Sensor , bot:Element , bop:Sensor ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "b3ca6858-e675-4f4a-bca7-8638468257a3" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "330084" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "2pocXOvdLFIhodXZX6WbUZ" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor:330084" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor" ;
+		bop:hasSubSensor  :TemperatureSensor001 ,
+			:RelativeHumiditySensor001 ,
+			:CO2Sensor001 ,
+			:COSensor001 ,
+			:PM25Sensor001 ,
+			:PM10Sensor001 ,
+			:BrightnessSensor001 .
+
+:TemperatureSensor001 rdf:type bop:Sensor ;
+	bop:observes :Staircase_Temperature .
+:RelativeHumiditySensor001 rdf:type bop:Sensor ;
+	bop:observes :Staircase_RelativeHumidity .
+:CO2Sensor001 rdf:type bop:Sensor ;
+	bop:observes :Staircase_CO2 .			
+:COSensor001 rdf:type bop:Sensor ;
+	bop:observes :Staircase_CO .
+:PM25Sensor001 rdf:type bop:Sensor ;
+	bop:observes :Staircase_PM25 .
+:PM10Sensor001 rdf:type bop:Sensor ;
+	bop:observes :Staircase_PM10 .
+
+################################################################################################################
+
+:MultiSensor002
+        a       mep:Sensor , bot:Element , bop:Sensor ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "b3ca6858-e675-4f4a-bca7-8638468257e4" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "330019" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "2pocXOvdLFIhodXZX6WbVa" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor:330019" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor" ;
+		bop:hasSubSensor  :TemperatureSensor002 ,
+			:RelativeHumiditySensor002 ,
+			:CO2Sensor002 ,
+			:COSensor002 ,
+			:PM25Sensor002 ,
+			:PM10Sensor002 ,
+			:BrightnessSensor002 .
+
+:TemperatureSensor002 rdf:type bop:Sensor ;
+	bop:observes :Hall_Temperature .
+:RelativeHumiditySensor002 rdf:type bop:Sensor ;
+	bop:observes :Hall_RelativeHumidity .
+:CO2Sensor002 rdf:type bop:Sensor ;
+	bop:observes :Hall_CO2 .			
+:COSensor002 rdf:type bop:Sensor ;
+	bop:observes :Hall_CO .
+:PM25Sensor002 rdf:type bop:Sensor ;
+	bop:observes :Hall_PM25 .
+:PM10Sensor002 rdf:type bop:Sensor ;
+	bop:observes :Hall_PM10 .
+
+################################################################################################################
+
+:MultiSensor003
+        a       mep:Sensor , bot:Element , bop:Sensor ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "b3ca6858-e675-4f4a-bca7-86384682547a" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "330429" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "2pocXOvdLFIhodXZX6WbHw" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor:330429" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor" ;
+		bop:hasSubSensor  :TemperatureSensor003 ,
+			:RelativeHumiditySensor003 ,
+			:CO2Sensor003 ,
+			:COSensor003 ,
+			:PM25Sensor003 ,
+			:PM10Sensor003 ,
+			:BrightnessSensor003 .
+
+:TemperatureSensor003 rdf:type bop:Sensor ;
+	bop:observes :Bathroom_Temperature .
+:RelativeHumiditySensor003 rdf:type bop:Sensor ;
+	bop:observes :Bathroom_RelativeHumidity .
+:CO2Sensor003 rdf:type bop:Sensor ;
+	bop:observes :Bathroom_CO2 .			
+:COSensor003 rdf:type bop:Sensor ;
+	bop:observes :Bathroom_CO .
+:PM25Sensor003 rdf:type bop:Sensor ;
+	bop:observes :Bathroom_PM25 .
+:PM10Sensor003 rdf:type bop:Sensor ;
+	bop:observes :Bathroom_PM10 .
+
+################################################################################################################
+
+:MultiSensor004
+        a       mep:Sensor , bot:Element , bop:Sensor ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "b3ca6858-e675-4f4a-bca7-86384683a0fc" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "327227" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "2pocXOvdLFIhodXZX6Ww3y" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor:327227" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor" ;
+		bop:hasSubSensor  :TemperatureSensor004 ,
+			:RelativeHumiditySensor004 ,
+			:CO2Sensor004 ,
+			:COSensor004 ,
+			:PM25Sensor004 ,
+			:PM10Sensor004 ,
+			:BrightnessSensor004 .
+
+:TemperatureSensor004 rdf:type bop:Sensor ;
+	bop:observes :Dining_Temperature .
+:RelativeHumiditySensor004 rdf:type bop:Sensor ;
+	bop:observes :Dining_RelativeHumidity .
+:CO2Sensor004 rdf:type bop:Sensor ;
+	bop:observes :Dining_CO2 .			
+:COSensor004 rdf:type bop:Sensor ;
+	bop:observes :Dining_CO .
+:PM25Sensor004 rdf:type bop:Sensor ;
+	bop:observes :Dining_PM25 .
+:PM10Sensor004 rdf:type bop:Sensor ;
+	bop:observes :Dining_PM10 .
+
+################################################################################################################
+
+:MultiSensor005
+        a       mep:Sensor , bot:Element , bop:Sensor ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "b3ca6858-e675-4f4a-bca7-86384682559d" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "330586" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "2pocXOvdLFIhodXZX6WbMT" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor:330586" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor" ;
+		bop:hasSubSensor  :TemperatureSensor005 ,
+			:RelativeHumiditySensor005 ,
+			:CO2Sensor005 ,
+			:COSensor005 ,
+			:PM25Sensor005 ,
+			:PM10Sensor005 ,
+			:BrightnessSensor005 .
+
+:TemperatureSensor005 rdf:type bop:Sensor ;
+	bop:observes :Bedroom_Temperature .
+:RelativeHumiditySensor005 rdf:type bop:Sensor ;
+	bop:observes :Bedroom_RelativeHumidity .
+:CO2Sensor005 rdf:type bop:Sensor ;
+	bop:observes :Bedroom_CO2 .			
+:COSensor005 rdf:type bop:Sensor ;
+	bop:observes :Bedroom_CO .
+:PM25Sensor005 rdf:type bop:Sensor ;
+	bop:observes :Bedroom_PM25 .
+:PM10Sensor005 rdf:type bop:Sensor ;
+	bop:observes :Bedroom_PM10 .
+
+################################################################################################################
+
+:MultiSensor006
+        a       mep:Sensor , bot:Element , bop:Sensor ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "b3ca6858-e675-4f4a-bca7-863846825601" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "329926" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "2pocXOvdLFIhodXZX6WbO1" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor:329926" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor" ;
+		bop:hasSubSensor  :TemperatureSensor006 ,
+			:RelativeHumiditySensor006 ,
+			:CO2Sensor006 ,
+			:COSensor006 ,
+			:PM25Sensor006 ,
+			:PM10Sensor006 ,
+			:BrightnessSensor006 .
+
+:TemperatureSensor006 rdf:type bop:Sensor ;
+	bop:observes :Kitchen_Temperature .
+:RelativeHumiditySensor006 rdf:type bop:Sensor ;
+	bop:observes :Kitchen_RelativeHumidity .
+:CO2Sensor006 rdf:type bop:Sensor ;
+	bop:observes :Kitchen_CO2 .			
+:COSensor006 rdf:type bop:Sensor ;
+	bop:observes :Kitchen_CO .
+:PM25Sensor006 rdf:type bop:Sensor ;
+	bop:observes :Kitchen_PM25 .
+:PM10Sensor006 rdf:type bop:Sensor ;
+	bop:observes :Kitchen_PM10 .
+
+################################################################################################################
+
+:MultiSensor007
+        a       mep:Sensor , bot:Element , bop:Sensor ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "b3ca6858-e675-4f4a-bca7-863846825941" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "329606" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "2pocXOvdLFIhodXZX6Wbb1" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor:329606" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor" ;
+		bop:hasSubSensor  :TemperatureSensor007 ,
+			:RelativeHumiditySensor007 ,
+			:CO2Sensor007 ,
+			:COSensor007 ,
+			:PM25Sensor007 ,
+			:PM10Sensor007 ,
+			:BrightnessSensor007 .
+
+:TemperatureSensor007 rdf:type bop:Sensor ;
+	bop:observes :Living_Temperature .
+:RelativeHumiditySensor007 rdf:type bop:Sensor ;
+	bop:observes :Living_RelativeHumidity .
+:CO2Sensor007 rdf:type bop:Sensor ;
+	bop:observes :Living_CO2 .			
+:COSensor007 rdf:type bop:Sensor ;
+	bop:observes :Living_CO .
+:PM25Sensor007 rdf:type bop:Sensor ;
+	bop:observes :Living_PM25 .
+:PM10Sensor007 rdf:type bop:Sensor ;
+	bop:observes :Living_PM10 .
+
+################################################################################################################
+
+:MultiSensor008
+        a       mep:Sensor , bot:Element , bop:Sensor ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "b3ca6858-e675-4f4a-bca7-863846825447" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "330368" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "2pocXOvdLFIhodXZX6WbH7" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor:330368" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor" ;
+		bop:hasSubSensor  :TemperatureSensor008 ,
+			:RelativeHumiditySensor008 ,
+			:CO2Sensor008 ,
+			:COSensor008 ,
+			:PM25Sensor008 ,
+			:PM10Sensor008 ,
+			:BrightnessSensor008 .
+
+:TemperatureSensor008 rdf:type bop:Sensor ;
+	bop:observes :Room_Temperature .
+:RelativeHumiditySensor008 rdf:type bop:Sensor ;
+	bop:observes :Room_RelativeHumidity .
+:CO2Sensor008 rdf:type bop:Sensor ;
+	bop:observes :Room_CO2 .			
+:COSensor008 rdf:type bop:Sensor ;
+	bop:observes :Room_CO .
+:PM25Sensor008 rdf:type bop:Sensor ;
+	bop:observes :Room_PM25 .
+:PM10Sensor008 rdf:type bop:Sensor ;
+	bop:observes :Room_PM10 .
+				
+################################################################################################################				
+				
+:MultiSensor009
+        a       mep:Sensor , bot:Element , bop:Sensor ;
+		a bop:FeatureOfInterest ;
+		bot:hasGuid "b3ca6858-e675-4f4a-bca7-8638468254e5" ;
+        <https://w3id.org/props#batid_attribute_simple>
+                "330274" ;
+        <https://w3id.org/props#globalIdIfcRoot_attribute_simple>
+                "2pocXOvdLFIhodXZX6WbJb" ;
+        <https://w3id.org/props#nameIfcRoot_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor:330274" ;
+        <https://w3id.org/props#objectTypeIfcObject_attribute_simple>
+                "VE_Sensor_F_MEPcontent_Brink Climate Systems_eBus:MultiSensor" ;
+		bop:hasSubSensor  :TemperatureSensor009 ,
+			:RelativeHumiditySensor009 ,
+			:CO2Sensor009 ,
+			:COSensor009 ,
+			:PM25Sensor009 ,
+			:PM10Sensor009 ,
+			:BrightnessSensor009 .
+
+:TemperatureSensor009 rdf:type bop:Sensor ;
+	bop:observes :Toilet_Temperature .
+:RelativeHumiditySensor009 rdf:type bop:Sensor ;
+	bop:observes :Toilet_RelativeHumidity .
+:CO2Sensor009 rdf:type bop:Sensor ;
+	bop:observes :Toilet_CO2 .			
+:COSensor009 rdf:type bop:Sensor ;
+	bop:observes :Toilet_CO .
+:PM25Sensor009 rdf:type bop:Sensor ;
+	bop:observes :Toilet_PM25 .
+:PM10Sensor009 rdf:type bop:Sensor ;
+	bop:observes :Toilet_PM10 .
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# Dynamic properties
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+:Staircase_Temperature rdf:type bop:Property ,
+							 quantitykind:Temperature ;
+	bop:hasPropertyState :Staircase_Temperature_DataPoint.
+:Staircase_RelativeHumidity rdf:type bop:Property ,
+							 quantitykind:RelativeHumidity ;
+	bop:hasPropertyState :Staircase_RelativeHumidity_DataPoint .
+:Staircase_CO2 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Staircase_CO2_DataPoint .
+:Staircase_CO rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Staircase_CO_DataPoint .
+:Staircase_PM25 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Staircase_PM25_DataPoint .
+:Staircase_PM10 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Staircase_PM10_DataPoint .							 
+
+
+:Hall_Temperature rdf:type bop:Property ,
+							 quantitykind:Temperature ;
+	bop:hasPropertyState :Hall_Temperature_DataPoint .
+:Hall_RelativeHumidity rdf:type bop:Property ,
+							 quantitykind:RelativeHumidity ;
+	bop:hasPropertyState :Hall_RelativeHumidity_DataPoint .
+:Hall_CO2 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Hall_CO2_DataPoint .
+:Hall_CO rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Hall_CO_DataPoint .
+:Hall_PM25 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Hall_PM25_DataPoint .
+:Hall_PM10 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Hall_PM10_DataPoint .
+							 
+							 
+:Bathroom_Temperature rdf:type bop:Property ,
+							 quantitykind:Temperature ;
+	bop:hasPropertyState :Bathroom_Temperature_DataPoint .
+:Bathroom_RelativeHumidity rdf:type bop:Property ,
+							 quantitykind:RelativeHumidity ;
+	bop:hasPropertyState :Bathroom_RelativeHumidity_DataPoint .
+:Bathroom_CO2 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Bathroom_CO2_DataPoint .
+:Bathroom_CO rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Bathroom_CO_DataPoint .
+:Bathroom_PM25 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Bathroom_PM25_DataPoint .
+:Bathroom_PM10 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Bathroom_PM10_DataPoint .
+
+
+:Dining_Temperature rdf:type bop:Property ,
+							 quantitykind:Temperature ;
+	bop:hasPropertyState :Dining_Temperature_DataPoint .
+:Dining_RelativeHumidity rdf:type bop:Property ,
+							 quantitykind:RelativeHumidity ;
+	bop:hasPropertyState :Dining_RelativeHumidity_DataPoint .
+:Dining_CO2 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Dining_CO2_DataPoint .
+:Dining_CO rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Dining_CO_DataPoint .
+:Dining_PM25 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Dining_PM25_DataPoint .
+:Dining_PM10 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Dining_PM10_DataPoint .
+
+
+:Bedroom_Temperature rdf:type bop:Property ,
+							 quantitykind:Temperature ;
+	bop:hasPropertyState :Bedroom_Temperature_DataPoint .
+:Bedroom_RelativeHumidity rdf:type bop:Property ,
+							 quantitykind:RelativeHumidity ;
+	bop:hasPropertyState :Bedroom_RelativeHumidity_DataPoint .
+:Bedroom_CO2 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Bedroom_CO2_DataPoint .
+:Bedroom_CO rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Bedroom_CO_DataPoint .
+:Bedroom_PM25 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Bedroom_PM25_DataPoint .
+:Bedroom_PM10 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Bedroom_PM10_DataPoint .
+
+
+:Kitchen_Temperature rdf:type bop:Property ,
+							 quantitykind:Temperature ;
+	bop:hasPropertyState :Kitchen_Temperature_DataPoint .
+:Kitchen_RelativeHumidity rdf:type bop:Property ,
+							 quantitykind:RelativeHumidity ;
+	bop:hasPropertyState :Kitchen_RelativeHumidity_DataPoint .
+:Kitchen_CO2 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Kitchen_CO2_DataPoint .
+:Kitchen_CO rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Kitchen_CO_DataPoint .
+:Kitchen_PM25 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Kitchen_PM25_DataPoint .
+:Kitchen_PM10 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Kitchen_PM10_DataPoint .
+
+
+:Living_Temperature rdf:type bop:Property ,
+							 quantitykind:Temperature ;
+	bop:hasPropertyState :Living_Temperature_DataPoint .
+:Living_RelativeHumidity rdf:type bop:Property ,
+							 quantitykind:RelativeHumidity ;
+	bop:hasPropertyState :Living_RelativeHumidity_DataPoint .
+:Living_CO2 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Living_CO2_DataPoint .
+:Living_CO rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Living_CO_DataPoint .
+:Living_PM25 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Living_PM25_DataPoint .
+:Living_PM10 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Living_PM10_DataPoint .
+
+
+:Room_Temperature rdf:type bop:Property ,
+							 quantitykind:Temperature ;
+	bop:hasPropertyState :Room_Temperature_DataPoint .
+:Room_RelativeHumidity rdf:type bop:Property ,
+							 quantitykind:RelativeHumidity ;
+	bop:hasPropertyState :Room_RelativeHumidity_DataPoint .
+:Room_CO2 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Room_CO2_DataPoint .
+:Room_CO rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Room_CO_DataPoint .
+:Room_PM25 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Room_PM25_DataPoint .
+:Room_PM10 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Room_PM10_DataPoint .
+
+
+:Toilet_Temperature rdf:type bop:Property ,
+							 quantitykind:Temperature ;
+	bop:hasPropertyState :Toilet_Temperature_DataPoint .
+:Toilet_RelativeHumidity rdf:type bop:Property ,
+							 quantitykind:RelativeHumidity ;
+	bop:hasPropertyState :Toilet_RelativeHumidity_DataPoint .
+:Toilet_CO2 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Toilet_CO2_DataPoint .
+:Toilet_CO rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Toilet_CO_DataPoint .
+:Toilet_PM25 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Toilet_PM25_DataPoint .
+:Toilet_PM10 rdf:type bop:Property ,
+							 quantitykind:Concentration ;
+	bop:hasPropertyState :Toilet_PM10_DataPoint .
+
+
+
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# Results
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+:Staircase_Temperature_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .
+:Staircase_RelativeHumidity_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .
+:Staircase_CO2_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .
+:Staircase_CO_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .
+:Staircase_PM25_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .
+:Staircase_PM10_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .							 
+
+:Hall_Temperature_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Hall_RelativeHumidity_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Hall_CO2_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Hall_CO_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Hall_PM25_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Hall_PM10_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+							 
+:Bathroom_Temperature_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Bathroom_RelativeHumidity_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Bathroom_CO2_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Bathroom_CO_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Bathroom_PM25_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Bathroom_PM10_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+
+:Dining_Temperature_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Dining_RelativeHumidity_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Dining_CO2_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Dining_CO_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Dining_PM25_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Dining_PM10_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+
+:Bedroom_Temperature_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Bedroom_RelativeHumidity_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Bedroom_CO2_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Bedroom_CO_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Bedroom_PM25_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Bedroom_PM10_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+
+:Kitchen_Temperature_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Kitchen_RelativeHumidity_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Kitchen_CO2_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Kitchen_CO_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Kitchen_PM25_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Kitchen_PM10_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+
+:Living_Temperature_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Living_RelativeHumidity_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Living_CO2_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Living_CO_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Living_PM25_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Living_PM10_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+
+:Room_Temperature_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Room_RelativeHumidity_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Room_CO2_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Room_CO_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Room_PM25_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Room_PM10_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+
+:Toilet_Temperature_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Toilet_RelativeHumidity_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Toilet_CO2_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Toilet_CO_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Toilet_PM25_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+:Toilet_PM10_DataPoint rdf:type bop:DataPoint ;
+									bop:isDataPointOf :OSH_DB .		
+
