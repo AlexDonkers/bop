@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://www.w3id.org/bop#"
-     xml:base="https://www.w3id.org/bop"
+<rdf:RDF xmlns="https://w3id.org/bop#"
+     xml:base="https://w3id.org/bop"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,15 +10,18 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://www.w3id.org/bop#">
+    <owl:Ontology rdf:about="https://w3id.org/bop#">
         <terms:creator rdf:resource="https://orcid.org/0000-0002-8809-3277"/>
+        <terms:description xml:lang="nl">De Building Performance Ontology (BOP) heeft het doel om de integratie van topologische gebouwinformatie met statische en dynamische eigenschappen mogelijk te maken, om zo een homogene informatieomgeving te creëren die wordt gebruikt bij complexe prestatiebeoordelingen van gebouwen. Het helpt gebouwbeheerders en hun software om te gaan met de grote heterogeniteit van informatie.
+
+Hoewel de gegevens die statische en dynamische eigenschappen beschrijven fundamenteel verschillend zijn, delen ze een vergelijkbare context met een complexe spatio-temporele resolutie. Het doel van deze ontologie is om deze complexe contextuele informatie op dezelfde manier weer te geven voor verschillende soorten informatie, waardoor de mogelijkheden voor het gebruik van de linked data in complexe vergelijkingen worden vergroot en de machineleesbaarheid wordt verbeterd. We hebben geprobeerd om zo semantisch correct mogelijk te izjn, terwijl we ook streefden naar eenvoudige en intuïtieve SPARQL queries. Doordat we concepten uit belangrijke ontologieën in het veld hebben hergebruikt, kan BOP gemakkelijk worden geïntegreerd met een breed scala aan bestaande ontologieën en datasets.</terms:description>
         <terms:description xml:lang="en">The Building Performance Ontology (BOP) aims to enable the integration of topological building information with static and dynamic properties,  to create a homogeneous data environment used by complex building performance assessments. It helps building managers and their software to deal with the large heterogeneity of information. 
 
 While the data describing static and dynamic properties is fundamentally different, they share a similar context with a complex spatio-temporal resolution. The goal of this ontology is to represent this complex contextual information similarly for different types of information, which will increase the opportunities for using the linked data in complex equations and improves machine-readability. We tried to be as semantically correct as possible, while also aiming for simple and intuitive queries. By (re-)using concepts from major ontologies in the field, BOP could easily be integrated with a wide range of existing ontologies and datasets.</terms:description>
         <terms:title xml:lang="en">Building Performance Ontology</terms:title>
         <vann:preferredNamespacePrefix>bop</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://www.w3id.org/bop#"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</owl:versionInfo>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/bop#"/>
+        <owl:versionInfo xml:lang="nl">1.6</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -31,12 +34,10 @@ While the data describing static and dynamic properties is fundamentally differe
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
     
 
 
     <!-- http://purl.org/dc/terms/contributor -->
-
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
     
@@ -44,13 +45,11 @@ While the data describing static and dynamic properties is fundamentally differe
 
     <!-- http://purl.org/dc/terms/creator -->
 
-
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
     
 
 
     <!-- http://purl.org/dc/terms/description -->
-
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
     
@@ -58,13 +57,11 @@ While the data describing static and dynamic properties is fundamentally differe
 
     <!-- http://purl.org/dc/terms/title -->
 
-
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
     <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
-
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
     
@@ -72,13 +69,11 @@ While the data describing static and dynamic properties is fundamentally differe
 
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
 
-
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#example -->
-
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
     
@@ -86,13 +81,11 @@ While the data describing static and dynamic properties is fundamentally differe
 
     <!-- http://xmlns.com/foaf/0.1/name -->
 
-
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
     
 
 
     <!-- http://xmlns.com/foaf/0.1/weblog -->
-
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/weblog"/>
     
@@ -106,140 +99,123 @@ While the data describing static and dynamic properties is fundamentally differe
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
     
 
 
-    <!-- https://www.w3id.org/bop#actsOn -->
+    <!-- https://w3id.org/bop#actsOn -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#actsOn">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#executesOn"/>
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isActuatedBy"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Actuator"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Property"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#actsOn">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#executesOn"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isActuatedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Actuator"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:comment xml:lang="nl">Relatie tussen een actuator en de eigenschap die hij bedient.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship between an actuator and the property it acts on.</rdfs:comment>
         <rdfs:label xml:lang="en">acts on</rdfs:label>
+        <rdfs:label xml:lang="nl">bedient</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#actuatedBy -->
+    <!-- https://w3id.org/bop#actuatedBy -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#actuatedBy">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#executedBy"/>
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#performsActuation"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Actuation"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Actuator"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#actuatedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#executedBy"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#performsActuation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Actuation"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Actuator"/>
+        <rdfs:comment xml:lang="nl">Relatie tussen een bediening en een actuator die deze bediening heeft uitgevoerd.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship between an actuation and the actuator which performed this actuation.</rdfs:comment>
         <rdfs:label xml:lang="en">actuated by</rdfs:label>
+        <rdfs:label xml:lang="nl">bediend door</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#actuatedProperty -->
+    <!-- https://w3id.org/bop#containsProperty -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#actuatedProperty">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#executedProperty"/>
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#hasActuation"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Actuation"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:comment xml:lang="en">Relationship between an actuation and the actuated property.</rdfs:comment>
-        <rdfs:label xml:lang="en">actuated property</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.w3id.org/bop#containsProperty -->
-
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#containsProperty">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isPartOfPropertySet"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#PropertySet"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Property"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#containsProperty">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isPartOfPropertySet"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#PropertySet"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:comment xml:lang="nl">Relatie tussen een set van eigenschappen en een eigenschap die deel uitmaakt van deze set.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship between a property set and a property which is part of this set.</rdfs:comment>
+        <rdfs:label xml:lang="nl">bevat eigenschap</rdfs:label>
         <rdfs:label xml:lang="en">contains property</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#executedBy -->
+    <!-- https://w3id.org/bop#executedBy -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#executedBy">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#performsExecution"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Execution"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Executor"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#executedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#performsExecution"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Execution"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Executor"/>
+        <rdfs:comment xml:lang="nl">Relatie tussen een uitvoering en een uitvoerder die deze uitvoering heeft uitgevoerd.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship between an execution and the executor which performed this execution.</rdfs:comment>
         <rdfs:label xml:lang="en">executed by</rdfs:label>
+        <rdfs:label xml:lang="nl">uitgevoerd door</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#executedProperty -->
+    <!-- https://w3id.org/bop#executesOn -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#executedProperty">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#hasExecution"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Execution"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:comment xml:lang="en">Relationship between an execution and the executed property.</rdfs:comment>
-        <rdfs:label xml:lang="en">executed property</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.w3id.org/bop#executesOn -->
-
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#executesOn">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isExecutedBy"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Executor"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Property"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#executesOn">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isExecutedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Executor"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:comment xml:lang="nl">Relatie tussen een uitvoerder en de eigenschap waarop deze uitvoert.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship between an executor and the property it executes on.</rdfs:comment>
         <rdfs:label xml:lang="en">executes on</rdfs:label>
+        <rdfs:label xml:lang="nl">voert uit op</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasActuation -->
+    <!-- https://w3id.org/bop#hasActuatedProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasActuatedProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#hasExecutedProperty"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#hasActuation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Actuation"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:comment xml:lang="nl">Relatie tussen een bediening en de bediende eigenschap.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship between an actuation and the actuated property.</rdfs:comment>
+        <rdfs:label xml:lang="en">has actuated property</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft bediende eigenschap</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasActuation">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#hasExecution"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Actuation"/>
+    <!-- https://w3id.org/bop#hasActuation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasActuation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#hasExecution"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Actuation"/>
+        <rdfs:comment xml:lang="nl">Relatie tussen een eigenschap en een bijbehorende bediening</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship between a property and a corresponding actuation.</rdfs:comment>
         <rdfs:label xml:lang="en">has actuation</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft bediening</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasCollection -->
+    <!-- https://w3id.org/bop#hasComplexProperty -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasCollection">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isCollectionOf"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Database"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Collection"/>
-        <rdfs:comment xml:lang="en">Relationship between a database and its collection.</rdfs:comment>
-        <rdfs:label xml:lang="en">has collection</rdfs:label>
-        <skos:example xml:lang="en">E.g. the relationship between an InfluxDB database and an InfluxDB bucket.</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.w3id.org/bop#hasComplexProperty -->
-
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasComplexProperty">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isComplexPropertyOf"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#FeatureOfInterest"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Result"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasComplexProperty">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isComplexPropertyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#FeatureOfInterest"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Result"/>
         <rdfs:comment xml:lang="en">Direct relationship between a feature of interest and a result.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Directe relatie tussen een kenmerk van belang en een resultaat.</rdfs:comment>
         <rdfs:label xml:lang="en">has complex property</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft complexe eigenschap</rdfs:label>
+        <skos:example xml:lang="nl">De objecteigenschap kan worden uitgebreid door deze te subclassificeren met casus-specifieke objecteigenschappen.
+
+Zo zou men kunnen zeggen: :Muur --ex:heeftLengte-&gt; :Lengte, waarbij ex:heeftLengte een subklasse is van bop:hasComplexProperty.</skos:example>
         <skos:example xml:lang="en">The object property could be extended by subclassing it with use-case-specific object properties.
 
 One could for example say: :Wall --ex:hasLength-&gt; :CurrentWallLength, where ex:hasLength is a subclass of bop:hasComplexProperty.</skos:example>
@@ -247,184 +223,233 @@ One could for example say: :Wall --ex:hasLength-&gt; :CurrentWallLength, where e
     
 
 
-    <!-- https://www.w3id.org/bop#hasExecution -->
+    <!-- https://w3id.org/bop#hasDataPoint -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasExecution">
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Execution"/>
-        <rdfs:comment xml:lang="en">Relationship between a property and a corresponding execution.</rdfs:comment>
-        <rdfs:label xml:lang="en">has execution</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasDataPoint">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isDataPointOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Database"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#DataPoint"/>
+        <rdfs:comment xml:lang="nl">Relatie tussen een databank en zijn datapunten.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship between a database and its data points.</rdfs:comment>
+        <rdfs:label xml:lang="en">has data point</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft datapunt</rdfs:label>
+        <skos:example xml:lang="nl">Bijvoorbeeld the relatie tussen een time-series databank en een datapunt in deze databank.</skos:example>
+        <skos:example xml:lang="en">E.g. the relationship between a time-series database and a data record in this database.</skos:example>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasExternalDatabase -->
+    <!-- https://w3id.org/bop#hasExecutedProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasExecutedProperty">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#hasExecution"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Execution"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:comment xml:lang="nl">Relatie tussen een uitvoering en de uitgevoerde eigenschap.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship between an execution and the executed property.</rdfs:comment>
+        <rdfs:label xml:lang="en">has executed property</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft uitgevoerde eigenschap</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasExternalDatabase">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isExternalDatabaseOf"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Executor"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Database"/>
+    <!-- https://w3id.org/bop#hasExecution -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasExecution">
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Execution"/>
+        <rdfs:comment xml:lang="nl">Relatie tussen een eigenschap en een bijbehorende uitvoering.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship between a property and a corresponding execution.</rdfs:comment>
+        <rdfs:label xml:lang="en">has execution</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft uitvoering</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/bop#hasExternalDatabase -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasExternalDatabase">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isExternalDatabaseOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Executor"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Database"/>
+        <rdfs:comment xml:lang="nl">Koppelt een uitvoerder aan een databank waar zijn resultaten worden opgeslagen.</rdfs:comment>
         <rdfs:comment xml:lang="en">Linking an executor with the database its results are stored in.</rdfs:comment>
         <rdfs:label xml:lang="en">has external database</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft externe databank</rdfs:label>
+        <skos:example xml:lang="nl">Deze objecteigenschap kan worden gebruikt om een sensor te koppelen aan een time-series databank.</skos:example>
         <skos:example xml:lang="en">This object property could be used to link a sensor with a time-series database.</skos:example>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasFeatureOfInterest -->
+    <!-- https://w3id.org/bop#hasFeatureOfInterest -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasFeatureOfInterest">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isFeatureOfInterestOf"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Execution"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#FeatureOfInterest"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasFeatureOfInterest">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isFeatureOfInterestOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Execution"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#FeatureOfInterest"/>
+        <rdfs:comment xml:lang="nl">Koppelt een uitvoering met zijn kenmerk van belang.</rdfs:comment>
         <rdfs:comment xml:lang="en">Linking an execution with its feature of interest.</rdfs:comment>
         <rdfs:label xml:lang="en">has feature of interest</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft kenmerk van belang</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasObservation -->
+    <!-- https://w3id.org/bop#hasObservation -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasObservation">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#hasExecution"/>
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#observedProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Observation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasObservation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#hasExecution"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#hasObservedProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Observation"/>
+        <rdfs:comment xml:lang="nl">Relatie tussen een eigenschap en een bijbehorende observatie.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship between a property and a corresponding observation.</rdfs:comment>
         <rdfs:label xml:lang="en">has observation</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft observatie</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasProperty -->
+    <!-- https://w3id.org/bop#hasObservedProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasObservedProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#hasExecutedProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Observation"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:comment xml:lang="nl">Relatie tussen een observatie en de geobserveerde eigenschap.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship between an observation and the observed property.</rdfs:comment>
+        <rdfs:label xml:lang="en">has observed property</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft geobserveerde eigenschap</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasProperty">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isPropertyOf"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#FeatureOfInterest"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:comment xml:lang="en">Linking a feature of interest with its property. The property is intrinsic to this feature of interest, and cannot exist without a feature of interest.</rdfs:comment>
+    <!-- https://w3id.org/bop#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasProperty">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isPropertyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#FeatureOfInterest"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:comment xml:lang="nl">Koppelt een kenmerk van belang aan haar eigenschap. De eigenschap is intrinsiek aan dit kenmerk van belang, en kan niet bestaan zonder dit kenmerk van belang.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Linking a feature of interest with its property. The property is intrinsic to this feature of interest, and cannot exist without this feature of interest.</rdfs:comment>
         <rdfs:label xml:lang="en">has property</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft eigenschap</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasPropertyState -->
+    <!-- https://w3id.org/bop#hasPropertyState -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasPropertyState">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isPropertyStateOf"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Result"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasPropertyState">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isPropertyStateOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Result"/>
+        <rdfs:comment xml:lang="nl">Koppelt een eigenschap met een resultaat.</rdfs:comment>
         <rdfs:comment xml:lang="en">Linking a property with a result</rdfs:comment>
         <rdfs:label xml:lang="en">has property state</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft eigenschapsstatus</rdfs:label>
+        <skos:example xml:lang="nl">Deze objecteigenschap kan worden gebruikt om direct een koppeling tussen een eigenschap en een eigenschapsstatus te maken. 
+
+Voorbeeld: :Temperatuur --bop:hasPropertyState--&gt; :HuidigeTemperatuur</skos:example>
         <skos:example xml:lang="en">This object property is used to directly link a property to a property state. 
 
-Example: Temperature -- hasPropertyState --&gt; CurrentTemperatureState</skos:example>
+Example: :Temperature --bop:hasPropertyState--&gt; :CurrentTemperatureState</skos:example>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasResult -->
+    <!-- https://w3id.org/bop#hasResult -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasResult">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isResultOf"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Execution"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Result"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasResult">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isResultOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Execution"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Result"/>
+        <rdfs:comment xml:lang="nl">Koppelt een uitvoering aan zijn resultaat.</rdfs:comment>
         <rdfs:comment xml:lang="en">Linking an execution to its result.</rdfs:comment>
         <rdfs:label xml:lang="en">has result</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft resultaat</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasSubActuator -->
+    <!-- https://w3id.org/bop#hasSubActuator -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasSubActuator">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#hasSubExecutor"/>
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isSubActuatorOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasSubActuator">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#hasSubExecutor"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isSubActuatorOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Actuator"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Actuator"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Actuator"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Actuator"/>
         <rdfs:comment xml:lang="en">Describing a whole-part relationship between an actuator and its sub-actuator.</rdfs:comment>
         <rdfs:label xml:lang="en">has sub-actuator</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasSubExecutor -->
+    <!-- https://w3id.org/bop#hasSubExecutor -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasSubExecutor">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isSubExecutorOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasSubExecutor">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isSubExecutorOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Executor"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Executor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Executor"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Executor"/>
         <rdfs:comment xml:lang="en">Describing a whole-part relationship between an executor and its sub-executor.</rdfs:comment>
         <rdfs:label xml:lang="en">has sub-executor</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasSubProperty -->
+    <!-- https://w3id.org/bop#hasSubProperty -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasSubProperty">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isSubPropertyOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasSubProperty">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isSubPropertyOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Property"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Property"/>
         <rdfs:comment xml:lang="en">Describing a whole-part relationship between a property and its sub-property..</rdfs:comment>
         <rdfs:label xml:lang="en">has sub-property</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasSubSensor -->
+    <!-- https://w3id.org/bop#hasSubSensor -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasSubSensor">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#hasSubExecutor"/>
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isSubSensorOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasSubSensor">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#hasSubExecutor"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isSubSensorOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Sensor"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Sensor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Sensor"/>
         <rdfs:comment xml:lang="en">Describing a whole-part relationship between a sensor and its sub-sensor..</rdfs:comment>
         <rdfs:label xml:lang="en">has sub-sensor</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasUnit -->
+    <!-- https://w3id.org/bop#hasUnit -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hasUnit">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isUnitOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hasUnit">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isUnitOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Result"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Unit"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Result"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Unit"/>
         <rdfs:comment xml:lang="en">Linking a result with a unit.</rdfs:comment>
         <rdfs:label xml:lang="en">has unit</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hosts -->
+    <!-- https://w3id.org/bop#hosts -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#hosts">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#isHostedBy"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#hosts">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#isHostedBy"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Platform"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Executor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Platform"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Executor"/>
         <rdfs:comment xml:lang="en">Describing the relation between a platform and the executor which is hosted by this platform.</rdfs:comment>
         <rdfs:label xml:lang="en">hosts</rdfs:label>
         <skos:example xml:lang="en">This object property could be used to describe the relationship between a wall and a sensor hosted by this wall.</skos:example>
@@ -432,62 +457,46 @@ Example: Temperature -- hasPropertyState --&gt; CurrentTemperatureState</skos:ex
     
 
 
-    <!-- https://www.w3id.org/bop#implementedBy -->
+    <!-- https://w3id.org/bop#implementedBy -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#implementedBy">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#implementsProcedure"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Procedure"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Executor"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#implementedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#implementsProcedure"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Procedure"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Executor"/>
         <rdfs:comment xml:lang="en">Describing the relation between a procedure and the executor implementing this procedure.</rdfs:comment>
         <rdfs:label xml:lang="en">implemented by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#implementsProcedure -->
+    <!-- https://w3id.org/bop#implementsProcedure -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#implementsProcedure">
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Executor"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Procedure"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#implementsProcedure">
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Executor"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Procedure"/>
         <rdfs:comment xml:lang="en">Describing the relationship between an executor and the procedure it implements.</rdfs:comment>
         <rdfs:label xml:lang="en">implements procedure</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#isActuatedBy -->
+    <!-- https://w3id.org/bop#isActuatedBy -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isActuatedBy">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#isExecutedBy"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Actuator"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isActuatedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#isExecutedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Actuator"/>
         <rdfs:comment xml:lang="en">Relationship between a property and the actuator which acts on the property.</rdfs:comment>
         <rdfs:label xml:lang="en">is actuated by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#isCollectionOf -->
+    <!-- https://w3id.org/bop#isComplexPropertyOf -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isCollectionOf">
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Collection"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Database"/>
-        <rdfs:comment xml:lang="en">Linking a collection with the database it is part of.</rdfs:comment>
-        <rdfs:label xml:lang="en">is collection of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.w3id.org/bop#isComplexPropertyOf -->
-
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isComplexPropertyOf">
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Result"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#FeatureOfInterest"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isComplexPropertyOf">
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Result"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#FeatureOfInterest"/>
         <rdfs:comment xml:lang="en">Linking a result with a feature of interest</rdfs:comment>
         <rdfs:label xml:lang="en">is complex property of</rdfs:label>
         <skos:example xml:lang="en">This object property is used to directly link the current state of a property to a feature of interest. It is the shortest route to link a result to a feature of interest. 
@@ -498,24 +507,33 @@ One could for example say: :CurrentWallLength --ex:isLengthOf-&gt; :Wall, where 
     
 
 
-    <!-- https://www.w3id.org/bop#isExecutedBy -->
+    <!-- https://w3id.org/bop#isDataPointOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isDataPointOf">
+        <rdfs:domain rdf:resource="https://w3id.org/bop#DataPoint"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Database"/>
+        <rdfs:comment xml:lang="en">Linking a data point with the database it is part of.</rdfs:comment>
+        <rdfs:label xml:lang="en">is data point of</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isExecutedBy">
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Executor"/>
+    <!-- https://w3id.org/bop#isExecutedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isExecutedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Executor"/>
         <rdfs:comment xml:lang="en">Relationship between a property and the executor which executes on the property.</rdfs:comment>
         <rdfs:label xml:lang="en">is executed by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#isExternalDatabaseOf -->
+    <!-- https://w3id.org/bop#isExternalDatabaseOf -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isExternalDatabaseOf">
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Database"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Executor"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isExternalDatabaseOf">
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Database"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Executor"/>
         <rdfs:label xml:lang="en">is external database of</rdfs:label>
         <skos:example xml:lang="en">Linking a database with the executor which results are stored in this database.</skos:example>
         <skos:example xml:lang="en">This object property could be used to link a time-series database with a sensor.</skos:example>
@@ -523,25 +541,23 @@ One could for example say: :CurrentWallLength --ex:isLengthOf-&gt; :Wall, where 
     
 
 
-    <!-- https://www.w3id.org/bop#isFeatureOfInterestOf -->
+    <!-- https://w3id.org/bop#isFeatureOfInterestOf -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isFeatureOfInterestOf">
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#FeatureOfInterest"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Execution"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isFeatureOfInterestOf">
+        <rdfs:domain rdf:resource="https://w3id.org/bop#FeatureOfInterest"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Execution"/>
         <rdfs:comment xml:lang="en">Linking a feature of interest with an execution which executes on a property of this feature of interest.</rdfs:comment>
         <rdfs:label xml:lang="en">is feature of interest of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#isHostedBy -->
+    <!-- https://w3id.org/bop#isHostedBy -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isHostedBy">
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isHostedBy">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Executor"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Platform"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Executor"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Platform"/>
         <rdfs:comment xml:lang="en">Describing the relation between an executor and the platform hosting this executor.</rdfs:comment>
         <rdfs:label xml:lang="en">is hosted by</rdfs:label>
         <skos:example xml:lang="en">This object property could be used to describe the relationship between a sensor and a wall hosting this sensor.</skos:example>
@@ -549,50 +565,47 @@ One could for example say: :CurrentWallLength --ex:isLengthOf-&gt; :Wall, where 
     
 
 
-    <!-- https://www.w3id.org/bop#isObservedBy -->
+    <!-- https://w3id.org/bop#isObservedBy -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isObservedBy">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#isExecutedBy"/>
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#observes"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Sensor"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isObservedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#isExecutedBy"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#observes"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Sensor"/>
         <rdfs:comment xml:lang="en">Relationship between a property and the sensor which observes the property.</rdfs:comment>
         <rdfs:label xml:lang="en">is observed by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#isPartOfPropertySet -->
+    <!-- https://w3id.org/bop#isPartOfPropertySet -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isPartOfPropertySet">
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#PropertySet"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isPartOfPropertySet">
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#PropertySet"/>
         <rdfs:comment xml:lang="en">Relationship between a property and the property set it is part of.</rdfs:comment>
         <rdfs:label xml:lang="en">is part of property set</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#isPropertyOf -->
+    <!-- https://w3id.org/bop#isPropertyOf -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isPropertyOf">
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#FeatureOfInterest"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isPropertyOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#FeatureOfInterest"/>
         <rdfs:comment xml:lang="en">Linking a property with its feature of interest. The property is intrinsic to this feature of interest, and cannot exist without a feature of interest.</rdfs:comment>
         <rdfs:label xml:lang="en">is property of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#isPropertyStateOf -->
+    <!-- https://w3id.org/bop#isPropertyStateOf -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isPropertyStateOf">
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Result"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Property"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isPropertyStateOf">
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Result"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Property"/>
         <rdfs:comment xml:lang="en">Linking a result with a property</rdfs:comment>
         <rdfs:label xml:lang="en">is property state of</rdfs:label>
         <skos:example xml:lang="en">This object property is used to directly link the current state of a property to a property. It is the shortest route to link a result to a property. 
@@ -602,27 +615,25 @@ Example: CurrentTemperatureState -- isPropertyStateOf --&gt; Temperature</skos:e
     
 
 
-    <!-- https://www.w3id.org/bop#isResultOf -->
+    <!-- https://w3id.org/bop#isResultOf -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isResultOf">
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Result"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Execution"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isResultOf">
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Result"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Execution"/>
         <rdfs:comment xml:lang="en">Linking a result with an execution.</rdfs:comment>
         <rdfs:label xml:lang="en">is result of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#isSubActuatorOf -->
+    <!-- https://w3id.org/bop#isSubActuatorOf -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isSubActuatorOf">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#isSubExecutorOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isSubActuatorOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#isSubExecutorOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Actuator"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Actuator"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Actuator"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Actuator"/>
         <rdfs:comment xml:lang="en">Relation between an actuator and sub-actuators. The sub-actuators are of type actuator and could function as individual actuators.</rdfs:comment>
         <rdfs:label xml:lang="en">is sub-actuator of</rdfs:label>
         <skos:example xml:lang="en">The object property could be used to model actuators which have multiple components with their own functions.</skos:example>
@@ -630,14 +641,13 @@ Example: CurrentTemperatureState -- isPropertyStateOf --&gt; Temperature</skos:e
     
 
 
-    <!-- https://www.w3id.org/bop#isSubExecutorOf -->
+    <!-- https://w3id.org/bop#isSubExecutorOf -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isSubExecutorOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isSubExecutorOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Executor"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Executor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Executor"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Executor"/>
         <rdfs:comment xml:lang="en">Relation between an executor and sub-executors. The sub-executors are of type executor and could function as individual executors.</rdfs:comment>
         <rdfs:label xml:lang="en">is sub-executor of</rdfs:label>
         <skos:example xml:lang="en">The object property could be used to model devices which have multiple components with their own functions. A multisensor - for example - consists of multiple sub-sensors which individually perform a sensing function.</skos:example>
@@ -645,14 +655,13 @@ Example: CurrentTemperatureState -- isPropertyStateOf --&gt; Temperature</skos:e
     
 
 
-    <!-- https://www.w3id.org/bop#isSubPropertyOf -->
+    <!-- https://w3id.org/bop#isSubPropertyOf -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isSubPropertyOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isSubPropertyOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Property"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Property"/>
         <rdfs:comment xml:lang="en">Relation between a sub-property and its parent property.</rdfs:comment>
         <rdfs:label xml:lang="en">is sub-property of</rdfs:label>
         <skos:example xml:lang="en">The object property describes a typical whole-part relationship between a property and its sub-properties. It is used in cases where properties are so complex that it is desirable to decompose them into separate properties. The separate properties might also be individually linked to their own results.</skos:example>
@@ -660,15 +669,14 @@ Example: CurrentTemperatureState -- isPropertyStateOf --&gt; Temperature</skos:e
     
 
 
-    <!-- https://www.w3id.org/bop#isSubSensorOf -->
+    <!-- https://w3id.org/bop#isSubSensorOf -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isSubSensorOf">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#isSubExecutorOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isSubSensorOf">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#isSubExecutorOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Sensor"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Sensor"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Sensor"/>
         <rdfs:comment xml:lang="en">Relation between a sensor and sub-sensors. The sub-sensors are of type sensor and could function as individual sensors.</rdfs:comment>
         <rdfs:label xml:lang="en">is sub-sensor of</rdfs:label>
         <skos:example xml:lang="en">The object property could be used to model sensors which have multiple components with their own functions.</skos:example>
@@ -676,116 +684,99 @@ Example: CurrentTemperatureState -- isPropertyStateOf --&gt; Temperature</skos:e
     
 
 
-    <!-- https://www.w3id.org/bop#isUnitOf -->
+    <!-- https://w3id.org/bop#isUnitOf -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isUnitOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isUnitOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Unit"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Result"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Unit"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Result"/>
         <rdfs:comment xml:lang="en">Linking a unit with a result.</rdfs:comment>
         <rdfs:label xml:lang="en">is unit of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#isUsedFor -->
+    <!-- https://w3id.org/bop#isUsedFor -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#isUsedFor">
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#usesProcedure"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Procedure"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Execution"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#isUsedFor">
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#usesProcedure"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Procedure"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Execution"/>
         <rdfs:comment xml:lang="en">The relationship between a procedure and an execution which used this procedure.</rdfs:comment>
         <rdfs:label xml:lang="en">is used for</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#observedBy -->
+    <!-- https://w3id.org/bop#observedBy -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#observedBy">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#executedBy"/>
-        <owl:inverseOf rdf:resource="https://www.w3id.org/bop#performsObservation"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Observation"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Sensor"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#observedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#executedBy"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bop#performsObservation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Observation"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Sensor"/>
+        <rdfs:comment xml:lang="nl">Relatie tussen een observatie en een sensor die deze observatie heeft uitgevoerd.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship between an observation and the sensor which performed this observation.</rdfs:comment>
+        <rdfs:label xml:lang="nl">geobserveerd door</rdfs:label>
         <rdfs:label xml:lang="en">observed by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#observedProperty -->
+    <!-- https://w3id.org/bop#observes -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#observedProperty">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#executedProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Observation"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:comment xml:lang="en">Relationship between an observation and the observed property.</rdfs:comment>
-        <rdfs:label xml:lang="en">observed property</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://www.w3id.org/bop#observes -->
-
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#observes">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#executesOn"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Sensor"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Property"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#observes">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#executesOn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:comment xml:lang="nl">Relatie tussen een sensor en de eigenschap die hij observeert.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship between a sensor and the property it observes.</rdfs:comment>
+        <rdfs:label xml:lang="nl">observeert</rdfs:label>
         <rdfs:label xml:lang="en">observes</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#performsActuation -->
+    <!-- https://w3id.org/bop#performsActuation -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#performsActuation">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#performsExecution"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Actuator"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Actuation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#performsActuation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#performsExecution"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Actuator"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Actuation"/>
         <rdfs:comment xml:lang="en">Relationship between an actuator and the actuation it performs.</rdfs:comment>
         <rdfs:label xml:lang="en">performs actuation</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#performsExecution -->
+    <!-- https://w3id.org/bop#performsExecution -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#performsExecution">
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Executor"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Execution"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#performsExecution">
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Executor"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Execution"/>
         <rdfs:comment xml:lang="en">Relationship between an executor and the execution it performs.</rdfs:comment>
         <rdfs:label xml:lang="en">performs execution</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#performsObservation -->
+    <!-- https://w3id.org/bop#performsObservation -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#performsObservation">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/bop#performsExecution"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Sensor"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Observation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#performsObservation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#performsExecution"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Observation"/>
         <rdfs:comment xml:lang="en">Relationship between a sensor and the observation it performs.</rdfs:comment>
         <rdfs:label xml:lang="en">performs observation</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#usesProcedure -->
+    <!-- https://w3id.org/bop#usesProcedure -->
 
-
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/bop#usesProcedure">
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Execution"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/bop#Procedure"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/bop#usesProcedure">
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Execution"/>
+        <rdfs:range rdf:resource="https://w3id.org/bop#Procedure"/>
         <rdfs:comment xml:lang="en">The relationship between an execution and the used procedure.</rdfs:comment>
         <rdfs:label xml:lang="en">uses procedure</rdfs:label>
     </owl:ObjectProperty>
@@ -800,66 +791,82 @@ Example: CurrentTemperatureState -- isPropertyStateOf --&gt; Temperature</skos:e
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
     
 
 
-    <!-- https://www.w3id.org/bop#hasSimpleProperty -->
+    <!-- https://w3id.org/bop#hasID -->
 
-
-    <owl:DatatypeProperty rdf:about="https://www.w3id.org/bop#hasSimpleProperty">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bop#hasID">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bop#hasValue"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#FeatureOfInterest"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#DataPoint"/>
+        <rdfs:comment xml:lang="nl">Het ID van een datapunt in een externe databank.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The ID of a data point in an external database.</rdfs:comment>
+        <rdfs:label xml:lang="en">has ID</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/bop#hasSimpleProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bop#hasSimpleProperty">
+        <rdfs:domain rdf:resource="https://w3id.org/bop#FeatureOfInterest"/>
+        <rdfs:comment xml:lang="nl">Koppelt een kenmerk van belang met een simpele eigenschapswaarde, beschreven als tekstueel veld.</rdfs:comment>
         <rdfs:comment xml:lang="en">Linking a feature of interest with a simple property value described as a literal.</rdfs:comment>
         <rdfs:label xml:lang="en">has simple property</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft simpele eigenschap</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasSimplePropertyState -->
+    <!-- https://w3id.org/bop#hasSimplePropertyState -->
 
-
-    <owl:DatatypeProperty rdf:about="https://www.w3id.org/bop#hasSimplePropertyState">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Property"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bop#hasSimplePropertyState">
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Property"/>
+        <rdfs:comment xml:lang="nl">Koppelt een eigenschap met een simpele eigenschapsstatus, beschreven als tekstueel veld.</rdfs:comment>
         <rdfs:comment xml:lang="en">Linking a property with a simple property state value described as a literal.</rdfs:comment>
         <rdfs:label xml:lang="en">has simple property state</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft simpele eigenschapsstatus</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasSimpleResult -->
+    <!-- https://w3id.org/bop#hasSimpleResult -->
 
-
-    <owl:DatatypeProperty rdf:about="https://www.w3id.org/bop#hasSimpleResult">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bop#hasSimpleResult">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Execution"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Execution"/>
+        <rdfs:comment xml:lang="nl">Koppelt een uitvoering met een simpel resultaat, beschreven als tekstueel veld.</rdfs:comment>
         <rdfs:comment xml:lang="en">Linking an execution with a simple result value described as a literal.</rdfs:comment>
         <rdfs:label xml:lang="en">has simple result</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft simpel resultaat</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasSimpleUnit -->
+    <!-- https://w3id.org/bop#hasSimpleUnit -->
 
-
-    <owl:DatatypeProperty rdf:about="https://www.w3id.org/bop#hasSimpleUnit">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bop#hasSimpleUnit">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Result"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Result"/>
+        <rdfs:comment xml:lang="nl">Koppelt een resultaat met een eenheid beschreven als tekstueel veld.</rdfs:comment>
         <rdfs:comment xml:lang="en">Linking a result with a unit described by a literal.</rdfs:comment>
         <rdfs:label xml:lang="en">has simple unit</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft simpele eenheid</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://www.w3id.org/bop#hasValue -->
+    <!-- https://w3id.org/bop#hasValue -->
 
-
-    <owl:DatatypeProperty rdf:about="https://www.w3id.org/bop#hasValue">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/bop#hasValue">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/bop#Result"/>
+        <rdfs:domain rdf:resource="https://w3id.org/bop#Result"/>
+        <rdfs:comment xml:lang="nl">De waarde van een resultaat, beschreven als tekstueel veld.</rdfs:comment>
         <rdfs:comment xml:lang="en">The simple value of a result.</rdfs:comment>
         <rdfs:label xml:lang="en">has value</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft waarde</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -872,85 +879,73 @@ Example: CurrentTemperatureState -- isPropertyStateOf --&gt; Temperature</skos:e
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
     
 
 
     <!-- http://xmlns.com/foaf/0.1/Person -->
 
-
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
     
 
 
-    <!-- https://www.w3id.org/bop#Actuation -->
+    <!-- https://w3id.org/bop#Actuation -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#Actuation">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/bop#Execution"/>
-        <owl:disjointWith rdf:resource="https://www.w3id.org/bop#Observation"/>
+    <owl:Class rdf:about="https://w3id.org/bop#Actuation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bop#Execution"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/bop#Observation"/>
         <rdfs:comment xml:lang="en">An act of carrying out an actuation procedure by an actuator to change the state of a property.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Het bedienen van iets. Een bediening kan worden bediend door een actuator, eventueel op basis van een procedure.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuation</rdfs:label>
         <rdfs:label xml:lang="nl">Bediening</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://www.w3id.org/bop#Actuator -->
+    <!-- https://w3id.org/bop#Actuator -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#Actuator">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/bop#Executor"/>
-        <owl:disjointWith rdf:resource="https://www.w3id.org/bop#Sensor"/>
+    <owl:Class rdf:about="https://w3id.org/bop#Actuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bop#Executor"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/bop#Sensor"/>
         <rdfs:comment xml:lang="en">An agent that can implement an actuation procedure to change the state of a property..</rdfs:comment>
-        <rdfs:comment xml:lang="nl">Iets wat een actie kan uitvoeren op basis van een procedure om de status van een eigenschap te veranderen.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Iets wat een bediening kan uitvoeren op basis van een procedure om de status van een eigenschap te veranderen.</rdfs:comment>
         <rdfs:label xml:lang="en">Actuator</rdfs:label>
         <rdfs:label xml:lang="nl">Actuator</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://www.w3id.org/bop#Collection -->
+    <!-- https://w3id.org/bop#DataPoint -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#Collection">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/bop#Result"/>
-        <rdfs:comment xml:lang="en">A collection of documents in a database.</rdfs:comment>
-        <rdfs:label xml:lang="nl">Collectie</rdfs:label>
-        <rdfs:label xml:lang="en">Collection</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/bop#DataPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bop#Result"/>
+        <rdfs:comment xml:lang="en">A data element in a database representing the state of a property.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een dataelement in een databank die de staat van een eigenschap vertegenwoordigt.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data point</rdfs:label>
+        <rdfs:label xml:lang="nl">Datapunt</rdfs:label>
+        <skos:example xml:lang="nl">Het datapunt kan in verschillende soorten databanken worden gebruikt. Het komt overeen met afzonderlijke datapunten in time-series databanken of rijen in SQL tabellen. Het is ook een gebruikelijk concept in BMS-servers, waarin het bijvoorbeeld sensor-observaties, output van actuatoren of een andere scalaire waarde vertegenwoordigt.</skos:example>
+        <skos:example xml:lang="en">The data point can be used in various types of databases. It corresponds to single data records in time-series databases, or rows in SQL database tables. It is also a common concept in BMS servers, representing for example a sensor reading, output value of an actuator or any other scalar value.</skos:example>
     </owl:Class>
     
 
 
-    <!-- https://www.w3id.org/bop#CurrentState -->
+    <!-- https://w3id.org/bop#Database -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#CurrentState">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/bop#Result"/>
-        <rdfs:comment xml:lang="en">The most recently defined state of a property.</rdfs:comment>
-        <rdfs:label xml:lang="en">Current state</rdfs:label>
-        <rdfs:label xml:lang="nl">Huidige staat</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://www.w3id.org/bop#Database -->
-
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#Database">
+    <owl:Class rdf:about="https://w3id.org/bop#Database">
         <rdfs:comment xml:lang="en">A collection of data.
 
 The database class is used to describe an external database, storing results of executions, such as a time-series database.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een collectie van data.
+
+De databank klasse wordt gebruikt om externe databanken te beschrijven. Deze kunnen resultaten van uitvoeringen bevatten.</rdfs:comment>
         <rdfs:label xml:lang="nl">Databank</rdfs:label>
         <rdfs:label xml:lang="en">Database</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://www.w3id.org/bop#Execution -->
+    <!-- https://w3id.org/bop#Execution -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#Execution">
+    <owl:Class rdf:about="https://w3id.org/bop#Execution">
         <rdfs:comment xml:lang="en">An act of carrying out a procedure by an executor on a property</rdfs:comment>
         <rdfs:comment xml:lang="nl">Het doen of uitvoeren van iets. Een uitvoering kan worden uitgevoerd door een uitvoerder, eventueel op basis van een procedure.</rdfs:comment>
         <rdfs:label xml:lang="en">Execution</rdfs:label>
@@ -959,15 +954,14 @@ The database class is used to describe an external database, storing results of 
     
 
 
-    <!-- https://www.w3id.org/bop#Executor -->
+    <!-- https://w3id.org/bop#Executor -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#Executor">
+    <owl:Class rdf:about="https://w3id.org/bop#Executor">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.w3id.org/bop#isHostedBy"/>
+                <owl:onProperty rdf:resource="https://w3id.org/bop#isHostedBy"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="https://www.w3id.org/bop#Platform"/>
+                <owl:onClass rdf:resource="https://w3id.org/bop#Platform"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An agent that can implement a procedure to perform an execution.</rdfs:comment>
@@ -978,15 +972,14 @@ The database class is used to describe an external database, storing results of 
     
 
 
-    <!-- https://www.w3id.org/bop#FeatureOfInterest -->
+    <!-- https://w3id.org/bop#FeatureOfInterest -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#FeatureOfInterest">
+    <owl:Class rdf:about="https://w3id.org/bop#FeatureOfInterest">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.w3id.org/bop#hasProperty"/>
+                <owl:onProperty rdf:resource="https://w3id.org/bop#hasProperty"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://www.w3id.org/bop#Property"/>
+                <owl:onClass rdf:resource="https://w3id.org/bop#Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An abstraction of a real-world phenomenon which could be described in terms of its properties.</rdfs:comment>
@@ -994,86 +987,101 @@ The database class is used to describe an external database, storing results of 
         <rdfs:label xml:lang="en">Feature of interest</rdfs:label>
         <rdfs:label xml:lang="nl">Kenmerk van belang</rdfs:label>
         <skos:example xml:lang="en">An object, part, zone, event etc.</skos:example>
+        <skos:example xml:lang="nl">Een object, deel, zone, evenement, etc.</skos:example>
     </owl:Class>
     
 
 
-    <!-- https://www.w3id.org/bop#Function -->
+    <!-- https://w3id.org/bop#Input -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#Function">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/bop#Property"/>
-        <rdfs:comment xml:lang="en">A function of a feature of interest.</rdfs:comment>
-        <rdfs:label xml:lang="nl">Functie</rdfs:label>
-        <rdfs:label xml:lang="en">Function</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/bop#Input">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bop#DataPoint"/>
+        <rdfs:comment xml:lang="en">An input data point in a BMS system.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een invoerdatapunt in een BMS systeem.</rdfs:comment>
+        <rdfs:label xml:lang="en">Input</rdfs:label>
+        <rdfs:label xml:lang="nl">Invoer</rdfs:label>
+        <skos:example xml:lang="en">Inputs in BMS are often the results of an observation, such as sensor readings. They are read by a system.</skos:example>
+        <skos:example xml:lang="nl">Invoerdatapunten in BMS-systemen zijn vaak het resultaat van een waarneming, zoals sensor-observaties. Ze worden gelezen door een systeem.</skos:example>
     </owl:Class>
     
 
 
-    <!-- https://www.w3id.org/bop#Observation -->
+    <!-- https://w3id.org/bop#Observation -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#Observation">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/bop#Execution"/>
+    <owl:Class rdf:about="https://w3id.org/bop#Observation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bop#Execution"/>
         <rdfs:comment xml:lang="en">An act of carrying out an observation procedure by a sensor to observe the state of a property.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Het observeren van iets. Een observatie kan worden geobserveerd door een sensor, eventueel op basis van een procedure.</rdfs:comment>
         <rdfs:label xml:lang="nl">Observatie</rdfs:label>
         <rdfs:label xml:lang="en">Observation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://www.w3id.org/bop#Platform -->
+    <!-- https://w3id.org/bop#Output -->
+
+    <owl:Class rdf:about="https://w3id.org/bop#Output">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bop#DataPoint"/>
+        <rdfs:comment xml:lang="en">An output data point in a BMS system.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een uitvoerdatapunt in een BMS systeem.</rdfs:comment>
+        <rdfs:label xml:lang="en">Output</rdfs:label>
+        <rdfs:label xml:lang="nl">Uitvoer</rdfs:label>
+        <skos:example xml:lang="en">Outputs in BMS are often the values sent to actuators, such as turning on a light. They are written by a system.</skos:example>
+        <skos:example xml:lang="nl">Uitvoerdatapunten in BMS systemen zijn vaak de waarden die naar actuatoren worden gestuurd, zoals het inschakelen van een lamp. Ze worden geschreven door een systeem.</skos:example>
+    </owl:Class>
+    
 
 
-    <owl:Class rdf:about="https://www.w3id.org/bop#Platform">
+    <!-- https://w3id.org/bop#Platform -->
+
+    <owl:Class rdf:about="https://w3id.org/bop#Platform">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.w3id.org/bop#hosts"/>
+                <owl:onProperty rdf:resource="https://w3id.org/bop#hosts"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://www.w3id.org/bop#Executor"/>
+                <owl:onClass rdf:resource="https://w3id.org/bop#Executor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An entity that hosts an executor.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een entitiet die een uitvoerder herbergt.</rdfs:comment>
         <rdfs:label xml:lang="en">Platform</rdfs:label>
         <rdfs:label xml:lang="nl">Platform</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://www.w3id.org/bop#Procedure -->
+    <!-- https://w3id.org/bop#Procedure -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#Procedure">
+    <owl:Class rdf:about="https://w3id.org/bop#Procedure">
         <rdfs:comment xml:lang="en">A workflow, protocol, plan, algorithm, or computational method specifying how to perform an execution.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een workflow, protocol, plan, algoritme of rekenmethode die specificeert hoe een uitvoering moet worden uitgevoerd.</rdfs:comment>
         <rdfs:label xml:lang="en">Procedure</rdfs:label>
         <rdfs:label xml:lang="nl">Procedure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://www.w3id.org/bop#Property -->
+    <!-- https://w3id.org/bop#Property -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#Property">
+    <owl:Class rdf:about="https://w3id.org/bop#Property">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.w3id.org/bop#isPropertyOf"/>
+                <owl:onProperty rdf:resource="https://w3id.org/bop#isPropertyOf"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://www.w3id.org/bop#FeatureOfInterest"/>
+                <owl:onClass rdf:resource="https://w3id.org/bop#FeatureOfInterest"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A measurable and intrinsic characteristic of a feature of interest.</rdfs:comment>
-        <rdfs:comment xml:lang="nl">Een kenmerk van een feature of interest. Het kenmerk is intrinsiek aan en kan niet bestaan zonder de feature of interest.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een eigenschap van een kenmerk van belang. De eigenschap is intrinsiek aan en kan niet bestaan zonder het kenmerk van belang.</rdfs:comment>
         <rdfs:label xml:lang="nl">Eigenschap</rdfs:label>
         <rdfs:label xml:lang="en">Property</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://www.w3id.org/bop#PropertySet -->
+    <!-- https://w3id.org/bop#PropertySet -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#PropertySet">
+    <owl:Class rdf:about="https://w3id.org/bop#PropertySet">
         <rdfs:comment xml:lang="en">A collection of properties. The collection could also be a singleton or a null set.</rdfs:comment>
         <rdfs:comment xml:lang="nl">Een collectie van eigenschappen. De collectie kan ook een eenpuntsverzameling of een lege verzameling zijn.</rdfs:comment>
         <rdfs:label xml:lang="en">Property set</rdfs:label>
@@ -1082,39 +1090,52 @@ The database class is used to describe an external database, storing results of 
     
 
 
-    <!-- https://www.w3id.org/bop#Result -->
+    <!-- https://w3id.org/bop#Result -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#Result">
+    <owl:Class rdf:about="https://w3id.org/bop#Result">
+        <rdfs:comment xml:lang="nl">De uitkomst van een uitvoering.</rdfs:comment>
         <rdfs:comment xml:lang="en">The outcome of an execution.</rdfs:comment>
         <rdfs:label xml:lang="en">Result</rdfs:label>
         <rdfs:label xml:lang="nl">Resultaat</rdfs:label>
+        <skos:example xml:lang="nl">Het resultaat kan bijvoorbeeld bestaan uit een waarde, een eenheid en andere herkomstgegevens.</skos:example>
         <skos:example xml:lang="en">The result may hold, for example, a value, a unit, a result time and other provenance data.</skos:example>
     </owl:Class>
     
 
 
-    <!-- https://www.w3id.org/bop#Sensor -->
+    <!-- https://w3id.org/bop#Sensor -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#Sensor">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/bop#Executor"/>
+    <owl:Class rdf:about="https://w3id.org/bop#Sensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bop#Executor"/>
         <rdfs:comment xml:lang="en">An agent that can implement an observation procedure to measure the state of a property.</rdfs:comment>
-        <rdfs:comment xml:lang="nl">Iets wat een meting kan uitvoeren op basis van een procedure om de status van een eigenschap te meten.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Iets wat een observatie kan uitvoeren op basis van een procedure om de status van een eigenschap te meten.</rdfs:comment>
         <rdfs:label xml:lang="en">Sensor</rdfs:label>
         <rdfs:label xml:lang="nl">Sensor</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://www.w3id.org/bop#Unit -->
+    <!-- https://w3id.org/bop#Unit -->
 
-
-    <owl:Class rdf:about="https://www.w3id.org/bop#Unit">
+    <owl:Class rdf:about="https://w3id.org/bop#Unit">
         <rdfs:comment xml:lang="en">A particular quantity value that has been chosen as a scale for measuring other quantities of the same kind.</rdfs:comment>
         <rdfs:comment xml:lang="nl">Een specifieke waarde van een natuurkundige grootheid die is gekozen als een schaal voor het meten van andere hoeveelheden van diezelfde grootheid.</rdfs:comment>
         <rdfs:label xml:lang="nl">Eenheid</rdfs:label>
         <rdfs:label xml:lang="en">Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/bop#UserDefined -->
+
+    <owl:Class rdf:about="https://w3id.org/bop#UserDefined">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bop#DataPoint"/>
+        <rdfs:comment xml:lang="en">A user defined data point in a BMS system.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een door de gebruiker gedefinieerd datapunt in een BMS systeem.</rdfs:comment>
+        <rdfs:label xml:lang="nl">Door de gebruiker gedefinieerd</rdfs:label>
+        <rdfs:label xml:lang="en">User defined</rdfs:label>
+        <skos:example xml:lang="nl">Door de gebruiker gedefinieerde datapunten in een BMS systeem zijn vaak parameters die zijn ingesteld door mensen of wettelijke voorschriften. Ze worden gebruikt om de staat van eigenschappen de beïnvloeden, zoals temperatuurinstelpunten.</skos:example>
+        <skos:example xml:lang="en">User defined data points in BMS are often parameters set by humans or regulations which are used to control the state of properties, such temperature set points.</skos:example>
     </owl:Class>
     
 
@@ -1127,12 +1148,10 @@ The database class is used to describe an external database, storing results of 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
     
 
 
     <!-- https://orcid.org/0000-0002-8809-3277 -->
-
 
     <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-8809-3277">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
@@ -1143,10 +1162,9 @@ The database class is used to describe an external database, storing results of 
     
 
 
-    <!-- https://www.w3id.org/bop# -->
+    <!-- https://w3id.org/bop# -->
 
-
-    <owl:NamedIndividual rdf:about="https://www.w3id.org/bop#"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/bop#"/>
     
 
 
@@ -1158,26 +1176,24 @@ The database class is used to describe an external database, storing results of 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://www.w3id.org/bop#Database"/>
-            <rdf:Description rdf:about="https://www.w3id.org/bop#Execution"/>
-            <rdf:Description rdf:about="https://www.w3id.org/bop#Executor"/>
-            <rdf:Description rdf:about="https://www.w3id.org/bop#FeatureOfInterest"/>
-            <rdf:Description rdf:about="https://www.w3id.org/bop#Platform"/>
-            <rdf:Description rdf:about="https://www.w3id.org/bop#Procedure"/>
-            <rdf:Description rdf:about="https://www.w3id.org/bop#Property"/>
-            <rdf:Description rdf:about="https://www.w3id.org/bop#PropertySet"/>
-            <rdf:Description rdf:about="https://www.w3id.org/bop#Result"/>
-            <rdf:Description rdf:about="https://www.w3id.org/bop#Unit"/>
+            <rdf:Description rdf:about="https://w3id.org/bop#Database"/>
+            <rdf:Description rdf:about="https://w3id.org/bop#Execution"/>
+            <rdf:Description rdf:about="https://w3id.org/bop#Executor"/>
+            <rdf:Description rdf:about="https://w3id.org/bop#FeatureOfInterest"/>
+            <rdf:Description rdf:about="https://w3id.org/bop#Platform"/>
+            <rdf:Description rdf:about="https://w3id.org/bop#Procedure"/>
+            <rdf:Description rdf:about="https://w3id.org/bop#Property"/>
+            <rdf:Description rdf:about="https://w3id.org/bop#PropertySet"/>
+            <rdf:Description rdf:about="https://w3id.org/bop#Result"/>
+            <rdf:Description rdf:about="https://w3id.org/bop#Unit"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
-
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
