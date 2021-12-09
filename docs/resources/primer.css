@@ -114,5 +114,5 @@ div.manchester pre {
 /* And text inside, don't confuse fonts as it breaks em above */
 .status div span {
   font-family: "Ubuntu";
-  font-size: x-large;
+  font-size: large;
 }
