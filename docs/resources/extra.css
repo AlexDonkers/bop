@@ -82,8 +82,8 @@ h2 {
   margin-top: 40px;
   font-weight: bold;
   text-transform: none;
-  color: white;
-  background-image: url("https://raw.githubusercontent.com/AlexDonkers/bop/main/docs/resources/bop_header.png");
+  color: #5b9435;
+  background-image: url("https://raw.githubusercontent.com/AlexDonkers/bop/main/docs/resources/bop_dots.png");
   padding: 0.3em;
 }
 
